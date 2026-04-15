@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weddings & Events — The Last Frontier Collection</title>
+<meta name="description" content="Riverfront ceremonies, forest retreats, and ocean-view elopements across three Alaskan destination hubs. Let us plan your perfect Alaska event.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C5A059;--slate:#2C3E50;--glacier:#F8FAFB;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-serif;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(248,250,251,0.96);backdrop-filter:blur(20px);box-shadow:0 1px 24px rgba(44,62,80,0.07);}
+.glass{background:rgba(255,255,255,0.78);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.92);box-shadow:0 8px 40px rgba(44,62,80,0.08);}
+.btn-gold{background:var(--gold);color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:15px 38px;border:none;cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}
+.btn-gold:hover{background:#A07830;transform:translateY(-2px);box-shadow:0 10px 28px rgba(197,160,89,0.35);}
+.btn-outline{background:transparent;color:var(--slate);font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:14px 38px;border:1.5px solid rgba(44,62,80,0.3);cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+.section-label{display:inline-flex;align-items:center;gap:12px;margin-bottom:20px;}
+.section-label::before,.section-label::after{content:'';display:block;width:32px;height:1px;background:var(--gold);}
+.section-label span{font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);}
+.reveal{opacity:0;transform:translateY(20px);transition:all 0.65s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.venue-btn{cursor:pointer;padding:16px 32px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;border:none;background:transparent;color:#8A9BAB;border-bottom:2px solid transparent;transition:all 0.3s;font-family:'Montserrat',sans-serif;}
+.venue-btn.active{color:var(--gold);border-bottom-color:var(--gold);}
+.venue-panel{display:none;}
+.venue-panel.active{display:grid;}
+.vendor-card{background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:14px;padding:28px;transition:all 0.3s;}
+.vendor-card:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(44,62,80,0.10);}
+.cap-bar{height:6px;background:rgba(197,160,89,0.12);border-radius:3px;overflow:hidden;}
+.cap-fill{height:100%;background:linear-gradient(90deg,var(--gold),#D4B87A);border-radius:3px;transition:width 0.6s ease;}
+.form-input{width:100%;padding:14px 18px;border:1px solid rgba(44,62,80,0.15);border-radius:8px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:300;color:var(--slate);background:#fff;outline:none;transition:border-color 0.2s;}
+.form-input:focus{border-color:var(--gold);}
+.form-label{font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#4A6070;display:block;margin-bottom:8px;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div style="max-width:1280px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;">
+    <a href="index.html" style="text-decoration:none;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);line-height:1.1;">The Last Frontier</div>
+      <div style="font-size:8px;font-weight:600;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);">Collection</div>
+    </a>
+    <div style="display:flex;align-items:center;gap:32px;">
+      <a href="index.html#hubs" style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#4A6070;text-decoration:none;">The Hubs</a>
+      <a href="index.html#paths" style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#4A6070;text-decoration:none;">The Circuit</a>
+      <a href="events.html" style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Weddings</a>
+      <a href="index.html#concierge" style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#4A6070;text-decoration:none;">Concierge</a>
+    </div>
+    <a href="#inquiry" class="btn-gold" style="font-size:10px;padding:12px 24px;">Inquire Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="padding-top:90px;background:linear-gradient(150deg,#F5EDD8 0%,#F8FAFB 50%,#EDF3F7 100%);min-height:70vh;display:flex;align-items:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-120px;right:-120px;width:600px;height:600px;background:radial-gradient(circle,rgba(197,160,89,0.12) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="max-width:1280px;margin:0 auto;padding:80px 32px;width:100%;text-align:center;">
+    <div class="section-label" style="justify-content:center;margin-bottom:28px;"><span>Weddings & Events</span></div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:68px;color:var(--slate);line-height:1.07;font-weight:400;margin-bottom:24px;">
+      Alaska as Your<br><em style="color:var(--gold);">Backdrop.</em>
+    </h1>
+    <p style="font-size:16px;font-weight:300;line-height:1.85;color:#4A6070;max-width:620px;margin:0 auto 16px;">Three distinct settings. One seamless team. Whether you're planning an intimate elopement or a grand celebration for 85 guests — the Last Frontier Collection is your venue, your planner, and your concierge.</p>
+    <p style="font-size:14px;font-weight:300;color:#8A9BAB;margin-bottom:48px;">Riverfront · Forest · Ocean · We handle the rest.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="#venue-selector" class="btn-gold">Choose Your Backdrop</a>
+      <a href="#inquiry" class="btn-outline">Start Your Inquiry</a>
+    </div>
+  </div>
+</section>
+
+<!-- VENUE SELECTOR -->
+<section id="venue-selector" style="padding:100px 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="text-align:center;margin-bottom:48px;" class="reveal">
+      <div class="section-label" style="justify-content:center;"><span>Choose Your Setting</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:16px;">Three Backdrops.</h2>
+      <p style="font-size:15px;font-weight:300;color:#8A9BAB;max-width:500px;margin:0 auto;">Click a backdrop to explore the hub, its properties, vendors, capacity, and inquiry form.</p>
+    </div>
+
+    <!-- Tab buttons -->
+    <div style="display:flex;border-bottom:1px solid rgba(44,62,80,0.1);margin-bottom:60px;justify-content:center;" class="reveal">
+      <button class="venue-btn active" onclick="switchVenue('riverfront')">🏔️ Riverfront<br><span style="font-size:9px;font-weight:400;text-transform:none;letter-spacing:0;color:#8A9BAB;">Hub 1 · Cooper Landing</span></button>
+      <button class="venue-btn" onclick="switchVenue('forest')">🌲 Forest<br><span style="font-size:9px;font-weight:400;text-transform:none;letter-spacing:0;color:#8A9BAB;">Hub 2 · Soldotna</span></button>
+      <button class="venue-btn" onclick="switchVenue('ocean')">🌊 Ocean<br><span style="font-size:9px;font-weight:400;text-transform:none;letter-spacing:0;color:#8A9BAB;">Hub 3 · Homer</span></button>
+    </div>
+
+    <!-- RIVERFRONT PANEL -->
+    <div id="panel-riverfront" class="venue-panel active" style="grid-template-columns:1fr 1fr;gap:48px;">
+      <div>
+        <div style="height:300px;background:linear-gradient(145deg,#C4D8C4,#8AAE8A);border-radius:16px;margin-bottom:32px;display:flex;align-items:flex-end;padding:28px;">
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-bottom:6px;">Hub 1 · The Gateway</div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.2);">Cooper Landing</div></div>
+        </div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--slate);font-weight:400;margin-bottom:16px;">Riverfront Ceremonies</h3>
+        <p style="font-size:14px;font-weight:300;color:#4A6070;line-height:1.85;margin-bottom:24px;">Say "I Do" on the banks of the Upper Kenai River. Alaska Heavenly Lodge's 18-acre estate provides a breathtaking natural cathedral — mountain views, river sounds, and old-growth forest as your canopy.</p>
+        <p style="font-size:13px;font-weight:300;color:#8A9BAB;line-height:1.8;margin-bottom:32px;">Ideal for grand weddings, anniversary celebrations, family reunions, and multi-day retreats.</p>
+
+        <!-- Capacity -->
+        <div style="margin-bottom:32px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Capacity</div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div><div style="display:flex;justify-content:space-between;font-size:11px;font-weight:500;color:var(--slate);margin-bottom:6px;"><span>Ceremony (outdoor)</span><span style="color:var(--gold);">75 guests</span></div><div class="cap-bar"><div class="cap-fill" style="width:100%;"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:11px;font-weight:500;color:var(--slate);margin-bottom:6px;"><span>Lodging (on-property)</span><span style="color:var(--gold);">46 guests</span></div><div class="cap-bar"><div class="cap-fill" style="width:61%;"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:11px;font-weight:500;color:var(--slate);margin-bottom:6px;"><span>Seated Dinner</span><span style="color:var(--gold);">60 guests</span></div><div class="cap-bar"><div class="cap-fill" style="width:80%;"></div></div></div>
+          </div>
+        </div>
+
+        <!-- Properties -->
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">Properties Available</div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:32px;">
+          <div style="display:flex;justify-content:space-between;padding:12px 16px;background:#F5EDD8;border-radius:8px;"><span style="font-size:12px;font-weight:500;color:var(--slate);">Alaska Heavenly Lodge (Flagship)</span><span style="font-size:11px;color:var(--gold);font-weight:600;">22 guests</span></div>
+          <div style="display:flex;justify-content:space-between;padding:12px 16px;background:#F5EDD8;border-radius:8px;"><span style="font-size:12px;font-weight:500;color:var(--slate);">Heavenly Duplexes</span><span style="font-size:11px;color:var(--gold);font-weight:600;">24 guests</span></div>
+          <div style="display:flex;justify-content:space-between;padding:12px 16px;background:#F5EDD8;border-radius:8px;"><span style="font-size:12px;font-weight:500;color:var(--slate);">Salmon Run Lodge</span><span style="font-size:11px;color:var(--gold);font-weight:600;">18 guests</span></div>
+          <div style="display:flex;justify-content:space-between;padding:12px 16px;background:#F5EDD8;border-radius:8px;"><span style="font-size:12px;font-weight:500;color:var(--slate);">Scotch Run + 4 Acre Flats</span><span style="font-size:11px;color:var(--gold);font-weight:600;">Family add-on</span></div>
+        </div>
+
+        <a href="#inquiry" class="btn-gold">Inquire — Hub 1</a>
+      </div>
+
+      <!-- Vendors -->
+      <div>
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">Hub 1 · Local Vendors</div>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:40px;">
+          <div class="vendor-card">
+            <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Event Planning</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:4px;">True North Events</div>
+            <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.7;">Full-service Alaska wedding and event planning. Coordination, vendor management, and day-of logistics.</p>
+          </div>
+          <div class="vendor-card">
+            <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Photography</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:4px;">Best Route Productions</div>
+            <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.7;">Destination wedding photography and videography. Specializes in outdoor Alaskan landscapes.</p>
+          </div>
+          <div class="vendor-card" style="background:#F5EDD8;border-color:rgba(197,160,89,0.2);">
+            <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Tents & Rentals · All Hubs</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:4px;">L&R Rentals</div>
+            <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.7;">Homer-based tent, chair, and table rental serving all three hubs. Delivery and setup included.</p>
+          </div>
+          <div class="vendor-card" style="background:#F5EDD8;border-color:rgba(197,160,89,0.2);">
+            <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Wedding Planning · All Hubs</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:4px;">Wild Rose Weddings</div>
+            <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.7;">Dylan — Regional Alaska wedding specialist serving all three hubs across the Kenai Peninsula.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOREST PANEL -->
+    <div id="panel-forest" class="venue-panel" style="grid-template-columns:1fr 1fr;gap:48px;">
+      <div>
+        <div style="height:300px;background:linear-gradient(145deg,#D4C4A0,#A89060);border-radius:16px;margin-bottom:32px;display:flex;align-items:flex-end;padding:28px;">
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-bottom:6px;">Hub 2 · The Heartbeat</div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.2);">Soldotna / Sterling</div></div>
+        </div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--slate);font-weight:400;margin-bottom:16px;">Forest Retreats</h3>
+        <p style="font-size:14px;font-weight:300;color:#4A6070;line-height:1.85;margin-bottom:24px;">Immersed in the boreal forest of the Kenai Peninsula. Moose & Spruce's 10-acre property with 7 cabins creates a true wilderness retreat — perfect for intimate weddings, corporate off-sites, and multi-family gatherings.</p>
+        <p style="font-size:13px;font-weight:300;color:#8A9BAB;line-height:1.8;margin-bottom:32px;">Ideal for corporate retreats, team-building events, wellness retreats, and rustic-luxury weddings.</p>
+
+        <div style="margin-bottom:32px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Capacity</div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div><div style="display:flex;justify-content:space-between;font-size:11px;font-weight:500;color:var(--slate);margin-bottom:6px;"><span>Ceremony (outdoor)</span><span style="color:var(--gold);">55 guests</span></div><div class="cap-bar"><div class="cap-fill" style="width:73%;"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:11px;font-weight:500;color:var(--slate);margin-bottom:6px;"><span>Lodging (on-property)</span><span style="color:var(--gold);">44 guests</span></div><div class="cap-bar"><div class="cap-fill" style="width:59%;"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:11px;font-weight:500;color:var(--slate);margin-bottom:6px;"><span>Seated Dinner</span><span style="color:var(--gold);">40 guests</span></div><div class="cap-bar"><div class="cap-fill" style="width:53%;"></div></div></div>
+          </div>
+        </div>
+
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">Properties Available</div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:32px;">
+          <div style="display:flex;justify-content:space-between;padding:12px 16px;background:#FBF3EC;border-radius:8px;"><span style="font-size:12px;font-weight:500;color:var(--slate);">Alaska Moose & Spruce (Keen Eye)</span><span style="font-size:11px;color:var(--gold);font-weight:600;">28 guests</span></div>
+          <div style="display:flex;justify-content:space-between;padding:12px 16px;background:#FBF3EC;border-radius:8px;"><span style="font-size:12px;font-weight:500;color:var(--slate);">Kenai Adventure Cabins</span><span style="font-size:11px;color:var(--gold);font-weight:600;">16 guests</span></div>
+        </div>
+
+        <a href="#inquiry" class="btn-gold">Inquire — Hub 2</a>
+      </div>
+
+      <div>
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">Hub 2 · Local Vendors</div>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:40px;">
+          <div class="vendor-card">
+            <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Floral Design</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:4px;">Tundra Rose Florals</div>
+            <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.7;">Alaska-grown florals and event floral installations. Wildflower arrangements, ceremony arches, and reception centerpieces.</p>
+          </div>
+          <div class="vendor-card">
+            <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Catering</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:4px;">Kenai Catering</div>
+            <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.7;">Locally-sourced Kenai Peninsula cuisine. Farm-to-table menus, fresh-caught salmon dinners, and custom event packages.</p>
+          </div>
+          <div class="vendor-card" style="background:#F5EDD8;border-color:rgba(197,160,89,0.2);">
+            <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Tents & Rentals · All Hubs</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:4px;">L&R Rentals</div>
+            <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.7;">Homer-based tent, chair, and table rental serving all three hubs. Delivery and setup included.</p>
+          </div>
+          <div class="vendor-card" style="background:#F5EDD8;border-color:rgba(197,160,89,0.2);">
+            <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Wedding Planning · All Hubs</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:4px;">Wild Rose Weddings</div>
+            <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.7;">Dylan — Regional Alaska wedding specialist serving all three hubs across the Kenai Peninsula.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OCEAN PANEL -->
+    <div id="panel-ocean" class="venue-panel" style="grid-template-columns:1fr 1fr;gap:48px;">
+      <div>
+        <div style="height:300px;background:linear-gradient(145deg,#A8C4D8,#5888A8);border-radius:16px;margin-bottom:32px;display:flex;align-items:flex-end;padding:28px;">
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-bottom:6px;">Hub 3 · The Horizon</div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.2);">Homer · Kachemak Bay</div></div>
+        </div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--slate);font-weight:400;margin-bottom:16px;">Ocean & Bay Elopements</h3>
+        <p style="font-size:14px;font-weight:300;color:#4A6070;line-height:1.85;margin-bottom:24px;">With panoramic views of Kachemak Bay and the Kenai Mountains, Homer is Alaska at its most cinematic. Baycrest Lodge's intimate setting is made for boutique elopements; Driftwood Inn hosts larger celebrations.</p>
+        <p style="font-size:13px;font-weight:300;color:#8A9BAB;line-height:1.8;margin-bottom:32px;">Ideal for elopements, anniversary dinners, intimate ceremonies, and waterfront receptions.</p>
+
+        <div style="margin-bottom:32px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Capacity</div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div><div style="display:flex;justify-content:space-between;font-size:11px;font-weight:500;color:var(--slate);margin-bottom:6px;"><span>Ceremony (combined)</span><span style="color:var(--gold);">85+ guests</span></div><div class="cap-bar"><div class="cap-fill" style="width:100%;"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:11px;font-weight:500;color:var(--slate);margin-bottom:6px;"><span>Baycrest Lodge (intimate)</span><span style="color:var(--gold);">20 guests</span></div><div class="cap-bar"><div class="cap-fill" style="width:24%;"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:11px;font-weight:500;color:var(--slate);margin-bottom:6px;"><span>Driftwood Inn (large events)</span><span style="color:var(--gold);">50+ guests</span></div><div class="cap-bar"><div class="cap-fill" style="width:65%;"></div></div></div>
+          </div>
+        </div>
+
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">Properties Available</div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:32px;">
+          <div style="display:flex;justify-content:space-between;padding:12px 16px;background:#EBF2F8;border-radius:8px;"><span style="font-size:12px;font-weight:500;color:var(--slate);">Baycrest Lodge</span><span style="font-size:11px;color:var(--gold);font-weight:600;">20 guests</span></div>
+          <div style="display:flex;justify-content:space-between;padding:12px 16px;background:#EBF2F8;border-radius:8px;"><span style="font-size:12px;font-weight:500;color:var(--slate);">Driftwood Inn & Lodges</span><span style="font-size:11px;color:var(--gold);font-weight:600;">50+ guests</span></div>
+          <div style="display:flex;justify-content:space-between;padding:12px 16px;background:#EBF2F8;border-radius:8px;"><span style="font-size:12px;font-weight:500;color:var(--slate);">Jellyfish / Ocean Bluff</span><span style="font-size:11px;color:var(--gold);font-weight:600;">10 guests</span></div>
+        </div>
+
+        <a href="#inquiry" class="btn-gold">Inquire — Hub 3</a>
+      </div>
+
+      <div>
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">Hub 3 · Local Vendors</div>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:40px;">
+          <div class="vendor-card">
+            <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Photography</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:4px;">Uliana Reutov</div>
+            <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.7;">Fine art wedding and elopement photography. Specializes in Homer's dramatic coastal landscapes and Kachemak Bay light.</p>
+          </div>
+          <div class="vendor-card" style="background:#F5EDD8;border-color:rgba(197,160,89,0.2);">
+            <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Tents & Rentals · All Hubs</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:4px;">L&R Rentals</div>
+            <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.7;">Homer-based tent, chair, and table rental serving all three hubs. Delivery and setup included.</p>
+          </div>
+          <div class="vendor-card" style="background:#F5EDD8;border-color:rgba(197,160,89,0.2);">
+            <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Wedding Planning · All Hubs</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:4px;">Wild Rose Weddings</div>
+            <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.7;">Dylan — Regional Alaska wedding specialist serving all three hubs across the Kenai Peninsula.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INQUIRY FORM -->
+<section id="inquiry" style="padding:100px 0;background:#fff;">
+  <div style="max-width:800px;margin:0 auto;padding:0 32px;">
+    <div style="text-align:center;margin-bottom:56px;" class="reveal">
+      <div class="section-label" style="justify-content:center;"><span>Start Your Inquiry</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:16px;">Let's Plan Your Alaska Moment.</h2>
+      <p style="font-size:15px;font-weight:300;color:#8A9BAB;">Our concierge team responds within 24 hours with availability and a custom quote.</p>
+    </div>
+
+    <div class="glass" style="border-radius:20px;padding:56px;" class="reveal">
+      <form onsubmit="handleInquiry(event)">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;">
+          <div><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Kate" required></div>
+          <div><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Baldwin" required></div>
+        </div>
+        <div style="margin-bottom:20px;"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="you@example.com" required></div>
+        <div style="margin-bottom:20px;"><label class="form-label">Phone Number</label><input type="tel" class="form-input" placeholder="(555) 000-0000"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;">
+          <div>
+            <label class="form-label">Event Type</label>
+            <select class="form-input" style="appearance:none;cursor:pointer;">
+              <option>Wedding Ceremony</option>
+              <option>Elopement</option>
+              <option>Corporate Retreat</option>
+              <option>Family Reunion</option>
+              <option>Anniversary Event</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label">Preferred Hub</label>
+            <select class="form-input" style="appearance:none;cursor:pointer;">
+              <option>Hub 1 — Cooper Landing (Riverfront)</option>
+              <option>Hub 2 — Soldotna (Forest)</option>
+              <option>Hub 3 — Homer (Ocean)</option>
+              <option>Not Sure — Help Me Choose</option>
+            </select>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;">
+          <div><label class="form-label">Event Date</label><input type="date" class="form-input"></div>
+          <div><label class="form-label">Guest Count</label><input type="number" class="form-input" placeholder="e.g. 45" min="2" max="200"></div>
+        </div>
+        <div style="margin-bottom:32px;"><label class="form-label">Tell Us About Your Vision</label><textarea class="form-input" rows="5" placeholder="Describe your ideal event — setting preferences, any special needs, dietary restrictions, accommodation requirements..." style="resize:vertical;"></textarea></div>
+        <button type="submit" class="btn-gold" style="width:100%;text-align:center;padding:18px;">Submit Inquiry — We'll Be in Touch Within 24 Hours</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#2C3E50;padding:56px 32px 32px;">
+  <div style="max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px;margin-bottom:40px;">
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;margin-bottom:4px;">The Last Frontier</div>
+      <div style="font-size:9px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Collection · Weddings & Events</div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.35);font-weight:300;line-height:1.8;">Cooper Landing, AK 99572<br>(907) 599-0126<br>info@lastfrontiercollection.com</div>
+    </div>
+    <div style="display:flex;gap:48px;">
+      <div>
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Venues</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="#" onclick="switchVenue('riverfront')" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Riverfront — Hub 1</a>
+          <a href="#" onclick="switchVenue('forest')" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Forest — Hub 2</a>
+          <a href="#" onclick="switchVenue('ocean')" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Ocean — Hub 3</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Collection</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="index.html" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Main Site</a>
+          <a href="index.html#paths" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">The Circuit</a>
+          <a href="index.html#concierge" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Concierge</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;font-size:10px;color:rgba(255,255,255,0.25);text-align:center;">© 2026 The Last Frontier Collection. All rights reserved.</div>
+</footer>
+
+<script>
+function switchVenue(v){
+  ['riverfront','forest','ocean'].forEach(x=>{
+    document.querySelectorAll('.venue-btn').forEach((b,i)=>{ if(['riverfront','forest','ocean'][i]===x) b.classList.toggle('active',x===v); });
+    const p=document.getElementById('panel-'+x);
+    if(p){ p.classList.toggle('active',x===v); }
+  });
+  // re-sync buttons by index
+  const btns=document.querySelectorAll('.venue-btn');
+  const map={riverfront:0,forest:1,ocean:2};
+  btns.forEach((b,i)=>b.classList.toggle('active',i===map[v]));
+}
+
+function handleInquiry(e){
+  e.preventDefault();
+  alert('Thank you! Your inquiry has been received. Our concierge team will respond within 24 hours.\n\nFareHarbor integration will be activated here for deposits.');
+}
+
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
