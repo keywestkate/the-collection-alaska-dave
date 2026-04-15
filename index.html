@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Last Frontier Collection — Alaska's Premier Experience Ecosystem</title>
+<meta name="description" content="Three destination hubs. One master guide. Luxury fishing, lodging, weddings, and events across Alaska's Kenai Peninsula.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          glacier: '#F8FAFB',
+          slate:   '#2C3E50',
+          gold:    '#C5A059',
+          'gold-light': '#D4B87A',
+          'gold-pale':  '#F5EDD8',
+          'slate-mid':  '#4A6070',
+          'slate-light':'#8A9BAB',
+        },
+        fontFamily: {
+          sans:  ['Montserrat', 'sans-serif'],
+          serif: ['Playfair Display', 'serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --gold: #C5A059;
+    --slate: #2C3E50;
+    --glacier: #F8FAFB;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--glacier); color: var(--slate); font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(160deg, #EEF4F7 0%, #F8FAFB 40%, #F0EDE8 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(197,160,89,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(100,160,200,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* ── GLASS CARD ── */
+  .glass {
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.9);
+    box-shadow: 0 8px 32px rgba(44,62,80,0.08);
+  }
+
+  /* ── GOLD LINE ── */
+  .gold-line::after {
+    content: '';
+    display: block;
+    width: 48px; height: 2px;
+    background: var(--gold);
+    margin-top: 14px;
+  }
+  .gold-line-center::after {
+    margin-left: auto; margin-right: auto;
+  }
+
+  /* ── CTA BUTTON ── */
+  .btn-gold {
+    background: var(--gold);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 14px 36px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .btn-gold:hover { background: #B08040; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(197,160,89,0.35); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--slate);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 13px 36px;
+    border: 1.5px solid var(--slate);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* ── NAV ── */
+  .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 500; transition: all 0.3s ease; }
+  .nav.scrolled { background: rgba(248,250,251,0.95); backdrop-filter: blur(12px); box-shadow: 0 1px 20px rgba(44,62,80,0.07); }
+
+  /* ── MOBILE MENU ── */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 490;
+    background: rgba(248,250,251,0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #2C3E50;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .mobile-menu a:hover { color: #C5A059; }
+  .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: #2C3E50; border-radius: 2px; transition: all 0.3s ease; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ── HUB SWITCHER ── */
+  .hub-tab { cursor: pointer; transition: all 0.3s ease; position: relative; }
+  .hub-tab::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%; right: 50%;
+    height: 2px;
+    background: var(--gold);
+    transition: all 0.3s ease;
+  }
+  .hub-tab.active::after { left: 0; right: 0; }
+  .hub-tab.active { color: var(--gold); }
+
+  .hub-panel { display: none; animation: fadeUp 0.4s ease; }
+  .hub-panel.active { display: grid; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── PROPERTY CARD ── */
+  .prop-card {
+    background: #fff;
+    border: 1px solid rgba(44,62,80,0.08);
+    transition: all 0.3s ease;
+  }
+  .prop-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(44,62,80,0.12); }
+
+  /* ── CAPACITY TOOL ── */
+  .capacity-bar {
+    height: 6px;
+    background: rgba(197,160,89,0.15);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .capacity-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), #D4B87A);
+    border-radius: 3px;
+    transition: width 0.6s ease;
+  }
+
+  /* ── VENDOR TAG ── */
+  .vendor-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+
+  /* ── CIRCUIT BAND ── */
+  .circuit-band {
+    background: linear-gradient(135deg, #2C3E50 0%, #1A2A38 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .circuit-band::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(197,160,89,0.15) 0%, transparent 70%);
+  }
+
+  /* ── ANIMATE ON SCROLL ── */
+  .reveal { opacity: 0; transform: translateY(24px); transition: all 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--  NAV                                                    -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<nav class="nav" id="mainNav">
+  <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+    <!-- Brand -->
+    <div>
+      <div class="font-serif text-slate text-lg tracking-wide leading-tight">The Last Frontier</div>
+      <div class="font-sans text-gold text-[9px] font-600 tracking-[0.25em] uppercase">Collection</div>
+    </div>
+    <!-- Desktop Links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#hubs" class="text-[11px] font-semibold tracking-[0.1em] uppercase text-slate-mid hover:text-gold transition-colors">The Hubs</a>
+      <a href="#circuit" class="text-[11px] font-semibold tracking-[0.1em] uppercase text-slate-mid hover:text-gold transition-colors">The Circuit</a>
+      <a href="#events" class="text-[11px] font-semibold tracking-[0.1em] uppercase text-slate-mid hover:text-gold transition-colors">Weddings & Events</a>
+      <a href="#plan" class="text-[11px] font-semibold tracking-[0.1em] uppercase text-slate-mid hover:text-gold transition-colors">Plan</a>
+      <a href="#" class="text-[11px] font-semibold tracking-[0.1em] uppercase text-slate-mid hover:text-gold transition-colors">Shop</a>
+    </div>
+    <!-- Right: CTA + Hamburger -->
+    <div class="flex items-center gap-4">
+      <a href="#" class="btn-gold text-[10px] py-3 px-6 fareharbor-trigger">Book Now</a>
+      <!-- Hamburger (mobile only) -->
+      <button class="hamburger md:hidden" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <a href="#hubs"    class="mobile-menu-link">The Hubs</a>
+  <a href="#circuit" class="mobile-menu-link">The Circuit</a>
+  <a href="#events"  class="mobile-menu-link">Weddings &amp; Events</a>
+  <a href="#plan"    class="mobile-menu-link">Plan</a>
+  <a href="#"        class="mobile-menu-link">Shop</a>
+  <a href="#" class="btn-gold text-[10px] py-3 px-8 mt-4 fareharbor-trigger">Book Now</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--  HERO                                                   -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="hero flex items-center justify-center px-8" style="padding-top: 100px;">
+  <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center min-h-screen py-24">
+
+    <!-- Left: Copy -->
+    <div>
+      <div class="inline-flex items-center gap-3 mb-8">
+        <div class="w-8 h-px bg-gold"></div>
+        <span class="text-[10px] font-semibold tracking-[0.25em] uppercase text-gold">Alaska's Premier Experience Ecosystem</span>
+      </div>
+      <h1 class="font-serif text-5xl md:text-6xl text-slate leading-[1.12] mb-6">
+        Where Alaska<br>
+        <em class="text-gold">Comes Alive.</em>
+      </h1>
+      <p class="text-slate-mid text-base font-light leading-relaxed mb-4 max-w-md">
+        Three destination hubs. One master guide. From the trophy rivers of Cooper Landing to the halibut waters of Homer — this is Alaska as it was meant to be experienced.
+      </p>
+      <p class="text-slate-mid text-sm font-light leading-relaxed mb-10 max-w-md">
+        Guided fishing. Luxury lodging. Grand weddings. Corporate retreats. All connected by The Alaska Circuit — our signature 10-day concierge journey.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#circuit" class="btn-gold fareharbor-trigger">Explore The Circuit</a>
+        <a href="#hubs" class="btn-outline">View All Hubs</a>
+      </div>
+
+      <!-- Stats row -->
+      <div class="flex gap-8 mt-14 pt-10 border-t border-slate/10">
+        <div>
+          <div class="font-serif text-3xl text-slate">3</div>
+          <div class="text-[10px] font-semibold tracking-[0.12em] uppercase text-slate-light mt-1">Destination Hubs</div>
+        </div>
+        <div>
+          <div class="font-serif text-3xl text-slate">12</div>
+          <div class="text-[10px] font-semibold tracking-[0.12em] uppercase text-slate-light mt-1">Properties</div>
+        </div>
+        <div>
+          <div class="font-serif text-3xl text-slate">10</div>
+          <div class="text-[10px] font-semibold tracking-[0.12em] uppercase text-slate-light mt-1">Day Circuit</div>
+        </div>
+        <div>
+          <div class="font-serif text-3xl text-slate">215<span class="text-xl">+</span></div>
+          <div class="text-[10px] font-semibold tracking-[0.12em] uppercase text-slate-light mt-1">Guest Capacity</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Glass card cluster -->
+    <div class="relative hidden md:block">
+      <!-- Main photo placeholder -->
+      <div class="glass rounded-2xl overflow-hidden w-full aspect-[4/5] flex items-end"
+           style="background: linear-gradient(160deg, #D4E8E0 0%, #B8D4C8 50%, #A0C0B0 100%);">
+        <div class="p-6 w-full">
+          <div class="glass rounded-xl p-4">
+            <div class="text-[10px] font-semibold tracking-[0.15em] uppercase text-gold mb-1">Featured Property</div>
+            <div class="font-serif text-slate text-lg">Alaska Heavenly Lodge</div>
+            <div class="text-slate-mid text-sm font-light">Cooper Landing · Hub 1</div>
+            <div class="flex items-center gap-2 mt-3">
+              <span class="text-[10px] font-semibold tracking-[0.1em] uppercase bg-gold-pale text-gold px-2 py-1">18 Acres</span>
+              <span class="text-[10px] font-semibold tracking-[0.1em] uppercase bg-gold-pale text-gold px-2 py-1">Private River</span>
+              <span class="text-[10px] font-semibold tracking-[0.1em] uppercase bg-gold-pale text-gold px-2 py-1">4 Cabins</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating badge top right -->
+      <div class="glass absolute -top-6 -right-6 rounded-xl p-5 text-center shadow-lg">
+        <div class="font-serif text-gold text-2xl">5.8K</div>
+        <div class="text-[9px] font-semibold tracking-[0.15em] uppercase text-slate-mid mt-1">YouTube</div>
+        <div class="text-[9px] font-semibold tracking-[0.15em] uppercase text-slate-mid">Subscribers</div>
+      </div>
+
+      <!-- Floating badge bottom left -->
+      <div class="glass absolute -bottom-6 -left-8 rounded-xl p-5 shadow-lg w-48">
+        <div class="text-[9px] font-semibold tracking-[0.15em] uppercase text-gold mb-2">Next Available</div>
+        <div class="font-serif text-slate text-base">June 12, 2026</div>
+        <div class="text-slate-mid text-xs font-light">The Alaska Circuit</div>
+        <a href="#" class="text-[9px] font-semibold tracking-[0.1em] uppercase text-gold mt-2 inline-block fareharbor-trigger">Reserve →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--  EYEBROW BAND                                           -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="bg-white border-y border-slate/8 py-5 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-8 flex flex-wrap items-center justify-center gap-12 text-[10px] font-semibold tracking-[0.2em] uppercase text-slate-light">
+    <span>Kenai River · Trophy Trout</span>
+    <span class="text-gold">✦</span>
+    <span>World-Class Salmon Guiding</span>
+    <span class="text-gold">✦</span>
+    <span>Pacific Halibut · Homer</span>
+    <span class="text-gold">✦</span>
+    <span>Grand Weddings & Elopements</span>
+    <span class="text-gold">✦</span>
+    <span>Corporate Retreats</span>
+    <span class="text-gold">✦</span>
+    <span>Ford Bronco Fleet Transportation</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--  HUB SWITCHER                                           -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section id="hubs" class="py-24 px-8">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section header -->
+    <div class="text-center mb-16 reveal">
+      <div class="inline-flex items-center gap-3 mb-5">
+        <div class="w-8 h-px bg-gold"></div>
+        <span class="text-[10px] font-semibold tracking-[0.25em] uppercase text-gold">The Three Hubs</span>
+        <div class="w-8 h-px bg-gold"></div>
+      </div>
+      <h2 class="font-serif text-4xl text-slate mb-4">Choose Your Alaska</h2>
+      <p class="text-slate-mid text-base font-light max-w-xl mx-auto">Each hub offers a distinct Alaskan experience. Explore all three on The Circuit, or settle into the one that calls to you.</p>
+    </div>
+
+    <!-- Tab switcher -->
+    <div class="flex border-b border-slate/10 mb-12 reveal">
+      <button onclick="switchHub('hub1')" id="tab-hub1" class="hub-tab active flex-1 py-5 px-6 text-center text-[11px] font-semibold tracking-[0.12em] uppercase text-slate">
+        <div class="text-[9px] tracking-[0.2em] mb-1 opacity-60">Hub 1</div>
+        The Gateway
+        <div class="text-[9px] font-normal tracking-normal normal-case text-slate-light mt-1">Cooper Landing</div>
+      </button>
+      <button onclick="switchHub('hub2')" id="tab-hub2" class="hub-tab flex-1 py-5 px-6 text-center text-[11px] font-semibold tracking-[0.12em] uppercase text-slate-mid">
+        <div class="text-[9px] tracking-[0.2em] mb-1 opacity-60">Hub 2</div>
+        The Heartbeat
+        <div class="text-[9px] font-normal tracking-normal normal-case text-slate-light mt-1">Soldotna / Sterling</div>
+      </button>
+      <button onclick="switchHub('hub3')" id="tab-hub3" class="hub-tab flex-1 py-5 px-6 text-center text-[11px] font-semibold tracking-[0.12em] uppercase text-slate-mid">
+        <div class="text-[9px] tracking-[0.2em] mb-1 opacity-60">Hub 3</div>
+        The Horizon
+        <div class="text-[9px] font-normal tracking-normal normal-case text-slate-light mt-1">Homer</div>
+      </button>
+    </div>
+
+    <!-- HUB 1 PANEL -->
+    <div id="panel-hub1" class="hub-panel active grid md:grid-cols-3 gap-6">
+
+      <!-- Hero card -->
+      <div class="md:col-span-2 prop-card rounded-xl overflow-hidden">
+        <div class="h-64 flex items-end"
+             style="background: linear-gradient(160deg, #C8DCC8 0%, #98B898 100%);">
+          <div class="p-6">
+            <span class="text-[9px] font-semibold tracking-[0.2em] uppercase bg-white/80 text-forest-text px-2 py-1 rounded">Flagship Property</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between mb-3">
+            <div>
+              <h3 class="font-serif text-xl text-slate">Alaska Heavenly Lodge</h3>
+              <p class="text-slate-mid text-sm font-light">19260 Sterling Highway, Cooper Landing, AK 99572</p>
+            </div>
+            <a href="https://alaskaheavenly.com" target="_blank" class="text-[10px] font-semibold tracking-[0.1em] uppercase text-gold hover:underline">alaskaheavenly.com ↗</a>
+          </div>
+          <p class="text-slate-mid text-sm font-light leading-relaxed mb-4">18-acre flagship estate featuring 4 luxury cabins, hot tub, sauna, and private Upper Kenai River access. The crown jewel of Hub 1.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="vendor-tag bg-gold-pale text-gold">18 Acres</span>
+            <span class="vendor-tag bg-gold-pale text-gold">4 Luxury Cabins</span>
+            <span class="vendor-tag bg-gold-pale text-gold">Private River Access</span>
+            <span class="vendor-tag bg-gold-pale text-gold">Hot Tub + Sauna</span>
+            <span class="vendor-tag bg-gold-pale text-gold">Weddings</span>
+          </div>
+          <div class="mb-4">
+            <div class="flex justify-between text-[10px] font-semibold uppercase tracking-[0.1em] mb-2">
+              <span class="text-slate-mid">Capacity</span>
+              <span class="text-gold">22 guests</span>
+            </div>
+            <div class="capacity-bar"><div class="capacity-fill" style="width:29%"></div></div>
+          </div>
+          <a href="#" class="btn-gold fareharbor-trigger text-[10px] py-3 px-5">Inquire / Book</a>
+        </div>
+      </div>
+
+      <!-- Side cards -->
+      <div class="flex flex-col gap-6">
+        <div class="prop-card rounded-xl p-5">
+          <div class="h-28 rounded-lg mb-4 flex items-center justify-center"
+               style="background: linear-gradient(135deg, #D4E4D4, #B8CCB8);">
+            <span class="text-white font-serif text-lg opacity-80">Duplexes</span>
+          </div>
+          <h4 class="font-serif text-slate text-base mb-1">Heavenly Duplexes</h4>
+          <p class="text-slate-light text-xs font-light mb-3">Cooper Landing, AK · alaskaheavenly.com</p>
+          <p class="text-slate-mid text-xs font-light leading-relaxed mb-3">4 duplex units — 8 total guest rooms. Separate APNs from the main lodge.</p>
+          <div class="mb-3">
+            <div class="flex justify-between text-[10px] uppercase tracking-[0.1em] mb-1"><span class="text-slate-mid">Capacity</span><span class="text-gold">24 guests</span></div>
+            <div class="capacity-bar"><div class="capacity-fill" style="width:32%"></div></div>
+          </div>
+          <a href="#" class="text-[10px] font-semibold tracking-[0.1em] uppercase text-gold fareharbor-trigger">Book →</a>
+        </div>
+
+        <div class="prop-card rounded-xl p-5">
+          <h4 class="font-serif text-slate text-base mb-1">Salmon Run Lodge</h4>
+          <p class="text-slate-light text-xs font-light mb-2">Cooper Landing Area</p>
+          <p class="text-slate-mid text-xs font-light leading-relaxed mb-3">Mid-scale fishing lodge with cabins, bait shop, and fish processing. Perfect for serious anglers.</p>
+          <div class="mb-3">
+            <div class="flex justify-between text-[10px] uppercase tracking-[0.1em] mb-1"><span class="text-slate-mid">Capacity</span><span class="text-gold">18 guests</span></div>
+            <div class="capacity-bar"><div class="capacity-fill" style="width:24%"></div></div>
+          </div>
+          <a href="#" class="text-[10px] font-semibold tracking-[0.1em] uppercase text-gold fareharbor-trigger">Book →</a>
+        </div>
+
+        <div class="prop-card rounded-xl p-5 bg-glacier">
+          <div class="text-[9px] font-semibold tracking-[0.2em] uppercase text-gold mb-2">Also at Hub 1</div>
+          <div class="text-sm font-serif text-slate mb-1">4 Acre Flats (Foraker Flats)</div>
+          <div class="text-xs text-slate-light font-light mb-2">4BR/2BA · Built 2025 · Family Groups</div>
+          <div class="text-sm font-serif text-slate mb-1 mt-3">Scotch Run</div>
+          <div class="text-xs text-slate-light font-light">2BR/1BA Boutique Cottage · 2 Acres</div>
+        </div>
+      </div>
+
+      <!-- Hub 1 footer bar -->
+      <div class="md:col-span-3 glass rounded-xl p-6 flex flex-wrap gap-8 items-center justify-between">
+        <div>
+          <div class="text-[10px] font-semibold tracking-[0.2em] uppercase text-gold mb-1">Hub 1 Total Capacity</div>
+          <div class="font-serif text-slate text-2xl">~75 guests</div>
+        </div>
+        <div>
+          <div class="text-[10px] font-semibold tracking-[0.2em] uppercase text-slate-light mb-1">Best For</div>
+          <div class="flex gap-2 flex-wrap">
+            <span class="vendor-tag bg-white text-slate border border-slate/10">Grand Weddings</span>
+            <span class="vendor-tag bg-white text-slate border border-slate/10">Trophy Trout Fishing</span>
+            <span class="vendor-tag bg-white text-slate border border-slate/10">Riverfront Events</span>
+          </div>
+        </div>
+        <div>
+          <div class="text-[10px] font-semibold tracking-[0.2em] uppercase text-slate-light mb-2">Hub 1 Vendors</div>
+          <div class="text-xs text-slate-mid font-light">True North Events (Planning) · Best Route Productions (Photo)</div>
+        </div>
+        <a href="#" class="btn-gold fareharbor-trigger text-[10px] py-3 px-6">Plan at Hub 1</a>
+      </div>
+    </div>
+
+    <!-- HUB 2 PANEL -->
+    <div id="panel-hub2" class="hub-panel grid md:grid-cols-3 gap-6">
+
+      <div class="md:col-span-2 prop-card rounded-xl overflow-hidden">
+        <div class="h-64 flex items-end"
+             style="background: linear-gradient(160deg, #E8C8A8, #C8A478);">
+          <div class="p-6">
+            <span class="text-[9px] font-semibold tracking-[0.2em] uppercase bg-white/80 text-slate px-2 py-1 rounded">Flagship Property</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between mb-3">
+            <div>
+              <h3 class="font-serif text-xl text-slate">Alaska Moose & Spruce</h3>
+              <p class="text-slate-mid text-sm font-light">Brenda Way, Soldotna, AK</p>
+            </div>
+          </div>
+          <p class="text-slate-mid text-sm font-light leading-relaxed mb-4">10-acre property with 7 cabins, 1 house, and a maintenance shop. Also known as Keen Eye — Hub 2's flagship for salmon guiding and corporate retreats.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="vendor-tag bg-gold-pale text-gold">10 Acres</span>
+            <span class="vendor-tag bg-gold-pale text-gold">7 Cabins + 1 House</span>
+            <span class="vendor-tag bg-gold-pale text-gold">Lower Kenai River</span>
+            <span class="vendor-tag bg-gold-pale text-gold">Corporate Retreats</span>
+          </div>
+          <div class="mb-4">
+            <div class="flex justify-between text-[10px] font-semibold uppercase tracking-[0.1em] mb-2"><span class="text-slate-mid">Capacity</span><span class="text-gold">28 guests</span></div>
+            <div class="capacity-bar"><div class="capacity-fill" style="width:37%"></div></div>
+          </div>
+          <a href="#" class="btn-gold fareharbor-trigger text-[10px] py-3 px-5">Inquire / Book</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <div class="prop-card rounded-xl p-5">
+          <h4 class="font-serif text-slate text-base mb-1">Kenai Adventure Cabins</h4>
+          <p class="text-slate-light text-xs font-light mb-2">Sterling Highway Corridor</p>
+          <p class="text-slate-mid text-xs font-light leading-relaxed mb-3">Log cabins with direct Kenai River access. Built as an excursion base for serious salmon anglers.</p>
+          <div class="mb-3">
+            <div class="flex justify-between text-[10px] uppercase tracking-[0.1em] mb-1"><span class="text-slate-mid">Capacity</span><span class="text-gold">16 guests</span></div>
+            <div class="capacity-bar"><div class="capacity-fill" style="width:21%"></div></div>
+          </div>
+          <a href="#" class="text-[10px] font-semibold tracking-[0.1em] uppercase text-gold fareharbor-trigger">Book →</a>
+        </div>
+        <div class="prop-card rounded-xl p-5">
+          <h4 class="font-serif text-slate text-base mb-1">Kenai Kuik Cabins</h4>
+          <p class="text-slate-light text-xs font-light mb-2">Soldotna/Sterling Area</p>
+          <p class="text-slate-mid text-xs font-light leading-relaxed mb-3">Wilderness-adjacent log cabins focused on nature immersion and privacy.</p>
+          <a href="#" class="text-[10px] font-semibold tracking-[0.1em] uppercase text-gold fareharbor-trigger">Book →</a>
+        </div>
+      </div>
+
+      <div class="md:col-span-3 glass rounded-xl p-6 flex flex-wrap gap-8 items-center justify-between">
+        <div>
+          <div class="text-[10px] font-semibold tracking-[0.2em] uppercase text-gold mb-1">Hub 2 Total Capacity</div>
+          <div class="font-serif text-slate text-2xl">~55 guests</div>
+        </div>
+        <div>
+          <div class="text-[10px] font-semibold tracking-[0.2em] uppercase text-slate-light mb-1">Best For</div>
+          <div class="flex gap-2 flex-wrap">
+            <span class="vendor-tag bg-white text-slate border border-slate/10">World-Class Salmon</span>
+            <span class="vendor-tag bg-white text-slate border border-slate/10">Corporate Retreats</span>
+            <span class="vendor-tag bg-white text-slate border border-slate/10">Active Wellness</span>
+          </div>
+        </div>
+        <div>
+          <div class="text-[10px] font-semibold tracking-[0.2em] uppercase text-slate-light mb-2">Hub 2 Vendors</div>
+          <div class="text-xs text-slate-mid font-light">Tundra Rose Florals · Kenai Catering</div>
+        </div>
+        <a href="#" class="btn-gold fareharbor-trigger text-[10px] py-3 px-6">Plan at Hub 2</a>
+      </div>
+    </div>
+
+    <!-- HUB 3 PANEL -->
+    <div id="panel-hub3" class="hub-panel grid md:grid-cols-3 gap-6">
+
+      <div class="md:col-span-2 prop-card rounded-xl overflow-hidden">
+        <div class="h-64 flex items-end"
+             style="background: linear-gradient(160deg, #A8C4D8, #6898B8);">
+          <div class="p-6">
+            <span class="text-[9px] font-semibold tracking-[0.2em] uppercase bg-white/80 text-slate px-2 py-1 rounded">Premium Property</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between mb-3">
+            <div>
+              <h3 class="font-serif text-xl text-slate">Baycrest Lodge</h3>
+              <p class="text-slate-mid text-sm font-light">Homer, AK</p>
+            </div>
+            <a href="https://baycrestlodge.com" target="_blank" class="text-[10px] font-semibold tracking-[0.1em] uppercase text-gold hover:underline">baycrestlodge.com ↗</a>
+          </div>
+          <p class="text-slate-mid text-sm font-light leading-relaxed mb-4">Premium luxury lodging perched above Kachemak Bay with panoramic views. Hub 3's premier venue for boutique elopements and intimate events.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="vendor-tag bg-gold-pale text-gold">Panoramic Bay Views</span>
+            <span class="vendor-tag bg-gold-pale text-gold">Premium Luxury</span>
+            <span class="vendor-tag bg-gold-pale text-gold">Elopements</span>
+          </div>
+          <div class="mb-4">
+            <div class="flex justify-between text-[10px] font-semibold uppercase tracking-[0.1em] mb-2"><span class="text-slate-mid">Capacity</span><span class="text-gold">20 guests</span></div>
+            <div class="capacity-bar"><div class="capacity-fill" style="width:23%"></div></div>
+          </div>
+          <a href="#" class="btn-gold fareharbor-trigger text-[10px] py-3 px-5">Inquire / Book</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <div class="prop-card rounded-xl p-5">
+          <h4 class="font-serif text-slate text-base mb-1">Driftwood Inn & Lodges</h4>
+          <p class="text-slate-light text-xs font-light mb-2">Homer, AK · <a href="https://thedriftwoodinn.com" class="text-gold hover:underline" target="_blank">thedriftwoodinn.com</a></p>
+          <p class="text-slate-mid text-xs font-light leading-relaxed mb-3">Historic Homer inn with luxury lodges, RV sites, and charters. Hub 3's highest-capacity venue.</p>
+          <div class="mb-3">
+            <div class="flex justify-between text-[10px] uppercase tracking-[0.1em] mb-1"><span class="text-slate-mid">Capacity</span><span class="text-gold">50+ guests</span></div>
+            <div class="capacity-bar"><div class="capacity-fill" style="width:65%"></div></div>
+          </div>
+          <a href="#" class="text-[10px] font-semibold tracking-[0.1em] uppercase text-gold fareharbor-trigger">Book →</a>
+        </div>
+        <div class="prop-card rounded-xl p-5">
+          <h4 class="font-serif text-slate text-base mb-1">Jellyfish / Ocean Bluff</h4>
+          <p class="text-slate-light text-xs font-light mb-2">Kenai Coast / Clam Gulch</p>
+          <p class="text-slate-mid text-xs font-light leading-relaxed mb-3">Premium boutique 3BR/2BA unit with boats and vehicles included. Intimate and exclusive.</p>
+          <div class="mb-3">
+            <div class="flex justify-between text-[10px] uppercase tracking-[0.1em] mb-1"><span class="text-slate-mid">Capacity</span><span class="text-gold">10 guests</span></div>
+            <div class="capacity-bar"><div class="capacity-fill" style="width:13%"></div></div>
+          </div>
+          <a href="#" class="text-[10px] font-semibold tracking-[0.1em] uppercase text-gold fareharbor-trigger">Book →</a>
+        </div>
+        <div class="prop-card rounded-xl p-5 bg-glacier">
+          <h4 class="font-serif text-slate text-sm mb-1">Flat Fish Lodge</h4>
+          <p class="text-slate-light text-xs font-light mb-1">Homer, AK</p>
+          <p class="text-slate-mid text-xs font-light">Terminus lodge specializing in halibut & salmon charters.</p>
+        </div>
+      </div>
+
+      <div class="md:col-span-3 glass rounded-xl p-6 flex flex-wrap gap-8 items-center justify-between">
+        <div>
+          <div class="text-[10px] font-semibold tracking-[0.2em] uppercase text-gold mb-1">Hub 3 Total Capacity</div>
+          <div class="font-serif text-slate text-2xl">85+ guests</div>
+        </div>
+        <div>
+          <div class="text-[10px] font-semibold tracking-[0.2em] uppercase text-slate-light mb-1">Best For</div>
+          <div class="flex gap-2 flex-wrap">
+            <span class="vendor-tag bg-white text-slate border border-slate/10">Halibut Charters</span>
+            <span class="vendor-tag bg-white text-slate border border-slate/10">Boutique Elopements</span>
+            <span class="vendor-tag bg-white text-slate border border-slate/10">Ocean Experiences</span>
+          </div>
+        </div>
+        <div>
+          <div class="text-[10px] font-semibold tracking-[0.2em] uppercase text-slate-light mb-2">Hub 3 Vendors</div>
+          <div class="text-xs text-slate-mid font-light">L&R Rentals (Tents/Chairs · All Hubs) · Uliana Reutov (Photo)</div>
+        </div>
+        <a href="#" class="btn-gold fareharbor-trigger text-[10px] py-3 px-6">Plan at Hub 3</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--  THE CIRCUIT                                            -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section id="circuit" class="circuit-band py-24 px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="inline-flex items-center gap-3 mb-6">
+          <div class="w-8 h-px bg-gold"></div>
+          <span class="text-[10px] font-semibold tracking-[0.25em] uppercase text-gold">Signature Experience</span>
+        </div>
+        <h2 class="font-serif text-4xl text-white mb-6">The Alaska Circuit<br><em class="text-gold">10 Days. 3 Hubs. One Journey.</em></h2>
+        <p class="text-white/70 text-base font-light leading-relaxed mb-6">
+          Begin with trophy rainbow trout on the Upper Kenai at Hub 1. Move through salmon country at Hub 2. Finish with Pacific halibut in Homer's legendary waters at Hub 3.
+        </p>
+        <p class="text-white/70 text-sm font-light leading-relaxed mb-10">
+          Every detail is handled — airport pickup, Ford Bronco fleet transportation between all hubs, fully guided fishing, luxury lodging, and a concierge to manage it all. This is Alaska without the friction.
+        </p>
+        <div class="grid grid-cols-3 gap-6 mb-10">
+          <div class="text-center">
+            <div class="text-[9px] font-semibold tracking-[0.2em] uppercase text-gold mb-2">Days 1–3</div>
+            <div class="font-serif text-white text-sm">Hub 1<br>Cooper Landing</div>
+          </div>
+          <div class="text-center">
+            <div class="text-[9px] font-semibold tracking-[0.2em] uppercase text-gold mb-2">Days 4–7</div>
+            <div class="font-serif text-white text-sm">Hub 2<br>Soldotna</div>
+          </div>
+          <div class="text-center">
+            <div class="text-[9px] font-semibold tracking-[0.2em] uppercase text-gold mb-2">Days 8–10</div>
+            <div class="font-serif text-white text-sm">Hub 3<br>Homer</div>
+          </div>
+        </div>
+        <a href="#" class="btn-gold fareharbor-trigger">Book The Circuit</a>
+      </div>
+      <div class="glass rounded-2xl p-8" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12);">
+        <div class="text-[10px] font-semibold tracking-[0.2em] uppercase text-gold mb-6">What's Included</div>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div class="w-2 h-2 rounded-full bg-gold"></div>
+            </div>
+            <div>
+              <div class="text-white text-sm font-medium mb-0.5">Airport Pickup & Drop-off</div>
+              <div class="text-white/50 text-xs font-light">Anchorage (ANC) — fully handled, no rental car needed</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div class="w-2 h-2 rounded-full bg-gold"></div>
+            </div>
+            <div>
+              <div class="text-white text-sm font-medium mb-0.5">Ford Bronco Fleet Transportation</div>
+              <div class="text-white/50 text-xs font-light">All inter-hub transfers in the signature Bronco fleet</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div class="w-2 h-2 rounded-full bg-gold"></div>
+            </div>
+            <div>
+              <div class="text-white text-sm font-medium mb-0.5">10 Nights Luxury Lodging</div>
+              <div class="text-white/50 text-xs font-light">3 nights Hub 1 · 4 nights Hub 2 · 3 nights Hub 3</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div class="w-2 h-2 rounded-full bg-gold"></div>
+            </div>
+            <div>
+              <div class="text-white text-sm font-medium mb-0.5">Fully Guided Fishing — All Species</div>
+              <div class="text-white/50 text-xs font-light">Rainbow trout · King, Sockeye & Silver salmon · Pacific halibut</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div class="w-2 h-2 rounded-full bg-gold"></div>
+            </div>
+            <div>
+              <div class="text-white text-sm font-medium mb-0.5">Fish Processing & Shipping</div>
+              <div class="text-white/50 text-xs font-light">Your catch vacuum-sealed and shipped home</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div class="w-2 h-2 rounded-full bg-gold"></div>
+            </div>
+            <div>
+              <div class="text-white text-sm font-medium mb-0.5">Dedicated Concierge</div>
+              <div class="text-white/50 text-xs font-light">One point of contact for the entire journey</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--  CAPACITY PLANNING TOOL                                 -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section id="plan" class="py-24 px-8 bg-white">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12 reveal">
+      <div class="inline-flex items-center gap-3 mb-5">
+        <div class="w-8 h-px bg-gold"></div>
+        <span class="text-[10px] font-semibold tracking-[0.25em] uppercase text-gold">Event Planning Tool</span>
+        <div class="w-8 h-px bg-gold"></div>
+      </div>
+      <h2 class="font-serif text-4xl text-slate mb-4">Find Your Hub</h2>
+      <p class="text-slate-mid text-base font-light">Enter your guest count and we'll match you to the right hub and properties.</p>
+    </div>
+
+    <div class="glass rounded-2xl p-10 reveal">
+      <div class="mb-8">
+        <label class="block text-[10px] font-semibold tracking-[0.2em] uppercase text-slate mb-4">Number of Guests</label>
+        <div class="flex items-center gap-6">
+          <input type="range" id="guestSlider" min="2" max="120" value="20" oninput="updateCapacity(this.value)"
+                 class="flex-1 h-2 bg-gold-pale rounded-lg appearance-none cursor-pointer accent-gold">
+          <div class="glass rounded-xl px-6 py-3 text-center min-w-[80px]">
+            <div class="font-serif text-slate text-2xl" id="guestCount">20</div>
+            <div class="text-[9px] uppercase tracking-[0.15em] text-slate-light">guests</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="capacityResult" class="grid md:grid-cols-3 gap-4">
+        <div id="cap-hub1" class="rounded-xl p-5 border-2 border-transparent transition-all" style="background:#F0F7F0;">
+          <div class="text-[9px] font-semibold tracking-[0.2em] uppercase text-green-700 mb-2">Hub 1 · The Gateway</div>
+          <div class="font-serif text-slate text-lg mb-1">Cooper Landing</div>
+          <div class="text-xs text-slate-mid font-light mb-3">Max ~75 guests</div>
+          <div class="space-y-1.5 text-xs text-slate-mid font-light">
+            <div>Alaska Heavenly Lodge — 22</div>
+            <div>Heavenly Duplexes — 24</div>
+            <div>Salmon Run Lodge — 18</div>
+          </div>
+        </div>
+        <div id="cap-hub2" class="rounded-xl p-5 border-2 border-transparent transition-all" style="background:#FBF3EC;">
+          <div class="text-[9px] font-semibold tracking-[0.2em] uppercase text-orange-700 mb-2">Hub 2 · The Heartbeat</div>
+          <div class="font-serif text-slate text-lg mb-1">Soldotna / Sterling</div>
+          <div class="text-xs text-slate-mid font-light mb-3">Max ~55 guests</div>
+          <div class="space-y-1.5 text-xs text-slate-mid font-light">
+            <div>Moose & Spruce — 28</div>
+            <div>Kenai Adventure Cabins — 16</div>
+          </div>
+        </div>
+        <div id="cap-hub3" class="rounded-xl p-5 border-2 border-transparent transition-all" style="background:#EBF2F8;">
+          <div class="text-[9px] font-semibold tracking-[0.2em] uppercase text-blue-700 mb-2">Hub 3 · The Horizon</div>
+          <div class="font-serif text-slate text-lg mb-1">Homer</div>
+          <div class="text-xs text-slate-mid font-light mb-3">Max 85+ guests</div>
+          <div class="space-y-1.5 text-xs text-slate-mid font-light">
+            <div>Driftwood Inn — 50+</div>
+            <div>Baycrest Lodge — 20</div>
+            <div>Jellyfish / Ocean Bluff — 10</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="capacityRecommendation" class="mt-6 p-5 rounded-xl bg-gold-pale text-center hidden">
+        <div class="text-[10px] font-semibold tracking-[0.2em] uppercase text-gold mb-2">Recommended Hub</div>
+        <div id="recommendText" class="font-serif text-slate text-xl mb-3"></div>
+        <a href="#" class="btn-gold fareharbor-trigger text-[10px] py-3 px-6">Get a Custom Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--  VENDOR DIRECTORY                                       -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section id="events" class="py-24 px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14 reveal">
+      <div class="inline-flex items-center gap-3 mb-5">
+        <div class="w-8 h-px bg-gold"></div>
+        <span class="text-[10px] font-semibold tracking-[0.25em] uppercase text-gold">Weddings & Events</span>
+        <div class="w-8 h-px bg-gold"></div>
+      </div>
+      <h2 class="font-serif text-4xl text-slate mb-4">Our Trusted Vendors</h2>
+      <p class="text-slate-mid text-base font-light max-w-xl mx-auto">Carefully curated partners who know Alaska — and know how to make your event unforgettable.</p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-6">
+
+      <!-- Hub 1 vendors -->
+      <div class="prop-card rounded-xl p-6">
+        <div class="text-[9px] font-semibold tracking-[0.2em] uppercase text-green-700 mb-4 pb-3 border-b border-slate/8">Hub 1 · Cooper Landing</div>
+        <div class="space-y-5">
+          <div>
+            <div class="font-serif text-slate text-base mb-0.5">True North Events</div>
+            <div class="text-[10px] font-semibold tracking-[0.1em] uppercase text-gold mb-1">Event Planning</div>
+            <div class="text-xs text-slate-mid font-light">Full-service Alaska wedding & event planning.</div>
+          </div>
+          <div>
+            <div class="font-serif text-slate text-base mb-0.5">Best Route Productions</div>
+            <div class="text-[10px] font-semibold tracking-[0.1em] uppercase text-gold mb-1">Photography</div>
+            <div class="text-xs text-slate-mid font-light">Destination wedding photography.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hub 2 vendors -->
+      <div class="prop-card rounded-xl p-6">
+        <div class="text-[9px] font-semibold tracking-[0.2em] uppercase text-orange-700 mb-4 pb-3 border-b border-slate/8">Hub 2 · Soldotna</div>
+        <div class="space-y-5">
+          <div>
+            <div class="font-serif text-slate text-base mb-0.5">Tundra Rose Florals</div>
+            <div class="text-[10px] font-semibold tracking-[0.1em] uppercase text-gold mb-1">Floral Design</div>
+            <div class="text-xs text-slate-mid font-light">Alaska-grown florals and event installations.</div>
+          </div>
+          <div>
+            <div class="font-serif text-slate text-base mb-0.5">Kenai Catering</div>
+            <div class="text-[10px] font-semibold tracking-[0.1em] uppercase text-gold mb-1">Food & Beverage</div>
+            <div class="text-xs text-slate-mid font-light">Locally-sourced Kenai Peninsula cuisine.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hub 3 vendors -->
+      <div class="prop-card rounded-xl p-6">
+        <div class="text-[9px] font-semibold tracking-[0.2em] uppercase text-blue-700 mb-4 pb-3 border-b border-slate/8">Hub 3 · Homer</div>
+        <div class="space-y-5">
+          <div>
+            <div class="font-serif text-slate text-base mb-0.5">L&R Rentals</div>
+            <div class="text-[10px] font-semibold tracking-[0.1em] uppercase text-gold mb-1">Tents & Chairs · All Hubs</div>
+            <div class="text-xs text-slate-mid font-light">Homer-based rental company serving all 3 hubs.</div>
+          </div>
+          <div>
+            <div class="font-serif text-slate text-base mb-0.5">Uliana Reutov</div>
+            <div class="text-[10px] font-semibold tracking-[0.1em] uppercase text-gold mb-1">Photography</div>
+            <div class="text-xs text-slate-mid font-light">Fine art wedding & elopement photography.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regional -->
+      <div class="prop-card rounded-xl p-6" style="background: var(--gold-pale);">
+        <div class="text-[9px] font-semibold tracking-[0.2em] uppercase text-gold mb-4 pb-3 border-b border-gold/20">All Hubs · Regional</div>
+        <div>
+          <div class="font-serif text-slate text-base mb-0.5">Wild Rose Weddings</div>
+          <div class="text-[10px] font-semibold tracking-[0.1em] uppercase text-gold mb-1">Event Planning · Dylan</div>
+          <div class="text-xs text-slate-mid font-light">Regional Alaska wedding specialist serving all three hubs across the Kenai Peninsula.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--  FOOTER                                                 -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<footer class="bg-slate py-16 px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-4 gap-10 mb-12">
+      <div class="md:col-span-1">
+        <div class="font-serif text-white text-xl mb-1">The Last Frontier</div>
+        <div class="text-gold text-[9px] font-semibold tracking-[0.3em] uppercase mb-5">Collection</div>
+        <p class="text-white/50 text-xs font-light leading-relaxed mb-5">Alaska's premier experience ecosystem. Three hubs. One guide. Endless Alaska.</p>
+        <div class="text-white/40 text-xs font-light">Cooper Landing, AK 99572<br>(907) 599-0126<br>info@lastfrontiercollection.com</div>
+      </div>
+      <div>
+        <div class="text-[9px] font-semibold tracking-[0.2em] uppercase text-gold mb-4">The Hubs</div>
+        <div class="space-y-2">
+          <div class="text-white/60 text-xs font-light hover:text-gold cursor-pointer transition-colors">Hub 1 — Cooper Landing</div>
+          <div class="text-white/60 text-xs font-light hover:text-gold cursor-pointer transition-colors">Hub 2 — Soldotna / Sterling</div>
+          <div class="text-white/60 text-xs font-light hover:text-gold cursor-pointer transition-colors">Hub 3 — Homer</div>
+          <div class="text-white/60 text-xs font-light hover:text-gold cursor-pointer transition-colors">The Alaska Circuit</div>
+        </div>
+      </div>
+      <div>
+        <div class="text-[9px] font-semibold tracking-[0.2em] uppercase text-gold mb-4">Experiences</div>
+        <div class="space-y-2">
+          <div class="text-white/60 text-xs font-light hover:text-gold cursor-pointer transition-colors">Guided Fishing</div>
+          <div class="text-white/60 text-xs font-light hover:text-gold cursor-pointer transition-colors">Weddings & Events</div>
+          <div class="text-white/60 text-xs font-light hover:text-gold cursor-pointer transition-colors">Corporate Retreats</div>
+          <div class="text-white/60 text-xs font-light hover:text-gold cursor-pointer transition-colors">Transportation Fleet</div>
+          <div class="text-white/60 text-xs font-light hover:text-gold cursor-pointer transition-colors">Shop</div>
+        </div>
+      </div>
+      <div>
+        <div class="text-[9px] font-semibold tracking-[0.2em] uppercase text-gold mb-4">Book</div>
+        <div class="space-y-2 mb-6">
+          <div class="text-white/60 text-xs font-light hover:text-gold cursor-pointer transition-colors">FareHarbor Booking</div>
+          <div class="text-white/60 text-xs font-light hover:text-gold cursor-pointer transition-colors">Event Inquiries</div>
+          <div class="text-white/60 text-xs font-light hover:text-gold cursor-pointer transition-colors">Wedding Inquiries</div>
+        </div>
+        <a href="#" class="btn-gold text-[10px] py-3 px-5 fareharbor-trigger">Book Now</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-8 flex flex-wrap gap-4 items-center justify-between">
+      <div class="text-white/30 text-[10px]">© 2026 The Last Frontier Collection. All rights reserved.</div>
+      <div class="flex gap-6">
+        <a href="https://youtube.com/@CooperLandingFishingGuide" target="_blank" class="text-white/30 text-[10px] hover:text-gold transition-colors">YouTube</a>
+        <a href="https://instagram.com/i_guide_alaska" target="_blank" class="text-white/30 text-[10px] hover:text-gold transition-colors">Instagram</a>
+        <a href="https://facebook.com/clfishingguide" target="_blank" class="text-white/30 text-[10px] hover:text-gold transition-colors">Facebook</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--  JAVASCRIPT                                             -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<script>
+  // ── Nav scroll behavior
+  window.addEventListener('scroll', () => {
+    document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // ── Mobile menu toggle
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu   = document.getElementById('mobileMenu');
+
+  function toggleMobileMenu(forceClose) {
+    const isOpen = mobileMenu.classList.contains('open');
+    const shouldOpen = forceClose ? false : !isOpen;
+    mobileMenu.classList.toggle('open', shouldOpen);
+    hamburgerBtn.classList.toggle('open', shouldOpen);
+    hamburgerBtn.setAttribute('aria-expanded', shouldOpen);
+    document.body.style.overflow = shouldOpen ? 'hidden' : '';
+  }
+
+  hamburgerBtn.addEventListener('click', () => toggleMobileMenu());
+
+  // Close on any mobile menu link click
+  document.querySelectorAll('.mobile-menu-link, .mobile-menu .fareharbor-trigger').forEach(link => {
+    link.addEventListener('click', () => toggleMobileMenu(true));
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') toggleMobileMenu(true); });
+
+  // ── Hub switcher
+  function switchHub(hub) {
+    ['hub1','hub2','hub3'].forEach(h => {
+      document.getElementById('tab-' + h).classList.toggle('active', h === hub);
+      document.getElementById('panel-' + h).classList.toggle('active', h === hub);
+    });
+  }
+
+  // ── Capacity tool
+  function updateCapacity(val) {
+    document.getElementById('guestCount').textContent = val;
+    const n = parseInt(val);
+
+    const h1 = document.getElementById('cap-hub1');
+    const h2 = document.getElementById('cap-hub2');
+    const h3 = document.getElementById('cap-hub3');
+    const rec = document.getElementById('capacityRecommendation');
+    const recText = document.getElementById('recommendText');
+
+    // Reset borders
+    [h1, h2, h3].forEach(el => el.style.borderColor = 'transparent');
+
+    let recommend = '';
+
+    if (n <= 55) {
+      h2.style.borderColor = '#C5A059';
+      recommend = 'Hub 2 — The Heartbeat (Soldotna)';
+    }
+    if (n <= 75) {
+      h1.style.borderColor = '#C5A059';
+      if (n <= 55) recommend = 'Hub 1 or Hub 2 — Both can accommodate your group';
+      else recommend = 'Hub 1 — The Gateway (Cooper Landing)';
+    }
+    if (n > 75) {
+      h3.style.borderColor = '#C5A059';
+      recommend = 'Hub 3 — The Horizon (Homer) has the highest capacity at 85+ guests';
+    }
+    if (n > 85) {
+      [h1, h2, h3].forEach(el => el.style.borderColor = '#C5A059');
+      recommend = 'The Full Circuit — Consider combining all 3 hubs for groups over 85';
+    }
+
+    rec.classList.remove('hidden');
+    recText.textContent = recommend;
+  }
+
+  // ── Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ── FareHarbor placeholder
+  document.querySelectorAll('.fareharbor-trigger').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      alert('FareHarbor booking will open here. Paste your FareHarbor Lightframe script to activate.');
+    });
+  });
+</script>
+</body>
+</html>
