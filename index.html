@@ -92,15 +92,33 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
 </section>
 
 <!-- TICKER -->
-<div style="background:#fff;border-top:1px solid rgba(44,62,80,0.07);border-bottom:1px solid rgba(44,62,80,0.07);padding:18px 0;overflow:hidden;">
-  <div style="display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;">
-    <span>Kenai River · Trophy Trout</span><span style="color:var(--gold);">✦</span>
-    <span>King & Silver Salmon</span><span style="color:var(--gold);">✦</span>
-    <span>Pacific Halibut · Homer</span><span style="color:var(--gold);">✦</span>
-    <span>Grand Weddings & Elopements</span><span style="color:var(--gold);">✦</span>
-    <span>Corporate Retreats</span><span style="color:var(--gold);">✦</span>
-    <span>Ford Bronco Private Fleet</span><span style="color:var(--gold);">✦</span>
-    <span>Fish Processing & Shipping</span>
+<div style="background:#fff;border-top:1px solid rgba(44,62,80,0.07);border-bottom:1px solid rgba(44,62,80,0.07);padding:18px 0;overflow:hidden;position:relative;">
+  <style>
+    .marquee-track { display:flex; width:max-content; animation: marquee 28s linear infinite; }
+    .marquee-track:hover { animation-play-state: paused; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  </style>
+  <div class="marquee-track">
+    <!-- First set -->
+    <span style="display:flex;align-items:center;gap:36px;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;white-space:nowrap;padding-right:36px;">
+      <span>Kenai River · Trophy Trout</span><span style="color:#C5A059;">✦</span>
+      <span>King & Silver Salmon</span><span style="color:#C5A059;">✦</span>
+      <span>Pacific Halibut · Homer</span><span style="color:#C5A059;">✦</span>
+      <span>Grand Weddings & Elopements</span><span style="color:#C5A059;">✦</span>
+      <span>Corporate Retreats</span><span style="color:#C5A059;">✦</span>
+      <span>Ford Bronco Private Fleet</span><span style="color:#C5A059;">✦</span>
+      <span>Fish Processing & Shipping</span><span style="color:#C5A059;">✦</span>
+    </span>
+    <!-- Duplicate for seamless loop -->
+    <span style="display:flex;align-items:center;gap:36px;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;white-space:nowrap;padding-right:36px;">
+      <span>Kenai River · Trophy Trout</span><span style="color:#C5A059;">✦</span>
+      <span>King & Silver Salmon</span><span style="color:#C5A059;">✦</span>
+      <span>Pacific Halibut · Homer</span><span style="color:#C5A059;">✦</span>
+      <span>Grand Weddings & Elopements</span><span style="color:#C5A059;">✦</span>
+      <span>Corporate Retreats</span><span style="color:#C5A059;">✦</span>
+      <span>Ford Bronco Private Fleet</span><span style="color:#C5A059;">✦</span>
+      <span>Fish Processing & Shipping</span><span style="color:#C5A059;">✦</span>
+    </span>
   </div>
 </div>
 
