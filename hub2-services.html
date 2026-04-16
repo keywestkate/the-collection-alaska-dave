@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services · Hub 2 Soldotna | The Last Frontier Collection</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C5A059;--slate:#2C3E50;--glacier:#F8FAFB;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-serif;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--gold);}
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;transition:all 0.4s;}.nav.scrolled{background:rgba(248,250,251,0.97);backdrop-filter:blur(20px);box-shadow:0 1px 24px rgba(44,62,80,0.07);}
+.btn-gold{background:var(--gold);color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:14px 36px;border:none;cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}.btn-gold:hover{background:#A07830;}
+.btn-ghost{background:transparent;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:13px 36px;border:1.5px solid rgba(255,255,255,0.5);cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}
+.section-label{display:inline-flex;align-items:center;gap:12px;margin-bottom:16px;}.section-label::before,.section-label::after{content:'';display:block;width:28px;height:1px;background:var(--gold);}.section-label span{font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);}
+.hub-nav-tab{padding:14px 20px;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8A9BAB;border-bottom:2px solid transparent;cursor:pointer;transition:all 0.25s;text-decoration:none;display:inline-block;}.hub-nav-tab:hover,.hub-nav-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+.reveal{opacity:0;transform:translateY(20px);transition:all 0.6s ease;}.reveal.visible{opacity:1;transform:translateY(0);}
+.svc-card{background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:12px;overflow:hidden;transition:all 0.3s;}.svc-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(44,62,80,0.12);}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(44,62,80,0.06);">
+      <a href="hub1.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">← Hub 1 · Cooper Landing</a>
+      <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">Hub 2 of 3</div>
+      <a href="hub3.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">Hub 3 · Homer →</a>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;">
+      <a href="hub2.html" style="text-decoration:none;"><div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--slate);">The Heartbeat</div><div style="font-size:8px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Hub 2 · Soldotna / Sterling</div></a>
+      <div style="display:flex;">
+        <a href="hub2.html" class="hub-nav-tab">Home</a>
+        <a href="hub2-about.html" class="hub-nav-tab">About</a>
+        <a href="hub2-services.html" class="hub-nav-tab active">Services</a>
+        <a href="hub2-rates.html" class="hub-nav-tab">Rates</a>
+        <a href="contact.html" class="hub-nav-tab">Contact</a>
+      </div>
+      <a href="contact.html" class="btn-gold" style="font-size:9px;padding:11px 22px;">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<section style="min-height:50vh;background:linear-gradient(160deg,#D4C090 0%,#EDE4C8 50%,#F8FAFB 100%);display:flex;align-items:center;padding-top:130px;padding-bottom:80px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div class="section-label"><span>Soldotna / Sterling, Alaska</span></div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:64px;color:var(--slate);font-weight:400;line-height:1.05;margin-bottom:20px;">What We<br><em style="color:var(--gold);">Offer at Hub 2.</em></h1>
+    <p style="font-size:16px;font-weight:300;color:#4A6070;line-height:1.85;max-width:520px;">Kasilof and Lower Kenai River guided fishing, wilderness activities, the Keen Eye recovery program, and direct-book cabin lodging in the heart of the Kenai Peninsula.</p>
+  </div>
+</section>
+
+<section style="padding:100px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="margin-bottom:48px;" class="reveal">
+      <div class="section-label"><span>Core Service</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:12px;">Guided Fishing</h2>
+      <p style="font-size:15px;font-weight:300;color:#8A9BAB;max-width:560px;">The Kasilof Salmon Guide service — same team as Cooper Landing Fishing Guide, LLC — operates 20-foot drift boats on the Kasilof River and Lower Kenai. Back trolling, bobber fishing, spin fishing, and fly fishing for King, Sockeye, Silver salmon and Steelhead.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:48px;" class="reveal">
+      <div class="svc-card">
+        <div style="height:180px;background:linear-gradient(145deg,#C4A858,#8A7030);display:flex;align-items:flex-end;padding:20px;">
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:4px;">Kasilof River · Mid-May – July</div><div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">King Salmon</div></div>
+        </div>
+        <div style="padding:24px;">
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">The Kasilof has a distinct, separate King salmon run from the Kenai — a wilder, less pressured fishery. Trophy Chinook in the 50–80 lb class. Back trolling with plugs and spinners from 20-foot drift boats.</p>
+          <a href="hub2-rates.html" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">View Rates</a>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div style="height:180px;background:linear-gradient(145deg,#B89060,#7A5828);display:flex;align-items:flex-end;padding:20px;">
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:4px;">Kasilof &amp; Lower Kenai · June – August</div><div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">Sockeye Salmon</div></div>
+        </div>
+        <div style="padding:24px;">
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">The Lower Kenai and Kasilof both carry massive sockeye runs through late June and July. Bank fishing and drift techniques. The most productive red salmon fishing on the peninsula.</p>
+          <a href="hub2-rates.html" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">View Rates</a>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div style="height:180px;background:linear-gradient(145deg,#A88050,#685020);display:flex;align-items:flex-end;padding:20px;">
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:4px;">August – October</div><div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">Silver Salmon</div></div>
+        </div>
+        <div style="padding:24px;">
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">Silver (Coho) salmon run the Kasilof from early August through October. Aggressive, hard-fighting fish in the 10–15 lb range. Excellent on both conventional and fly tackle.</p>
+          <a href="hub2-rates.html" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">View Rates</a>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div style="height:180px;background:linear-gradient(145deg,#9A8870,#5A4838);display:flex;align-items:flex-end;padding:20px;">
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:4px;">August – October</div><div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">Steelhead</div></div>
+        </div>
+        <div style="padding:24px;">
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">The Kasilof River carries a fall steelhead run — one of Alaska's least-pressured and most coveted fisheries. Private boat only, 1–2 anglers. Contact for availability and conditions.</p>
+          <a href="contact.html" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Inquire</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Techniques callout -->
+    <div style="padding:40px;background:var(--slate);border-radius:16px;" class="reveal">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+        <div>
+          <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Technique</div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#fff;margin-bottom:16px;">Four Ways to Fish the Kasilof</h3>
+          <p style="font-size:14px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.85;">The Kasilof fishes differently from the Kenai. The guide team at Hub 2 uses four primary techniques depending on species, conditions, and guest preference — and they teach every technique on the water.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:rgba(255,255,255,0.08);border-radius:8px;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gold);min-width:32px;">01</div>
+            <div><div style="font-size:12px;font-weight:600;color:#fff;margin-bottom:2px;">Back Trolling</div><div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.6);">Plugs and spinners rowed upstream — primary King salmon technique</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:rgba(255,255,255,0.08);border-radius:8px;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gold);min-width:32px;">02</div>
+            <div><div style="font-size:12px;font-weight:600;color:#fff;margin-bottom:2px;">Bobber Fishing</div><div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.6);">Float presentation with bait or flies — dominant sockeye method</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:rgba(255,255,255,0.08);border-radius:8px;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gold);min-width:32px;">03</div>
+            <div><div style="font-size:12px;font-weight:600;color:#fff;margin-bottom:2px;">Spin Fishing</div><div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.6);">Casting lures and spinners — versatile across all species</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:rgba(255,255,255,0.08);border-radius:8px;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gold);min-width:32px;">04</div>
+            <div><div style="font-size:12px;font-weight:600;color:#fff;margin-bottom:2px;">Fly Fishing</div><div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.6);">Streamer and dry fly — excellent for Silver salmon and steelhead</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:100px 0;background:var(--glacier);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="margin-bottom:48px;" class="reveal">
+      <div class="section-label"><span>Wellness</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:12px;">Keen Eye Program</h2>
+      <p style="font-size:15px;font-weight:300;color:#8A9BAB;max-width:540px;">Active recovery designed for high-performance guests. Based at Alaska Moose &amp; Spruce — 10 acres, 7 cabins, wilderness adjacent.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px;" class="reveal">
+      <div style="padding:28px;background:#fff;border-radius:12px;border-top:3px solid var(--gold);">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Structured Recovery</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Keen Eye Program</div>
+        <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">Sleep optimization, cold exposure protocols, movement therapy, and nutrition coaching — all designed around your Alaska fishing itinerary. For athletes, executives, and serious adventurers.</p>
+      </div>
+      <div style="padding:28px;background:#fff;border-radius:12px;border-top:3px solid var(--gold);">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Cold Therapy</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Kenai River Immersion</div>
+        <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">Guided cold water immersion in the Kenai River. Controlled exposure sessions with timing protocol — the most natural cold plunge environment on earth, supervised by staff.</p>
+      </div>
+      <div style="padding:28px;background:#fff;border-radius:12px;border-top:3px solid var(--gold);">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Nature</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Forest Immersion</div>
+        <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">Guided slow-movement sessions through old-growth Kenai spruce. Breathwork, walking meditation, and intentional nature exposure in the Kenai National Wildlife Refuge.</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="reveal">
+      <div style="padding:28px;background:#fff;border-radius:12px;border:1px solid rgba(44,62,80,0.08);">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Wildlife</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Kenai Wildlife Refuge</div>
+        <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">1.97 million acres of protected wilderness. Moose, bears, eagles, and Dall sheep within minutes of Hub 2. Guided wildlife viewing available.</p>
+      </div>
+      <div style="padding:28px;background:#fff;border-radius:12px;border:1px solid rgba(44,62,80,0.08);">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Off-Road</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">ATV Trails</div>
+        <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">Mapped ATV and UTV trails through boreal forest and river flats. Equipment rentals coordinated through the Hub 2 concierge team.</p>
+      </div>
+      <div style="padding:28px;background:#fff;border-radius:12px;border:1px solid rgba(44,62,80,0.08);">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Corporate</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Group Retreats</div>
+        <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">Alaska Moose &amp; Spruce accommodates 30+ guests exclusively — ideal for corporate fishing retreats and team events. Direct booking, off Airbnb and VRBO.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--slate);padding:60px 0 32px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;"><div><div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;margin-bottom:4px;">The Heartbeat</div><div style="font-size:9px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Hub 2 · Soldotna / Sterling</div></div><a href="index.html" class="btn-ghost" style="font-size:9px;padding:10px 22px;">The Last Frontier Collection</a></div>
+    <div style="display:flex;gap:32px;flex-wrap:wrap;margin-bottom:32px;">
+      <a href="hub2.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Home</a>
+      <a href="hub2-about.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">About</a>
+      <a href="hub2-services.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Services</a>
+      <a href="hub2-rates.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Rates</a>
+      <a href="contact.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Contact</a>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;"><p style="font-size:11px;color:rgba(255,255,255,0.3);font-weight:300;">© 2025 The Last Frontier Collection. All rights reserved.</p><p style="font-size:11px;color:rgba(255,255,255,0.3);font-weight:300;">(907) 599-0126 · cooperlandingguide@gmail.com</p></div>
+  </div>
+</footer>
+<script>window.addEventListener('scroll',()=>{const nav=document.getElementById('nav');if(window.scrollY>40)nav.classList.add('scrolled');else nav.classList.remove('scrolled');});const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));</script>
+</body></html>
