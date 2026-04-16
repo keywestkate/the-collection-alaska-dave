@@ -80,6 +80,7 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
 @keyframes heroBadgePop { from{opacity:0;transform:scale(0.88);} to{opacity:1;transform:scale(1);} }
 @keyframes heroPulse { 0%,100%{opacity:0.6;} 50%{opacity:1;} }
 @keyframes scrollBounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(8px);} }
+@keyframes heroDrift { from{transform:scale(1) translateX(0);} to{transform:scale(1.08) translateX(-1%);} }
 .hero-word { animation: heroFadeUp 0.9s cubic-bezier(.22,1,.36,1) both; }
 .hero-badge { animation: heroBadgePop 0.6s cubic-bezier(.34,1.56,.64,1) both; }
 .hero-service-pill { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.14); border-radius:40px; padding:9px 20px; font-size:10px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.75); white-space:nowrap; transition:all 0.25s; }
@@ -88,8 +89,10 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
 <link rel="stylesheet" href="mobile.css">
 <section class="hero-split" style="min-height:100vh;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 420px;">
 
-  <!-- BACKGROUND full-bleed — NO overlay, full color -->
-  <img src="photos/fly-fishing-man.jpg" alt="Alaska wilderness fly fishing" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% center;z-index:0;">
+  <!-- BACKGROUND full-bleed — slow drift animation -->
+  <img src="photos/fly-fishing-man.jpg" alt="Alaska wilderness fly fishing" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% center;z-index:0;animation:heroDrift 22s ease-in-out forwards;">
+  <!-- Soft white overlay — photo shows through, text pops -->
+  <div style="position:absolute;inset:0;background:rgba(255,255,255,0.28);z-index:1;"></div>
   <!-- Gold shimmer top -->
   <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 0%,var(--gold) 30%,rgba(197,160,89,0.4) 70%,transparent 100%);z-index:10;"></div>
 
@@ -104,9 +107,9 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
     </div>
 
     <!-- Massive headline -->
-    <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.0;margin-bottom:32px;">
-      <span class="hero-word" style="animation-delay:0.2s;display:block;font-size:clamp(56px,7vw,96px);color:#1A5276;letter-spacing:-0.01em;">The Last Frontier</span>
-      <span class="hero-word" style="animation-delay:0.35s;display:block;font-size:clamp(60px,7.8vw,104px);color:var(--gold);font-style:italic;letter-spacing:-0.01em;">Collection.</span>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-weight:700;line-height:1.0;margin-bottom:32px;">
+      <span class="hero-word" style="animation-delay:0.2s;display:block;font-size:clamp(44px,5.5vw,76px);color:#1A5276;letter-spacing:0.12em;text-transform:uppercase;">The Last Frontier</span>
+      <span class="hero-word" style="animation-delay:0.35s;display:block;font-size:clamp(62px,8vw,110px);color:var(--gold);font-style:normal;letter-spacing:-0.01em;">Collection.</span>
     </h1>
 
     <!-- The big line -->
@@ -159,17 +162,15 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
     </div>
   </div>
 
-  <!-- RIGHT: Photo mosaic — NO overlays, pure color -->
-  <div class="hero-split-right" style="position:relative;z-index:5;display:flex;flex-direction:column;gap:0;padding:100px 40px 60px 0;">
-    <div style="flex:1;border-radius:16px 16px 0 0;overflow:hidden;min-height:180px;">
+  <!-- RIGHT: 3 square photos -->
+  <div class="hero-split-right" style="position:relative;z-index:5;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:110px 32px 60px 0;">
+    <div style="width:100%;aspect-ratio:1/1;border-radius:14px 14px 0 0;overflow:hidden;flex-shrink:0;">
       <img loading="lazy" src="photos/guide-kid-fishing.jpg" alt="Family fishing trip Alaska" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
     </div>
-    <div style="height:6px;"></div>
-    <div style="flex:1;overflow:hidden;min-height:180px;">
+    <div style="width:100%;aspect-ratio:1/1;overflow:hidden;flex-shrink:0;">
       <img loading="lazy" src="photos/girl-fishing.jpg" alt="Fishing the Kenai River" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
     </div>
-    <div style="height:6px;"></div>
-    <div style="flex:1;border-radius:0 0 16px 16px;overflow:hidden;min-height:180px;">
+    <div style="width:100%;aspect-ratio:1/1;border-radius:0 0 14px 14px;overflow:hidden;flex-shrink:0;">
       <img loading="lazy" src="photos/driftwood-wedding.jpg" alt="Alaska Weddings" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
     </div>
   </div>
