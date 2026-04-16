@@ -73,15 +73,13 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
 <!-- HERO -->
 <section class="hero-split" style="min-height:100vh;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 380px;">
 
-  <!-- Background photo -->
+  <!-- Background photo — NO overlay, full color -->
   <img src="photos/eagle.jpg" alt="Kachemak Bay Homer Alaska" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;">
-  <!-- Deep ocean-dark overlay -->
-  <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(5,15,28,0.93) 0%,rgba(5,15,28,0.80) 55%,rgba(5,15,28,0.42) 100%);z-index:1;"></div>
   <!-- Gold top bar -->
   <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 0%,var(--gold) 30%,rgba(197,160,89,0.4) 70%,transparent 100%);z-index:10;"></div>
 
-  <!-- LEFT: Content -->
-  <div class="hero-split-left" style="position:relative;z-index:5;display:flex;flex-direction:column;justify-content:center;padding:140px 60px 80px 80px;min-height:100vh;">
+  <!-- LEFT: White content panel -->
+  <div class="hero-split-left" style="position:relative;z-index:5;display:flex;flex-direction:column;justify-content:center;padding:140px 60px 80px 80px;min-height:100vh;background:rgba(255,255,255,0.92);">
 
     <div style="display:inline-flex;align-items:center;gap:14px;margin-bottom:32px;">
       <div style="width:36px;height:1px;background:var(--gold);"></div>
@@ -90,57 +88,51 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
     </div>
 
     <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.0;margin-bottom:28px;">
-      <span style="display:block;font-size:clamp(52px,6.5vw,90px);color:#fff;letter-spacing:-0.01em;">The</span>
+      <span style="display:block;font-size:clamp(52px,6.5vw,90px);color:var(--slate);letter-spacing:-0.01em;">The</span>
       <span style="display:block;font-size:clamp(58px,7.5vw,100px);color:var(--gold);font-style:italic;letter-spacing:-0.01em;">Horizon.</span>
     </h1>
 
-    <p style="font-size:16px;font-weight:300;color:rgba(255,255,255,0.65);line-height:1.85;max-width:480px;margin-bottom:20px;">Pacific halibut on Kachemak Bay. Ocean-bluff boutique lodging. A historic inn on the Homer Spit. Where the road ends and the adventure begins.</p>
+    <p style="font-size:16px;font-weight:300;color:#4A6070;line-height:1.85;max-width:480px;margin-bottom:20px;">Pacific halibut on Kachemak Bay. Ocean-bluff boutique lodging. A historic inn on the Homer Spit. Where the road ends and the adventure begins.</p>
 
     <div style="margin-bottom:40px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
-      <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,30px);color:#fff;font-style:italic;">Book your flight.</span>
-      <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,30px);color:#fff;font-style:italic;">Get to ANC.</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,30px);color:var(--slate);font-style:italic;">Book your flight.</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,30px);color:var(--slate);font-style:italic;">Get to ANC.</span>
       <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.6vw,32px);color:var(--gold);font-style:italic;">We do the rest.</span>
     </div>
 
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px;">
       <a href="#stay" style="background:var(--gold);color:#fff;font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;padding:16px 40px;text-decoration:none;transition:all 0.25s;" onmouseover="this.style.background='#A07830'" onmouseout="this.style.background='var(--gold)'">Explore Properties</a>
-      <a href="#fish" style="background:transparent;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;padding:15px 40px;border:1.5px solid rgba(255,255,255,0.3);text-decoration:none;transition:all 0.25s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)';this.style.color='#fff'">Plan Your Trip</a>
+      <a href="#fish" class="btn-outline" style="font-size:11px;padding:15px 40px;">Plan Your Trip</a>
     </div>
 
-    <div class="hero-stats" style="display:flex;gap:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.1);">
-      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#fff;">4</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:4px;">Properties</div></div>
-      <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
-      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#fff;">85+</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:4px;">Guest Capacity</div></div>
-      <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
-      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#fff;">180</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:4px;">Bay Miles</div></div>
-      <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
-      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#fff;">1</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:4px;">Famous Spit</div></div>
+    <div class="hero-stats" style="display:flex;gap:36px;padding-top:28px;border-top:1px solid rgba(44,62,80,0.12);">
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--slate);">4</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#8A9BAB;margin-top:4px;">Properties</div></div>
+      <div style="width:1px;background:rgba(44,62,80,0.1);"></div>
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--slate);">85+</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#8A9BAB;margin-top:4px;">Guest Capacity</div></div>
+      <div style="width:1px;background:rgba(44,62,80,0.1);"></div>
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--slate);">180</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#8A9BAB;margin-top:4px;">Bay Miles</div></div>
+      <div style="width:1px;background:rgba(44,62,80,0.1);"></div>
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--slate);">1</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#8A9BAB;margin-top:4px;">Famous Spit</div></div>
     </div>
   </div>
 
-  <!-- RIGHT: Photo stack -->
+  <!-- RIGHT: Pure photos — NO overlays -->
   <div class="hero-split-right" style="position:relative;z-index:5;display:flex;flex-direction:column;gap:6px;padding:110px 40px 60px 0;">
-    <div style="flex:1;border-radius:14px 14px 0 0;overflow:hidden;position:relative;min-height:170px;">
+    <div style="flex:1;border-radius:14px 14px 0 0;overflow:hidden;min-height:170px;">
       <img loading="lazy" src="photos/driftwood-wedding.jpg" alt="Driftwood Inn Homer Spit" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,15,28,0.68) 0%,transparent 55%);"></div>
-      <div style="position:absolute;bottom:14px;left:16px;font-size:9px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.8);">Driftwood Inn · Homer Spit</div>
     </div>
-    <div style="flex:1;overflow:hidden;position:relative;min-height:170px;">
-      <img loading="lazy" src="photos/alaska-night-2.jpg" alt="Kachemak Bay Views" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,15,28,0.68) 0%,transparent 55%);"></div>
-      <div style="position:absolute;bottom:14px;left:16px;font-size:9px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.8);">Kachemak Bay · Panoramic Views</div>
+    <div style="flex:1;overflow:hidden;min-height:170px;">
+      <img loading="lazy" src="photos/fishing-river.jpg" alt="Halibut Charters Kachemak Bay" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
     </div>
-    <div style="flex:1;border-radius:0 0 14px 14px;overflow:hidden;position:relative;min-height:170px;">
-      <img loading="lazy" src="photos/fishing-river.jpg" alt="Halibut Charters Homer" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,15,28,0.68) 0%,transparent 55%);"></div>
-      <div style="position:absolute;bottom:14px;left:16px;font-size:9px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.8);">Halibut &amp; Salmon Charters</div>
+    <div style="flex:1;border-radius:0 0 14px 14px;overflow:hidden;min-height:170px;">
+      <img loading="lazy" src="photos/salmon-catch.jpg" alt="King Salmon and Halibut" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
     </div>
   </div>
 
   <!-- Scroll indicator -->
   <div style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:6px;">
-    <span style="font-size:8px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.3);">Scroll</span>
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="animation:scrollBounce 1.6s ease-in-out infinite;"><path d="M5 8L10 13L15 8" stroke="rgba(197,160,89,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span style="font-size:8px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:rgba(44,62,80,0.4);">Scroll</span>
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="animation:scrollBounce 1.6s ease-in-out infinite;"><path d="M5 8L10 13L15 8" stroke="rgba(197,160,89,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </div>
 </section>
 <style>@keyframes scrollBounce{0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}</style>
@@ -170,14 +162,11 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
     <div class="prop-card reveal" style="margin-bottom:24px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;">
       <div style="min-height:360px;position:relative;overflow:hidden;">
         <img loading="lazy" src="photos/alaska-night-3.jpg" alt="Baycrest Lodge Homer Alaska" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,15,28,0.85) 0%,rgba(5,15,28,0.3) 60%,transparent 100%);"></div>
-        <div style="position:absolute;top:20px;left:20px;font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#1A3050;padding:5px 12px;border-radius:2px;">Flagship · baycrestlodge.com</div>
-        <div style="position:absolute;bottom:28px;left:28px;">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.4);margin-bottom:4px;">Baycrest Lodge</div>
-          <div style="font-size:11px;color:rgba(255,255,255,0.7);font-weight:300;">Homer, AK · Panoramic Kachemak Bay &amp; Kenai Mountain Views</div>
-        </div>
+        <div style="position:absolute;top:20px;left:20px;font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;background:rgba(255,255,255,0.95);color:#1A3050;padding:5px 12px;border-radius:2px;">Flagship · baycrestlodge.com</div>
       </div>
       <div style="padding:40px;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--slate);margin-bottom:4px;">Baycrest Lodge</div>
+        <div style="font-size:11px;color:#8A9BAB;font-weight:300;margin-bottom:20px;">Homer, AK · Panoramic Kachemak Bay &amp; Kenai Mountain Views</div>
         <p style="font-size:14px;font-weight:300;color:#4A6070;line-height:1.85;margin-bottom:24px;">Premium luxury lodging perched above Homer with unobstructed panoramic views of Kachemak Bay and the Kenai Mountains. Baycrest Lodge is the anchor property of Hub 3 — refined, remote, and extraordinary.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;">
           <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#EAF2F8;color:#2A5070;padding:4px 10px;border-radius:2px;">Bay Views</span>
@@ -199,12 +188,11 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="reveal">
 
       <div class="prop-card">
-        <div style="height:180px;position:relative;overflow:hidden;">
-          <img loading="lazy" src="photos/driftwood-wedding-2.jpg" alt="Driftwood Inn Homer" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,15,28,0.78) 0%,transparent 55%);"></div>
-          <div style="position:absolute;bottom:16px;left:16px;font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,0.3);">Driftwood Inn &amp; Lodges</div>
+        <div style="height:200px;overflow:hidden;">
+          <img loading="lazy" src="photos/driftwood-wedding-2.jpg" alt="Driftwood Inn Homer" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <div style="padding:24px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--slate);margin-bottom:12px;">Driftwood Inn &amp; Lodges</div>
           <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">Historic Homer Spit inn with luxury lodge suites, RV sites, and on-site charter boat operations. A beloved Homer institution. thedriftwoodinn.com</p>
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;">
             <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">Historic Inn</span>
@@ -223,12 +211,11 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
       </div>
 
       <div class="prop-card">
-        <div style="height:180px;position:relative;overflow:hidden;">
-          <img loading="lazy" src="photos/driftwood-wedding-3.jpg" alt="Jellyfish Ocean Bluff" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,15,28,0.78) 0%,transparent 55%);"></div>
-          <div style="position:absolute;bottom:16px;left:16px;font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,0.3);">Jellyfish · Ocean Bluff</div>
+        <div style="height:200px;overflow:hidden;">
+          <img loading="lazy" src="photos/driftwood-wedding-3.jpg" alt="Jellyfish Ocean Bluff" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <div style="padding:24px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--slate);margin-bottom:12px;">Jellyfish · Ocean Bluff</div>
           <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">Premium boutique unit at Clam Gulch on the Kenai Coast. 3BR/2BA with boats and vehicles included. A private ocean-bluff retreat for discerning travelers.</p>
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;">
             <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">3BR / 2BA</span>
@@ -244,12 +231,11 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
       </div>
 
       <div class="prop-card">
-        <div style="height:180px;position:relative;overflow:hidden;">
-          <img loading="lazy" src="photos/driftwood-wedding-4.jpg" alt="Flat Fish Lodge Homer" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,15,28,0.78) 0%,transparent 55%);"></div>
-          <div style="position:absolute;bottom:16px;left:16px;font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,0.3);">Flat Fish Lodge</div>
+        <div style="height:200px;overflow:hidden;">
+          <img loading="lazy" src="photos/driftwood-wedding-4.jpg" alt="Flat Fish Lodge Homer" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <div style="padding:24px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--slate);margin-bottom:12px;">Flat Fish Lodge</div>
           <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">Terminus lodge built around the halibut and salmon charter experience. Flat Fish Lodge connects directly to the Kachemak Bay fleet — wake up and walk to the boat.</p>
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;">
             <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">Charter Lodge</span>
