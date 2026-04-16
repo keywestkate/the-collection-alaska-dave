@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hub 1 · The Gateway — Cooper Landing | The Last Frontier Collection</title>
+<meta name="description" content="Riverfront estates, trophy rainbow trout, and grand celebrations on the Upper Kenai River. Alaska Heavenly Lodge and 4 additional properties — Cooper Landing, AK.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C5A059;--slate:#2C3E50;--glacier:#F8FAFB;--forest:#4A7A4A;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-serif;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;transition:all 0.4s;}
+.nav.scrolled{background:rgba(248,250,251,0.97);backdrop-filter:blur(20px);box-shadow:0 1px 24px rgba(44,62,80,0.07);}
+
+/* GLASS */
+.glass{background:rgba(255,255,255,0.78);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.92);box-shadow:0 8px 40px rgba(44,62,80,0.08);}
+
+/* BUTTONS */
+.btn-gold{background:var(--gold);color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:14px 36px;border:none;cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}
+.btn-gold:hover{background:#A07830;transform:translateY(-2px);box-shadow:0 8px 24px rgba(197,160,89,0.35);}
+.btn-outline{background:transparent;color:var(--slate);font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:13px 36px;border:1.5px solid rgba(44,62,80,0.3);cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+.btn-ghost{background:transparent;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:13px 36px;border:1.5px solid rgba(255,255,255,0.5);cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}
+.btn-ghost:hover{background:rgba(255,255,255,0.15);border-color:#fff;}
+
+/* SECTION LABEL */
+.section-label{display:inline-flex;align-items:center;gap:12px;margin-bottom:16px;}
+.section-label::before,.section-label::after{content:'';display:block;width:28px;height:1px;background:var(--gold);}
+.section-label span{font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);}
+
+/* NAV TABS */
+.hub-nav-tab{padding:14px 20px;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8A9BAB;border-bottom:2px solid transparent;cursor:pointer;transition:all 0.25s;text-decoration:none;display:inline-block;}
+.hub-nav-tab:hover,.hub-nav-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+
+/* PROPERTY CARD */
+.prop-card{background:#fff;border:1px solid rgba(44,62,80,0.08);transition:all 0.3s;border-radius:12px;overflow:hidden;}
+.prop-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(44,62,80,0.12);}
+
+/* CAP BAR */
+.cap-bar{height:5px;background:rgba(197,160,89,0.12);border-radius:3px;overflow:hidden;margin-top:6px;}
+.cap-fill{height:100%;background:linear-gradient(90deg,var(--gold),#D4B87A);border-radius:3px;}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(20px);transition:all 0.6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* SECTION TABS */
+.section-tab{cursor:pointer;padding:12px 24px;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8A9BAB;border-bottom:2px solid transparent;transition:all 0.25s;background:none;border-top:none;border-left:none;border-right:none;font-family:'Montserrat',sans-serif;}
+.section-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+.section-panel{display:none;}
+.section-panel.active{display:block;}
+
+/* VENDOR CARD */
+.vendor-card{background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:12px;padding:24px;transition:all 0.3s;}
+.vendor-card:hover{box-shadow:0 8px 32px rgba(44,62,80,0.10);}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <!-- Top bar: back to collection -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(44,62,80,0.06);">
+      <a href="index.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;display:flex;align-items:center;gap:8px;">
+        <span>←</span> The Last Frontier Collection
+      </a>
+      <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">Hub 1 of 3</div>
+      <a href="#" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">Hub 2 · Soldotna →</a>
+    </div>
+    <!-- Main nav -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;">
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--slate);line-height:1.1;">The Gateway</div>
+        <div style="font-size:8px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Hub 1 · Cooper Landing</div>
+      </div>
+      <div style="display:flex;align-items:center;">
+        <a href="#stay" class="hub-nav-tab">Stay</a>
+        <a href="#fish" class="hub-nav-tab">Fish</a>
+        <a href="#celebrate" class="hub-nav-tab">Celebrate</a>
+        <a href="#do" class="hub-nav-tab">Do</a>
+        <a href="#eat" class="hub-nav-tab">Eat</a>
+        <a href="#wellness" class="hub-nav-tab">Wellness</a>
+        <a href="index.html#shop" class="hub-nav-tab">Shop ↗</a>
+      </div>
+      <a href="#" class="btn-gold fh" style="font-size:9px;padding:11px 22px;">Book Hub 1</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="min-height:100vh;background:linear-gradient(160deg,#C4D8C4 0%,#E8F0E8 40%,#F8FAFB 100%);display:flex;align-items:flex-end;padding-top:110px;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(to bottom,rgba(248,250,251,0) 40%,rgba(248,250,251,0.95) 100%);pointer-events:none;"></div>
+  <div style="position:absolute;top:-100px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(197,160,89,0.12) 0%,transparent 65%);pointer-events:none;"></div>
+
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px 80px;width:100%;position:relative;z-index:2;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;">
+
+      <!-- Left: copy -->
+      <div>
+        <div class="section-label" style="margin-bottom:20px;"><span>Cooper Landing, Alaska</span></div>
+        <h1 style="font-family:'Cormorant Garamond',serif;font-size:72px;color:var(--slate);line-height:1.0;font-weight:400;margin-bottom:20px;">
+          The<br><em style="color:var(--gold);">Gateway.</em>
+        </h1>
+        <p style="font-size:16px;font-weight:300;color:#4A6070;line-height:1.85;max-width:460px;margin-bottom:36px;">Riverfront estates and grand celebrations on the Upper Kenai River. Trophy rainbow trout. 18-acre flagship lodge. Hub 1 is the Mothership — where every Alaska Circuit begins.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px;">
+          <a href="#stay" class="btn-gold fh">Explore Properties</a>
+          <a href="#fish" class="btn-outline">Plan Your Trip</a>
+        </div>
+        <!-- Quick stats -->
+        <div style="display:flex;gap:32px;">
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--slate);">5</div><div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;">Properties</div></div>
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--slate);">75</div><div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;">Guest Capacity</div></div>
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--slate);">18</div><div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;">Flagship Acres</div></div>
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--slate);">1</div><div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;">Private River</div></div>
+        </div>
+      </div>
+
+      <!-- Right: featured property card -->
+      <div>
+        <div class="glass" style="border-radius:20px;overflow:hidden;">
+          <div style="height:280px;background:linear-gradient(145deg,#8AAE8A,#4A7A4A);display:flex;align-items:flex-end;padding:24px;">
+            <div>
+              <div style="font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:6px;">Flagship Estate</div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.2);">Alaska Heavenly Lodge</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.7);font-weight:300;">19260 Sterling Highway, Cooper Landing, AK 99572</div>
+            </div>
+          </div>
+          <div style="padding:24px;">
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+              <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:4px 10px;border-radius:2px;">18 Acres</span>
+              <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:4px 10px;border-radius:2px;">4 Luxury Cabins</span>
+              <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:4px 10px;border-radius:2px;">Private River Access</span>
+              <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:4px 10px;border-radius:2px;">Hot Tub + Sauna</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div style="font-size:11px;color:#8A9BAB;font-weight:300;">22 guests · alaskaheavenly.com</div>
+              <a href="#" class="fh" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Book Now →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION TABS NAV -->
+<div style="background:#fff;border-bottom:1px solid rgba(44,62,80,0.08);position:sticky;top:110px;z-index:800;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:0;overflow-x:auto;">
+    <button class="section-tab active" onclick="switchSection('stay')">Stay</button>
+    <button class="section-tab" onclick="switchSection('fish')">Fish</button>
+    <button class="section-tab" onclick="switchSection('celebrate')">Celebrate</button>
+    <button class="section-tab" onclick="switchSection('do')">Do</button>
+    <button class="section-tab" onclick="switchSection('eat')">Eat</button>
+    <button class="section-tab" onclick="switchSection('wellness')">Wellness</button>
+  </div>
+</div>
+
+<!-- ═══════════════════ STAY ═══════════════════ -->
+<section id="stay" style="padding:80px 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="margin-bottom:48px;" class="reveal">
+      <div class="section-label"><span>Accommodations</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:12px;">Where You'll Stay</h2>
+      <p style="font-size:15px;font-weight:300;color:#8A9BAB;max-width:540px;">Five distinct properties along the Upper Kenai — from an 18-acre flagship estate to intimate boutique cottages.</p>
+    </div>
+
+    <!-- Featured: Alaska Heavenly -->
+    <div class="prop-card reveal" style="margin-bottom:24px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;">
+      <div style="background:linear-gradient(145deg,#8AAE8A,#4A7A4A);min-height:360px;display:flex;align-items:flex-end;padding:32px;position:relative;">
+        <div style="position:absolute;top:20px;left:20px;font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#2A5230;padding:5px 12px;border-radius:2px;">Flagship · Book Direct</div>
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.2);margin-bottom:4px;">Alaska Heavenly Lodge</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.7);font-weight:300;">19260 Sterling Highway · Cooper Landing, AK 99572</div>
+        </div>
+      </div>
+      <div style="padding:40px;">
+        <p style="font-size:14px;font-weight:300;color:#4A6070;line-height:1.85;margin-bottom:24px;">The crown jewel of Hub 1. This 18-acre riverfront estate features 4 luxury cabins, a hot tub, sauna, and exclusive private access to the Upper Kenai River. The operational heart of The Last Frontier Collection.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;">
+          <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F0F7F0;color:#2A5230;padding:4px 10px;border-radius:2px;">18 Acres</span>
+          <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F0F7F0;color:#2A5230;padding:4px 10px;border-radius:2px;">4 Luxury Cabins</span>
+          <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F0F7F0;color:#2A5230;padding:4px 10px;border-radius:2px;">Private River</span>
+          <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F0F7F0;color:#2A5230;padding:4px 10px;border-radius:2px;">Hot Tub</span>
+          <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F0F7F0;color:#2A5230;padding:4px 10px;border-radius:2px;">Sauna</span>
+          <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F0F7F0;color:#2A5230;padding:4px 10px;border-radius:2px;">Celebrations</span>
+        </div>
+        <div style="margin-bottom:28px;">
+          <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:500;color:var(--slate);margin-bottom:6px;"><span>Capacity</span><span style="color:var(--gold);">22 guests</span></div>
+          <div class="cap-bar"><div class="cap-fill" style="width:29%;"></div></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center;">
+          <a href="#" class="btn-gold fh" style="font-size:9px;padding:11px 22px;">Book Now</a>
+          <a href="https://alaskaheavenly.com" target="_blank" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">alaskaheavenly.com ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid: remaining 4 properties -->
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;" class="reveal">
+
+      <!-- Heavenly Duplexes -->
+      <div class="prop-card">
+        <div style="height:180px;background:linear-gradient(145deg,#A8C4A8,#6A9A6A);display:flex;align-items:flex-end;padding:20px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,0.2);">Heavenly Duplexes</div>
+        </div>
+        <div style="padding:24px;">
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">4 duplex units — 8 total guest rooms on separate APNs from the main lodge. Perfect overflow for larger groups or wedding parties.</p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;">
+            <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">8 Units</span>
+            <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">24 Guests</span>
+          </div>
+          <div style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--slate);margin-bottom:4px;"><span>Capacity</span><span style="color:var(--gold);">24 guests</span></div>
+            <div class="cap-bar"><div class="cap-fill" style="width:32%;"></div></div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <a href="#" class="btn-gold fh" style="font-size:9px;padding:9px 18px;">Book</a>
+            <a href="https://alaskaheavenly.com" target="_blank" style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">alaskaheavenly.com ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Salmon Run Lodge -->
+      <div class="prop-card">
+        <div style="height:180px;background:linear-gradient(145deg,#C4B898,#8A7858);display:flex;align-items:flex-end;padding:20px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,0.2);">Salmon Run Lodge</div>
+        </div>
+        <div style="padding:24px;">
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">Mid-scale fishing lodge with cabins, a bait shop, and fish processing on-site. Purpose-built for serious anglers and fishing groups.</p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;">
+            <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">Cabins</span>
+            <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">Bait Shop</span>
+            <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">Fish Processing</span>
+          </div>
+          <div style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--slate);margin-bottom:4px;"><span>Capacity</span><span style="color:var(--gold);">18 guests</span></div>
+            <div class="cap-bar"><div class="cap-fill" style="width:24%;"></div></div>
+          </div>
+          <a href="#" class="btn-gold fh" style="font-size:9px;padding:9px 18px;">Book</a>
+        </div>
+      </div>
+
+      <!-- 4 Acre Flats -->
+      <div class="prop-card">
+        <div style="height:180px;background:linear-gradient(145deg,#B8D4B8,#78A478);display:flex;align-items:flex-end;padding:20px;position:relative;">
+          <div style="position:absolute;top:14px;left:14px;font-size:8px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#2A5230;padding:3px 10px;border-radius:2px;">New · Built 2025</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,0.2);">4 Acre Flats</div>
+        </div>
+        <div style="padding:24px;">
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">Also known as Foraker Flats. Brand new 3-acre property with a 4BR/2BA home — ideal for multi-family groups or larger gatherings that want their own private space.</p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;">
+            <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">4BR / 2BA</span>
+            <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">3 Acres</span>
+            <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">Family Groups</span>
+          </div>
+          <a href="#" class="btn-gold fh" style="font-size:9px;padding:9px 18px;">Inquire</a>
+        </div>
+      </div>
+
+      <!-- Scotch Run -->
+      <div class="prop-card">
+        <div style="height:180px;background:linear-gradient(145deg,#D4C8A8,#A49878);display:flex;align-items:flex-end;padding:20px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,0.2);">Scotch Run</div>
+        </div>
+        <div style="padding:24px;">
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">A 2-acre boutique property with a 2BR/1BA cottage. Intimate and private — ideal for couples, honeymooners, or a quiet retreat after The Circuit.</p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;">
+            <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">2BR / 1BA</span>
+            <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">2 Acres</span>
+            <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">Boutique</span>
+          </div>
+          <a href="#" class="btn-gold fh" style="font-size:9px;padding:9px 18px;">Inquire</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FISH ═══════════════════ -->
+<section id="fish" style="padding:80px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;" class="reveal">
+      <div>
+        <div class="section-label"><span>Guided Fishing</span></div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:16px;">Trophy Trout.<br><em style="color:var(--gold);">Upper Kenai River.</em></h2>
+        <p style="font-size:15px;font-weight:300;color:#4A6070;line-height:1.85;margin-bottom:24px;">Cooper Landing sits at the headwaters of the Kenai River — one of the most productive trophy rainbow trout fisheries in the world. Dave Lisi has guided these waters for over a decade.</p>
+        <p style="font-size:14px;font-weight:300;color:#8A9BAB;line-height:1.8;margin-bottom:36px;">All guided days include waders, rods, tackle, flies, and local pickup from your Hub 1 property. Fish processing available at Salmon Run Lodge.</p>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:36px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border:1px solid rgba(44,62,80,0.1);border-radius:10px;">
+            <div><div style="font-size:11px;font-weight:600;color:var(--slate);margin-bottom:2px;">Full Day Guided Trout</div><div style="font-size:11px;color:#8A9BAB;font-weight:300;">8 hours · All gear included · Up to 2 anglers</div></div>
+            <div style="text-align:right;"><div style="font-size:16px;font-weight:600;color:var(--gold);">$295</div><div style="font-size:9px;color:#8A9BAB;">per person</div></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border:1px solid rgba(44,62,80,0.1);border-radius:10px;">
+            <div><div style="font-size:11px;font-weight:600;color:var(--slate);margin-bottom:2px;">Half Day Guided Trout</div><div style="font-size:11px;color:#8A9BAB;font-weight:300;">4 hours · All gear included · Up to 2 anglers</div></div>
+            <div style="text-align:right;"><div style="font-size:16px;font-weight:600;color:var(--gold);">$195</div><div style="font-size:9px;color:#8A9BAB;">per person</div></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border:1px solid rgba(197,160,89,0.3);border-radius:10px;background:#F5EDD8;">
+            <div><div style="font-size:11px;font-weight:600;color:var(--slate);margin-bottom:2px;">Private Boat — Full Day</div><div style="font-size:11px;color:#8A9BAB;font-weight:300;">Exclusive boat · Up to 4 anglers · All gear</div></div>
+            <div style="text-align:right;"><div style="font-size:16px;font-weight:600;color:var(--gold);">$885</div><div style="font-size:9px;color:#8A9BAB;">per boat</div></div>
+          </div>
+        </div>
+        <a href="#" class="btn-gold fh">Book a Guide Day</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <!-- Guide card -->
+        <div class="glass" style="border-radius:16px;padding:28px;">
+          <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">Your Guide</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--slate);margin-bottom:4px;">David Lisi</div>
+          <div style="font-size:11px;color:#8A9BAB;font-weight:300;margin-bottom:16px;">Master Guide & Founder · The Last Frontier Collection</div>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
+            <div style="font-size:12px;color:#4A6070;font-weight:300;">✓ US Coast Guard Certified</div>
+            <div style="font-size:12px;color:#4A6070;font-weight:300;">✓ Kenai River Guide School Certified</div>
+            <div style="font-size:12px;color:#4A6070;font-weight:300;">✓ CPR & First Aid Trained</div>
+            <div style="font-size:12px;color:#4A6070;font-weight:300;">✓ 5,800+ YouTube Subscribers</div>
+          </div>
+          <a href="https://youtube.com/@CooperLandingFishingGuide" target="_blank" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Watch on YouTube ↗</a>
+        </div>
+        <!-- Season card -->
+        <div style="background:var(--slate);border-radius:16px;padding:28px;">
+          <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">Best Season · Hub 1</div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:12px;color:rgba(255,255,255,0.7);font-weight:300;">Trophy Rainbow Trout</span><span style="font-size:11px;font-weight:600;color:var(--gold);">May – Oct</span></div>
+            <div style="height:1px;background:rgba(255,255,255,0.08);"></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:12px;color:rgba(255,255,255,0.7);font-weight:300;">King Salmon</span><span style="font-size:11px;font-weight:600;color:var(--gold);">Mid May – Jul</span></div>
+            <div style="height:1px;background:rgba(255,255,255,0.08);"></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:12px;color:rgba(255,255,255,0.7);font-weight:300;">Silver Salmon</span><span style="font-size:11px;font-weight:600;color:var(--gold);">Aug – Sep</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CELEBRATE ═══════════════════ -->
+<section id="celebrate" style="padding:80px 0;background:linear-gradient(135deg,#F5EDD8 0%,#F8FAFB 100%);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="text-align:center;margin-bottom:56px;" class="reveal">
+      <div class="section-label" style="justify-content:center;"><span>Weddings · Events · Celebrations</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:48px;color:var(--slate);font-weight:400;margin-bottom:16px;">Celebrate on the River.</h2>
+      <p style="font-size:15px;font-weight:300;color:#8A9BAB;max-width:540px;margin:0 auto;">Alaska Heavenly Lodge's 18-acre estate is Cooper Landing's premier celebration venue — riverfront ceremonies, old-growth forest canopy, and mountain views in every direction.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:48px;" class="reveal">
+      <!-- Capacity breakdown -->
+      <div class="glass" style="border-radius:16px;padding:36px;">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">Capacity at Hub 1</div>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:32px;">
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:var(--slate);margin-bottom:6px;"><span>Outdoor Ceremony</span><span style="color:var(--gold);">75 guests</span></div>
+            <div class="cap-bar"><div class="cap-fill" style="width:100%;"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:var(--slate);margin-bottom:6px;"><span>Seated Dinner (on-property)</span><span style="color:var(--gold);">60 guests</span></div>
+            <div class="cap-bar"><div class="cap-fill" style="width:80%;"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:var(--slate);margin-bottom:6px;"><span>On-property Lodging</span><span style="color:var(--gold);">46 guests</span></div>
+            <div class="cap-bar"><div class="cap-fill" style="width:61%;"></div></div>
+          </div>
+        </div>
+        <a href="events.html" class="btn-gold" style="font-size:9px;padding:11px 22px;">Full Events & Weddings Page →</a>
+      </div>
+
+      <!-- Vendor directory -->
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Hub 1 Vendor Directory</div>
+        <div class="vendor-card">
+          <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Event Planning</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);margin-bottom:4px;">True North Events</div>
+          <p style="font-size:12px;font-weight:300;color:#4A6070;line-height:1.7;">Full-service Alaska wedding & event planning. Coordination, vendor management, day-of logistics.</p>
+        </div>
+        <div class="vendor-card">
+          <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Photography</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);margin-bottom:4px;">Best Route Productions</div>
+          <p style="font-size:12px;font-weight:300;color:#4A6070;line-height:1.7;">Destination wedding photography specializing in outdoor Alaskan landscapes.</p>
+        </div>
+        <div class="vendor-card" style="background:#F5EDD8;border-color:rgba(197,160,89,0.2);">
+          <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">All Hubs · Planning</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);margin-bottom:4px;">Wild Rose Weddings — Dylan</div>
+          <p style="font-size:12px;font-weight:300;color:#4A6070;line-height:1.7;">Regional Alaska wedding specialist serving all three hubs. Tents & chairs via L&R Rentals (Homer-based, all hubs).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ DO ═══════════════════ -->
+<section id="do" style="padding:80px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="margin-bottom:48px;" class="reveal">
+      <div class="section-label"><span>Activities</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;">What To Do</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="reveal">
+      <div style="padding:28px;border:1px solid rgba(44,62,80,0.08);border-radius:12px;">
+        <div style="font-size:28px;margin-bottom:14px;">🎣</div>
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);margin-bottom:8px;">Guided Fishing</div>
+        <p style="font-size:13px;font-weight:300;color:#8A9BAB;line-height:1.7;">Trophy rainbow trout on the Upper Kenai. King and silver salmon runs. Guided by Dave Lisi.</p>
+      </div>
+      <div style="padding:28px;border:1px solid rgba(44,62,80,0.08);border-radius:12px;">
+        <div style="font-size:28px;margin-bottom:14px;">🦅</div>
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);margin-bottom:8px;">Wildlife Viewing</div>
+        <p style="font-size:13px;font-weight:300;color:#8A9BAB;line-height:1.7;">Bald eagles, moose, black and brown bears along the Kenai River corridor.</p>
+      </div>
+      <div style="padding:28px;border:1px solid rgba(44,62,80,0.08);border-radius:12px;">
+        <div style="font-size:28px;margin-bottom:14px;">🛶</div>
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);margin-bottom:8px;">Float Trips</div>
+        <p style="font-size:13px;font-weight:300;color:#8A9BAB;line-height:1.7;">Scenic float trips down the Upper Kenai — accessible for all ages and experience levels.</p>
+      </div>
+      <div style="padding:28px;border:1px solid rgba(44,62,80,0.08);border-radius:12px;">
+        <div style="font-size:28px;margin-bottom:14px;">🥾</div>
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);margin-bottom:8px;">Hiking</div>
+        <p style="font-size:13px;font-weight:300;color:#8A9BAB;line-height:1.7;">Kenai National Wildlife Refuge trails — from easy lakeside walks to alpine ridge hikes.</p>
+      </div>
+      <div style="padding:28px;border:1px solid rgba(44,62,80,0.08);border-radius:12px;">
+        <div style="font-size:28px;margin-bottom:14px;">✈️</div>
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);margin-bottom:8px;">Flightseeing</div>
+        <p style="font-size:13px;font-weight:300;color:#8A9BAB;line-height:1.7;">Scenic bush plane tours over the Harding Icefield and Chugach Mountains.</p>
+      </div>
+      <div style="padding:28px;border:1px solid rgba(44,62,80,0.08);border-radius:12px;background:#F5EDD8;border-color:rgba(197,160,89,0.2);">
+        <div style="font-size:28px;margin-bottom:14px;">💍</div>
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);margin-bottom:8px;">Celebrations</div>
+        <p style="font-size:13px;font-weight:300;color:#8A9BAB;line-height:1.7;">Riverfront ceremonies, grand receptions, and intimate gatherings on Alaska Heavenly Lodge's 18-acre estate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ EAT ═══════════════════ -->
+<section id="eat" style="padding:80px 0;background:var(--glacier);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="margin-bottom:48px;" class="reveal">
+      <div class="section-label"><span>Dining</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;">Where To Eat</h2>
+      <p style="font-size:14px;font-weight:300;color:#8A9BAB;margin-top:8px;">Our concierge team manages all dining reservations and coordinates private chefs for in-lodge meals.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="reveal">
+      <div style="background:#fff;border-radius:12px;padding:28px;border:1px solid rgba(44,62,80,0.08);">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">In-Lodge · Private Chef</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);margin-bottom:8px;">Private Chef Service</div>
+        <p style="font-size:12px;font-weight:300;color:#8A9BAB;line-height:1.7;">Coordinated by our concierge team — locally-sourced Alaska cuisine served in your lodge. Fresh-caught salmon dinners available.</p>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:28px;border:1px solid rgba(44,62,80,0.08);">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Cooper Landing · Local</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);margin-bottom:8px;">Gwin's Lodge</div>
+        <p style="font-size:12px;font-weight:300;color:#8A9BAB;line-height:1.7;">A Cooper Landing landmark since 1952. Classic Alaska roadhouse fare, local beer, and riverside atmosphere.</p>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:28px;border:1px solid rgba(44,62,80,0.08);">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Concierge Managed</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);margin-bottom:8px;">Reservation Coordination</div>
+        <p style="font-size:12px;font-weight:300;color:#8A9BAB;line-height:1.7;">Our team secures high-demand local reservations across the Peninsula and manages all dietary requirements for your party.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ WELLNESS ═══════════════════ -->
+<section id="wellness" style="padding:80px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;" class="reveal">
+      <div>
+        <div class="section-label"><span>Recovery & Wellness</span></div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:16px;">Rest on the<br><em style="color:var(--gold);">Upper Kenai.</em></h2>
+        <p style="font-size:15px;font-weight:300;color:#4A6070;line-height:1.85;margin-bottom:32px;">Alaska Heavenly Lodge's on-property amenities are designed for recovery and restoration after a day on the water or on the trail.</p>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="display:flex;align-items:flex-start;gap:16px;padding:18px;border:1px solid rgba(44,62,80,0.08);border-radius:10px;">
+            <div style="font-size:24px;flex-shrink:0;">♨️</div>
+            <div><div style="font-size:12px;font-weight:600;color:var(--slate);margin-bottom:4px;">Private Hot Tub</div><div style="font-size:12px;font-weight:300;color:#8A9BAB;line-height:1.6;">Riverside hot tub with mountain and river views. Open year-round.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:16px;padding:18px;border:1px solid rgba(44,62,80,0.08);border-radius:10px;">
+            <div style="font-size:24px;flex-shrink:0;">🪵</div>
+            <div><div style="font-size:12px;font-weight:600;color:var(--slate);margin-bottom:4px;">Sauna</div><div style="font-size:12px;font-weight:300;color:#8A9BAB;line-height:1.6;">Traditional Finnish sauna on property. Perfect post-fishing recovery.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:16px;padding:18px;border:1px solid rgba(44,62,80,0.08);border-radius:10px;">
+            <div style="font-size:24px;flex-shrink:0;">🌿</div>
+            <div><div style="font-size:12px;font-weight:600;color:var(--slate);margin-bottom:4px;">Nature Immersion</div><div style="font-size:12px;font-weight:300;color:#8A9BAB;line-height:1.6;">18 acres of old-growth forest, riverside walks, and complete stillness.</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="glass" style="border-radius:20px;padding:40px;background:linear-gradient(145deg,rgba(74,122,74,0.06),rgba(248,250,251,1));">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">Complete The Circuit</div>
+        <p style="font-size:14px;font-weight:300;color:#4A6070;line-height:1.85;margin-bottom:24px;">Hub 1 is just the beginning. Continue your Alaska Circuit through Hub 2 in Soldotna and finish at Hub 3 in Homer.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px;">
+          <a href="#" style="display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border:1px solid rgba(44,62,80,0.1);border-radius:8px;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(44,62,80,0.1)'">
+            <div><div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;">Next Stop</div><div style="font-size:14px;font-family:'Cormorant Garamond',serif;color:var(--slate);">Hub 2 · The Heartbeat</div></div>
+            <span style="font-size:12px;color:var(--gold);">→</span>
+          </a>
+          <a href="#" style="display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border:1px solid rgba(44,62,80,0.1);border-radius:8px;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(44,62,80,0.1)'">
+            <div><div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;">Final Stop</div><div style="font-size:14px;font-family:'Cormorant Garamond',serif;color:var(--slate);">Hub 3 · The Horizon</div></div>
+            <span style="font-size:12px;color:var(--gold);">→</span>
+          </a>
+        </div>
+        <a href="index.html#paths" class="btn-gold" style="font-size:9px;padding:12px 24px;width:100%;text-align:center;display:block;">Book The Full Circuit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#2C3E50;padding:56px 32px 32px;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px;">
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:#fff;margin-bottom:2px;">The Gateway</div>
+        <div style="font-size:8px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Hub 1 · Cooper Landing</div>
+        <p style="font-size:12px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.8;margin-bottom:16px;">5 properties. Trophy trout. Grand celebrations. The Mothership of The Last Frontier Collection.</p>
+        <div style="font-size:11px;color:rgba(255,255,255,0.3);font-weight:300;line-height:1.8;">19260 Sterling Highway<br>Cooper Landing, AK 99572<br>(907) 599-0126</div>
+      </div>
+      <div>
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">At Hub 1</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="#stay" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Stay</a>
+          <a href="#fish" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Fish</a>
+          <a href="#celebrate" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Celebrate</a>
+          <a href="#do" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Do</a>
+          <a href="#eat" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Eat</a>
+          <a href="#wellness" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Wellness</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">The Collection</div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px;">
+          <a href="index.html" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Main Site</a>
+          <a href="#" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Hub 2 — Soldotna</a>
+          <a href="#" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Hub 3 — Homer</a>
+          <a href="events.html" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Weddings & Events</a>
+          <a href="index.html#shop" style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Shop</a>
+        </div>
+        <a href="#" class="btn-gold fh" style="font-size:9px;padding:11px 20px;">Book Hub 1</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <div style="font-size:10px;color:rgba(255,255,255,0.25);">© 2026 The Last Frontier Collection · Hub 1 · Cooper Landing</div>
+      <a href="index.html" style="font-size:10px;color:rgba(255,255,255,0.25);text-decoration:none;">← Back to Collection</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{ document.getElementById('nav').classList.toggle('scrolled',window.scrollY>80); });
+
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+document.querySelectorAll('.fh').forEach(b=>{b.addEventListener('click',e=>{e.preventDefault();alert('FareHarbor Lightframe will open here.');});});
+</script>
+</body>
+</html>
