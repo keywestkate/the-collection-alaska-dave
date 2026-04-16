@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About · Hub 2 Soldotna | The Last Frontier Collection</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C5A059;--slate:#2C3E50;--glacier:#F8FAFB;--amber:#8A6A30;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-serif;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--gold);}
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;transition:all 0.4s;}.nav.scrolled{background:rgba(248,250,251,0.97);backdrop-filter:blur(20px);box-shadow:0 1px 24px rgba(44,62,80,0.07);}
+.btn-gold{background:var(--gold);color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:14px 36px;border:none;cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}.btn-gold:hover{background:#A07830;}
+.btn-ghost{background:transparent;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:13px 36px;border:1.5px solid rgba(255,255,255,0.5);cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}
+.section-label{display:inline-flex;align-items:center;gap:12px;margin-bottom:16px;}.section-label::before,.section-label::after{content:'';display:block;width:28px;height:1px;background:var(--gold);}.section-label span{font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);}
+.hub-nav-tab{padding:14px 20px;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8A9BAB;border-bottom:2px solid transparent;cursor:pointer;transition:all 0.25s;text-decoration:none;display:inline-block;}.hub-nav-tab:hover,.hub-nav-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+.reveal{opacity:0;transform:translateY(20px);transition:all 0.6s ease;}.reveal.visible{opacity:1;transform:translateY(0);}
+.guide-card{background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:12px;overflow:hidden;transition:all 0.3s;}.guide-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(44,62,80,0.12);}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(44,62,80,0.06);">
+      <a href="hub1.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">← Hub 1 · Cooper Landing</a>
+      <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">Hub 2 of 3</div>
+      <a href="hub3.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">Hub 3 · Homer →</a>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;">
+      <a href="hub2.html" style="text-decoration:none;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--slate);">The Heartbeat</div>
+        <div style="font-size:8px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Hub 2 · Soldotna / Sterling</div>
+      </a>
+      <div style="display:flex;">
+        <a href="hub2.html" class="hub-nav-tab">Home</a>
+        <a href="hub2-about.html" class="hub-nav-tab active">About</a>
+        <a href="hub2-services.html" class="hub-nav-tab">Services</a>
+        <a href="hub2-rates.html" class="hub-nav-tab">Rates</a>
+        <a href="contact.html" class="hub-nav-tab">Contact</a>
+      </div>
+      <a href="contact.html" class="btn-gold" style="font-size:9px;padding:11px 22px;">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<section style="min-height:60vh;background:linear-gradient(160deg,#D4C090 0%,#EDE4C8 50%,#F8FAFB 100%);display:flex;align-items:center;padding-top:130px;padding-bottom:80px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div class="section-label"><span>Soldotna / Sterling, Alaska</span></div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:64px;color:var(--slate);font-weight:400;line-height:1.05;margin-bottom:20px;">The Guide Team<br>at the <em style="color:var(--gold);">Heartbeat.</em></h1>
+    <p style="font-size:16px;font-weight:300;color:#4A6070;line-height:1.85;max-width:560px;">The same team that built Cooper Landing Fishing Guide, LLC operates the Kasilof Salmon Guide service out of Hub 2. Same standards, same guides, different river.</p>
+  </div>
+</section>
+
+<section style="padding:100px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;" class="reveal">
+      <div style="border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(145deg,#C4A858,#8A7030);display:flex;align-items:flex-end;padding:32px;position:relative;">
+        <div style="position:absolute;top:20px;left:20px;font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#6A4A10;padding:5px 12px;border-radius:2px;">Photo: dave-lisi-kasilof.jpg</div>
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#fff;margin-bottom:4px;">David Lisi</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.75);font-weight:300;">Owner · Kasilof River Specialist · Cooper Landing, AK</div>
+        </div>
+      </div>
+      <div>
+        <div class="section-label"><span>The Guide</span></div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:24px;">Same Guide. New River.</h2>
+        <p style="font-size:15px;font-weight:300;color:#4A6070;line-height:1.9;margin-bottom:20px;">Dave Lisi's guide operation extends from the Upper Kenai at Cooper Landing all the way down to the Kasilof River corridor in Soldotna. The Kasilof Salmon Guide service is the Hub 2 extension of Cooper Landing Fishing Guide, LLC — same team, same commitment, different water.</p>
+        <p style="font-size:15px;font-weight:300;color:#4A6070;line-height:1.9;margin-bottom:20px;">The Kasilof River is one of Alaska's most prolific King salmon streams — with a distinct run separate from the Kenai, offering access to trophy Chinook on a wilder, less crowded river. Dave and his team also work the Lower Kenai River from the Soldotna corridor, targeting sockeye, silver, and steelhead.</p>
+        <p style="font-size:15px;font-weight:300;color:#4A6070;line-height:1.9;margin-bottom:36px;">All guides operating out of Hub 2 hold the same certifications — Kenai River Guide School, US Coast Guard, First Aid/CPR, drug screened, and commercially insured. A 5-star rated operation with zero exceptions on standards.</p>
+        <div style="display:flex;gap:24px;padding:24px;background:var(--glacier);border-radius:12px;margin-bottom:32px;flex-wrap:wrap;">
+          <div style="text-align:center;"><div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--slate);">2</div><div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;">Rivers</div></div>
+          <div style="text-align:center;"><div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--slate);">4</div><div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;">Species</div></div>
+          <div style="text-align:center;"><div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--slate);">5★</div><div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;">Rated</div></div>
+          <div style="text-align:center;"><div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--slate);">20'</div><div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;">Drift Boats</div></div>
+        </div>
+        <a href="hub2-rates.html" class="btn-gold">View Rates</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:100px 0;background:var(--glacier);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="text-align:center;margin-bottom:60px;" class="reveal">
+      <div class="section-label" style="justify-content:center;"><span>The Team</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:12px;">Kasilof Guide Team</h2>
+      <p style="font-size:15px;font-weight:300;color:#8A9BAB;max-width:540px;margin:0 auto;">Core guides operating on the Kasilof and Lower Kenai River corridors out of Hub 2.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;" class="reveal">
+      <div class="guide-card" style="display:grid;grid-template-columns:160px 1fr;">
+        <div style="background:linear-gradient(145deg,#C4A858,#8A7030);display:flex;align-items:flex-end;padding:16px;position:relative;">
+          <div style="position:absolute;top:8px;left:8px;font-size:7px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#6A4A10;padding:3px 8px;border-radius:2px;">Photo: brian-jones.jpg</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;">Brian Jones</div>
+        </div>
+        <div style="padding:24px;">
+          <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Senior Guide · Kasilof &amp; Kenai</div>
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">Kasilof and Kenai River specialist with deep expertise in both streams. Preferred guide for King salmon targeting and multi-species days.</p>
+        </div>
+      </div>
+      <div class="guide-card" style="display:grid;grid-template-columns:160px 1fr;">
+        <div style="background:linear-gradient(145deg,#B89A68,#7A6038);display:flex;align-items:flex-end;padding:16px;position:relative;">
+          <div style="position:absolute;top:8px;left:8px;font-size:7px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#6A4A10;padding:3px 8px;border-radius:2px;">Photo: aaron-cameron.jpg</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;">Aaron Cameron</div>
+        </div>
+        <div style="padding:24px;">
+          <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Senior Guide · Kasilof Specialist</div>
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">Known for exceptional water reading ability on the Kasilof. Aaron consistently puts clients on fish during both the early King run and the sockeye peak.</p>
+        </div>
+      </div>
+      <div class="guide-card" style="display:grid;grid-template-columns:160px 1fr;">
+        <div style="background:linear-gradient(145deg,#A88858,#6A5828);display:flex;align-items:flex-end;padding:16px;position:relative;">
+          <div style="position:absolute;top:8px;left:8px;font-size:7px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#6A4A10;padding:3px 8px;border-radius:2px;">Photo: brett-just.jpg</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;">Brett Just</div>
+        </div>
+        <div style="padding:24px;">
+          <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Guide · Lower Kenai</div>
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">Lower Kenai River guide focused on the Soldotna drift. Back trolling, bobber fishing, and spin technique specialist — great with first-timers and families.</p>
+        </div>
+      </div>
+      <div class="guide-card" style="display:grid;grid-template-columns:160px 1fr;">
+        <div style="background:linear-gradient(145deg,#C4A058,#8A6828);display:flex;align-items:flex-end;padding:16px;position:relative;">
+          <div style="position:absolute;top:8px;left:8px;font-size:7px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#6A4A10;padding:3px 8px;border-radius:2px;">Photo: dave-lisi-hub2.jpg</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;">David Lisi</div>
+        </div>
+        <div style="padding:24px;">
+          <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Owner · All Kenai Peninsula Waters</div>
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">Dave guides across both Hub 1 and Hub 2 depending on conditions and species. His Kasilof King salmon trips are among the most sought-after days of the season.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:80px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="reveal">
+      <div style="padding:32px;background:var(--glacier);border-radius:12px;border-left:3px solid var(--gold);">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--slate);line-height:1.7;margin-bottom:16px;font-style:italic;">"World-class Alaska fishing trips for trophy salmon. The 5-star staff and 20-foot drift boats make every trip extraordinary."</p>
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;">Kasilof Salmon Guide — Guest Review</div>
+      </div>
+      <div style="padding:32px;background:var(--glacier);border-radius:12px;border-left:3px solid var(--gold);">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--slate);line-height:1.7;margin-bottom:16px;font-style:italic;">"Really the highlight of our vacation. Dave is by far the best — we'll be planning the full circuit next year."</p>
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;">Larry and Suzanne E.</div>
+      </div>
+      <div style="padding:32px;background:var(--glacier);border-radius:12px;border-left:3px solid var(--gold);">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--slate);line-height:1.7;margin-bottom:16px;font-style:italic;">"More professional and friendly than any guide service I've encountered — and I've fished everywhere."</p>
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;">Gus B.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--slate);padding:60px 0 32px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;">
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;margin-bottom:4px;">The Heartbeat</div><div style="font-size:9px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Hub 2 · Soldotna / Sterling</div></div>
+      <a href="index.html" class="btn-ghost" style="font-size:9px;padding:10px 22px;">The Last Frontier Collection</a>
+    </div>
+    <div style="display:flex;gap:32px;flex-wrap:wrap;margin-bottom:32px;">
+      <a href="hub2.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Home</a>
+      <a href="hub2-about.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">About</a>
+      <a href="hub2-services.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Services</a>
+      <a href="hub2-rates.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Rates</a>
+      <a href="contact.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Contact</a>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;">
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);font-weight:300;">© 2025 The Last Frontier Collection. All rights reserved.</p>
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);font-weight:300;">(907) 599-0126 · cooperlandingguide@gmail.com</p>
+    </div>
+  </div>
+</footer>
+<script>window.addEventListener('scroll',()=>{const nav=document.getElementById('nav');if(window.scrollY>40)nav.classList.add('scrolled');else nav.classList.remove('scrolled');});const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));</script>
+</body></html>

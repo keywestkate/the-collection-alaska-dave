@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | The Last Frontier Collection</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C5A059;--slate:#2C3E50;--glacier:#F8FAFB;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-serif;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--gold);}
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;transition:all 0.4s;}.nav.scrolled{background:rgba(248,250,251,0.97);backdrop-filter:blur(20px);box-shadow:0 1px 24px rgba(44,62,80,0.07);}
+.btn-gold{background:var(--gold);color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:14px 36px;border:none;cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}.btn-gold:hover{background:#A07830;}
+.btn-ghost{background:transparent;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:13px 36px;border:1.5px solid rgba(255,255,255,0.5);cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}
+.section-label{display:inline-flex;align-items:center;gap:12px;margin-bottom:16px;}.section-label::before,.section-label::after{content:'';display:block;width:28px;height:1px;background:var(--gold);}.section-label span{font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);}
+.hub-nav-tab{padding:14px 20px;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8A9BAB;border-bottom:2px solid transparent;cursor:pointer;transition:all 0.25s;text-decoration:none;display:inline-block;}.hub-nav-tab:hover,.hub-nav-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+.reveal{opacity:0;transform:translateY(20px);transition:all 0.6s ease;}.reveal.visible{opacity:1;transform:translateY(0);}
+.post-card{background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:12px;overflow:hidden;transition:all 0.3s;}.post-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(44,62,80,0.12);}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(44,62,80,0.06);">
+      <a href="index.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">← The Last Frontier Collection</a>
+      <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">The Journal</div>
+      <a href="contact.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">Contact</a>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;">
+      <a href="index.html" style="text-decoration:none;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--slate);">The Last Frontier Collection</div>
+        <div style="font-size:8px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Alaska Journal</div>
+      </a>
+      <div style="display:flex;">
+        <a href="hub1.html" class="hub-nav-tab">Hub 1</a>
+        <a href="hub2.html" class="hub-nav-tab">Hub 2</a>
+        <a href="hub3.html" class="hub-nav-tab">Hub 3</a>
+        <a href="blog.html" class="hub-nav-tab active">Blog</a>
+        <a href="contact.html" class="hub-nav-tab">Contact</a>
+      </div>
+      <a href="contact.html" class="btn-gold" style="font-size:9px;padding:11px 22px;">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="min-height:60vh;background:linear-gradient(160deg,#2C3E50 0%,#3A5060 60%,#4A6070 100%);display:flex;align-items:center;padding-top:130px;padding-bottom:80px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div class="section-label"><span style="color:var(--gold);">The Journal</span></div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:72px;color:#fff;font-weight:400;line-height:1.0;margin-bottom:20px;">Alaska Stories.<br><em style="color:var(--gold);">From the Water.</em></h1>
+    <p style="font-size:16px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.85;max-width:520px;margin-bottom:36px;">Trip reports, fly tying tutorials, river conditions, fishing guides, and life on the Kenai Peninsula. Written by Dave Lisi and the Last Frontier Collection team.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;">
+      <a href="https://www.youtube.com/@cooperlandingfishingguide" target="_blank" class="btn-gold">Watch on YouTube</a>
+      <a href="https://cooperlandingfishingguide.com/blog" target="_blank" class="btn-ghost">Full Blog Archive</a>
+    </div>
+  </div>
+</section>
+
+<!-- YOUTUBE FEATURE -->
+<section style="padding:100px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="margin-bottom:48px;" class="reveal">
+      <div class="section-label"><span>Video</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:12px;">YouTube Channel</h2>
+      <p style="font-size:15px;font-weight:300;color:#8A9BAB;max-width:540px;">Dave's channel covers trout spey technique, fly tying, trip films, and Alaska fishing reports. Subscribe for seasonal updates from the Kenai River.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:2fr 1fr;gap:32px;align-items:start;" class="reveal">
+      <!-- Featured video placeholder -->
+      <div style="border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:linear-gradient(145deg,#1A2C3A,#2C3E50);display:flex;align-items:center;justify-content:center;position:relative;">
+        <div style="position:absolute;top:20px;left:20px;font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;background:rgba(255,255,255,0.15);color:#fff;padding:5px 12px;border-radius:2px;">Featured Video Embed</div>
+        <div style="text-align:center;">
+          <div style="width:64px;height:64px;background:rgba(255,255,255,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <div style="width:0;height:0;border-top:16px solid transparent;border-bottom:16px solid transparent;border-left:28px solid #fff;margin-left:6px;"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">Cooper Landing Fishing Guide</div>
+          <div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.6);margin-top:4px;">YouTube · Trout Spey · Kenai River · Alaska Fishing</div>
+        </div>
+        <a href="https://www.youtube.com/@cooperlandingfishingguide" target="_blank" style="position:absolute;bottom:20px;right:20px;background:var(--gold);color:#fff;font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:10px 20px;text-decoration:none;">Subscribe</a>
+      </div>
+      <!-- Social links -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;margin-bottom:4px;">Follow Along</div>
+        <a href="https://www.youtube.com/@cooperlandingfishingguide" target="_blank" style="display:flex;align-items:center;gap:14px;padding:16px 20px;background:var(--glacier);border-radius:10px;text-decoration:none;border:1px solid rgba(44,62,80,0.06);">
+          <div style="width:36px;height:36px;background:#FF0000;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><div style="width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:14px solid #fff;margin-left:2px;"></div></div>
+          <div><div style="font-size:12px;font-weight:600;color:var(--slate);">YouTube</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;">Fishing videos &amp; fly tying</div></div>
+        </a>
+        <a href="https://www.instagram.com/cooperlandingfishingguide" target="_blank" style="display:flex;align-items:center;gap:14px;padding:16px 20px;background:var(--glacier);border-radius:10px;text-decoration:none;border:1px solid rgba(44,62,80,0.06);">
+          <div style="width:36px;height:36px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><div style="width:16px;height:16px;border:2px solid #fff;border-radius:4px;"></div></div>
+          <div><div style="font-size:12px;font-weight:600;color:var(--slate);">Instagram</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;">Daily Alaska life</div></div>
+        </a>
+        <a href="https://www.facebook.com/cooperlandingfishingguide" target="_blank" style="display:flex;align-items:center;gap:14px;padding:16px 20px;background:var(--glacier);border-radius:10px;text-decoration:none;border:1px solid rgba(44,62,80,0.06);">
+          <div style="width:36px;height:36px;background:#1877F2;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><div style="font-size:20px;font-weight:700;color:#fff;font-family:serif;">f</div></div>
+          <div><div style="font-size:12px;font-weight:600;color:var(--slate);">Facebook</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;">Trip updates &amp; reports</div></div>
+        </a>
+        <a href="https://www.tripadvisor.com" target="_blank" style="display:flex;align-items:center;gap:14px;padding:16px 20px;background:var(--glacier);border-radius:10px;text-decoration:none;border:1px solid rgba(44,62,80,0.06);">
+          <div style="width:36px;height:36px;background:#00AF87;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><div style="font-size:18px;font-weight:900;color:#fff;">O</div></div>
+          <div><div style="font-size:12px;font-weight:600;color:var(--slate);">TripAdvisor</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;">Top-rated guest reviews</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG POSTS PLACEHOLDER -->
+<section style="padding:100px 0;background:var(--glacier);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="margin-bottom:48px;" class="reveal">
+      <div class="section-label"><span>From the Archive</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:12px;">The Journal</h2>
+      <p style="font-size:15px;font-weight:300;color:#8A9BAB;max-width:540px;">All blog content from cooperlandingfishingguide.com, kasilofsalmonguide.com, and alaskaheavenly.com will be consolidated here. Posts below are placeholders — content migration coming soon.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;" class="reveal">
+      <div class="post-card">
+        <div style="height:200px;background:linear-gradient(145deg,#8AAE8A,#4A7A4A);display:flex;align-items:flex-end;padding:20px;position:relative;">
+          <div style="position:absolute;top:12px;left:12px;font-size:8px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#2A5230;padding:3px 10px;border-radius:2px;">Photo: blog-trout-spey.jpg</div>
+          <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.75);">Fly Fishing</div>
+        </div>
+        <div style="padding:28px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;margin-bottom:8px;">Hub 1 · Cooper Landing</div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--slate);margin-bottom:10px;">Trout Spey on the Upper Kenai: Dave's Approach</h3>
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">The techniques, fly patterns, and timing windows that make the Upper Kenai one of the finest trout spey fisheries on earth.</p>
+          <a href="https://cooperlandingfishingguide.com/blog" target="_blank" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Read on Blog Archive</a>
+        </div>
+      </div>
+      <div class="post-card">
+        <div style="height:200px;background:linear-gradient(145deg,#C4A858,#8A7030);display:flex;align-items:flex-end;padding:20px;position:relative;">
+          <div style="position:absolute;top:12px;left:12px;font-size:8px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#6A4A10;padding:3px 10px;border-radius:2px;">Photo: blog-king-salmon.jpg</div>
+          <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.75);">Salmon</div>
+        </div>
+        <div style="padding:28px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;margin-bottom:8px;">Hub 2 · Kasilof River</div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--slate);margin-bottom:10px;">Kasilof King Salmon: Run Timing and Best Tactics</h3>
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">The Kasilof King run peaks in June — here's what to know about timing, techniques, and how to book the best window of the season.</p>
+          <a href="https://www.kasilofsalmonguide.com" target="_blank" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Read on Blog Archive</a>
+        </div>
+      </div>
+      <div class="post-card">
+        <div style="height:200px;background:linear-gradient(145deg,#4A7898,#2A5070);display:flex;align-items:flex-end;padding:20px;position:relative;">
+          <div style="position:absolute;top:12px;left:12px;font-size:8px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#1A3050;padding:3px 10px;border-radius:2px;">Photo: blog-homer-halibut.jpg</div>
+          <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.75);">Ocean Fishing</div>
+        </div>
+        <div style="padding:28px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;margin-bottom:8px;">Hub 3 · Homer</div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--slate);margin-bottom:10px;">Halibut Season in Kachemak Bay: What to Expect</h3>
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">Homer is the halibut capital of the world. Season opens May 1 — here's a breakdown of timing, regulations, and how to land a 100+ lb fish.</p>
+          <a href="hub3-services.html" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Explore Hub 3</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content migration notice -->
+    <div style="margin-top:48px;padding:40px;background:var(--slate);border-radius:16px;text-align:center;" class="reveal">
+      <div style="font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Coming Soon</div>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#fff;font-weight:400;margin-bottom:12px;">One Blog. All of Alaska.</h3>
+      <p style="font-size:14px;font-weight:300;color:rgba(255,255,255,0.65);max-width:480px;margin:0 auto 24px;line-height:1.85;">All blog content from cooperlandingfishingguide.com, kasilofsalmonguide.com, alaskaheavenly.com, and denaliguideservice.com will be consolidated into a single Last Frontier Collection journal. Content migration in progress.</p>
+      <a href="https://cooperlandingfishingguide.com/blog" target="_blank" class="btn-gold" style="font-size:9px;padding:12px 28px;">Visit Current Blog Archive</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--slate);padding:60px 0 32px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;">
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;margin-bottom:4px;">The Last Frontier Collection</div><div style="font-size:9px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Alaska Journal</div></div>
+      <a href="index.html" class="btn-ghost" style="font-size:9px;padding:10px 22px;">Main Site</a>
+    </div>
+    <div style="display:flex;gap:32px;flex-wrap:wrap;margin-bottom:32px;">
+      <a href="index.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Home</a>
+      <a href="hub1.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Hub 1</a>
+      <a href="hub2.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Hub 2</a>
+      <a href="hub3.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Hub 3</a>
+      <a href="contact.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Contact</a>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;">
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);font-weight:300;">© 2025 The Last Frontier Collection. All rights reserved.</p>
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);font-weight:300;">(907) 599-0126 · cooperlandingguide@gmail.com</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{const nav=document.getElementById('nav');if(window.scrollY>40)nav.classList.add('scrolled');else nav.classList.remove('scrolled');});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+</script>
+</body></html>

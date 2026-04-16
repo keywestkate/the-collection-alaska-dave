@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Book | The Last Frontier Collection</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C5A059;--slate:#2C3E50;--glacier:#F8FAFB;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-serif;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;transition:all 0.4s;}
+.nav.scrolled{background:rgba(248,250,251,0.97);backdrop-filter:blur(20px);box-shadow:0 1px 24px rgba(44,62,80,0.07);}
+.btn-gold{background:var(--gold);color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:14px 36px;border:none;cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;width:100%;}
+.btn-gold:hover{background:#A07830;}
+.btn-ghost{background:transparent;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:13px 36px;border:1.5px solid rgba(255,255,255,0.5);cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}
+.section-label{display:inline-flex;align-items:center;gap:12px;margin-bottom:16px;}
+.section-label::before,.section-label::after{content:'';display:block;width:28px;height:1px;background:var(--gold);}
+.section-label span{font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);}
+.hub-nav-tab{padding:14px 20px;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8A9BAB;border-bottom:2px solid transparent;cursor:pointer;transition:all 0.25s;text-decoration:none;display:inline-block;}
+.hub-nav-tab:hover,.hub-nav-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+.reveal{opacity:0;transform:translateY(20px);transition:all 0.6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.form-input{width:100%;padding:14px 18px;border:1.5px solid rgba(44,62,80,0.15);border-radius:6px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:300;color:var(--slate);background:#fff;transition:border-color 0.25s;outline:none;}
+.form-input:focus{border-color:var(--gold);}
+.form-label{font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;margin-bottom:8px;display:block;}
+.location-btn{padding:14px 20px;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;border:1.5px solid rgba(44,62,80,0.15);border-radius:6px;background:#fff;cursor:pointer;transition:all 0.25s;font-family:'Montserrat',sans-serif;color:#8A9BAB;}
+.location-btn.active,.location-btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(197,160,89,0.06);}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(44,62,80,0.06);">
+      <a href="index.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">← The Last Frontier Collection</a>
+      <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">Contact &amp; Book</div>
+      <a href="index.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">Back to Collection</a>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;">
+      <a href="index.html" style="text-decoration:none;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--slate);">The Last Frontier Collection</div>
+        <div style="font-size:8px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Alaska · Three Hubs · One Circuit</div>
+      </a>
+      <div style="display:flex;align-items:center;">
+        <a href="hub1.html" class="hub-nav-tab">Hub 1</a>
+        <a href="hub2.html" class="hub-nav-tab">Hub 2</a>
+        <a href="hub3.html" class="hub-nav-tab">Hub 3</a>
+        <a href="blog.html" class="hub-nav-tab">Blog</a>
+      </div>
+      <span style="font-size:11px;font-weight:500;color:var(--slate);">(907) 599-0126</span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="min-height:50vh;background:linear-gradient(160deg,#C4D0C0 0%,#E0E8DC 40%,#F8FAFB 100%);display:flex;align-items:center;padding-top:130px;padding-bottom:80px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div class="section-label"><span>Get In Touch</span></div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:64px;color:var(--slate);font-weight:400;line-height:1.05;margin-bottom:20px;">Plan Your<br><em style="color:var(--gold);">Alaska Trip.</em></h1>
+    <p style="font-size:16px;font-weight:300;color:#4A6070;line-height:1.85;max-width:520px;">All bookings, inquiries, and custom trip planning start here. Tell us which hub you're headed to, what you're after, and we'll handle the rest.</p>
+  </div>
+</section>
+
+<!-- CONTACT FORM + INFO -->
+<section style="padding:100px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;" class="reveal">
+
+      <!-- FORM -->
+      <div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--slate);font-weight:400;margin-bottom:32px;">Send Us a Message</h2>
+
+        <form action="mailto:cooperlandingguide@gmail.com" method="POST" enctype="text/plain">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
+            <div>
+              <label class="form-label">First Name</label>
+              <input type="text" name="first_name" class="form-input" placeholder="Jane">
+            </div>
+            <div>
+              <label class="form-label">Last Name</label>
+              <input type="text" name="last_name" class="form-input" placeholder="Smith">
+            </div>
+          </div>
+
+          <div style="margin-bottom:20px;">
+            <label class="form-label">Email Address</label>
+            <input type="email" name="email" class="form-input" placeholder="jane@example.com">
+          </div>
+
+          <div style="margin-bottom:20px;">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" name="phone" class="form-input" placeholder="(555) 000-0000">
+          </div>
+
+          <div style="margin-bottom:24px;">
+            <label class="form-label">Which Hub Are You Interested In?</label>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;" id="locationBtns">
+              <button type="button" class="location-btn active" onclick="selectLocation(this,'Hub 1 - Cooper Landing')">Hub 1 · Cooper Landing</button>
+              <button type="button" class="location-btn" onclick="selectLocation(this,'Hub 2 - Soldotna')">Hub 2 · Soldotna</button>
+              <button type="button" class="location-btn" onclick="selectLocation(this,'Hub 3 - Homer')">Hub 3 · Homer</button>
+              <button type="button" class="location-btn" onclick="selectLocation(this,'Full Circuit - All 3')">Full Circuit</button>
+            </div>
+            <input type="hidden" name="location" id="locationInput" value="Hub 1 - Cooper Landing">
+          </div>
+
+          <div style="margin-bottom:20px;">
+            <label class="form-label">What Are You Looking For?</label>
+            <select name="interest" class="form-input">
+              <option value="">Select one...</option>
+              <option>Guided Fishing — King Salmon</option>
+              <option>Guided Fishing — Sockeye Salmon</option>
+              <option>Guided Fishing — Silver Salmon</option>
+              <option>Guided Fishing — Rainbow Trout</option>
+              <option>Guided Fishing — Steelhead</option>
+              <option>Fly Fishing / Trout Spey</option>
+              <option>Halibut Charter — Hub 3</option>
+              <option>Lodging Only</option>
+              <option>All-Inclusive Package</option>
+              <option>Wedding / Event</option>
+              <option>Corporate Retreat</option>
+              <option>Fly-Out / Backcountry</option>
+              <option>Other / Custom Request</option>
+            </select>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
+            <div>
+              <label class="form-label">Preferred Dates</label>
+              <input type="text" name="dates" class="form-input" placeholder="June 15–22, 2025">
+            </div>
+            <div>
+              <label class="form-label">Group Size</label>
+              <input type="number" name="group_size" class="form-input" placeholder="4" min="1">
+            </div>
+          </div>
+
+          <div style="margin-bottom:32px;">
+            <label class="form-label">Tell Us About Your Trip</label>
+            <textarea name="message" class="form-input" rows="5" style="resize:vertical;" placeholder="Species you're targeting, experience level, any specific requests, dietary restrictions, accessibility needs..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-gold" style="font-size:11px;padding:16px;">Send Inquiry</button>
+          <p style="font-size:11px;color:#8A9BAB;font-weight:300;margin-top:12px;">We respond within 24 hours. For urgent bookings call (907) 599-0126.</p>
+        </form>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--slate);font-weight:400;margin-bottom:32px;">Reach Us Directly</h2>
+
+        <div style="display:flex;flex-direction:column;gap:24px;margin-bottom:48px;">
+          <div style="padding:24px;background:var(--glacier);border-radius:12px;border:1px solid rgba(44,62,80,0.06);">
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Phone</div>
+            <a href="tel:9075990126" style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--slate);text-decoration:none;">(907) 599-0126</a>
+            <div style="font-size:12px;font-weight:300;color:#8A9BAB;margin-top:4px;">Available daily · May through October</div>
+          </div>
+          <div style="padding:24px;background:var(--glacier);border-radius:12px;border:1px solid rgba(44,62,80,0.06);">
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Email</div>
+            <a href="mailto:cooperlandingguide@gmail.com" style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);text-decoration:none;">cooperlandingguide@gmail.com</a>
+            <div style="font-size:12px;font-weight:300;color:#8A9BAB;margin-top:4px;">Responses within 24 hours</div>
+          </div>
+        </div>
+
+        <!-- Hub Addresses -->
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--slate);font-weight:400;margin-bottom:24px;">Our Locations</h3>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:48px;">
+          <div style="padding:20px 24px;border-left:3px solid #4A7A4A;background:#fff;border-radius:0 8px 8px 0;box-shadow:0 2px 12px rgba(44,62,80,0.06);">
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#4A7A4A;margin-bottom:4px;">Hub 1 · The Gateway</div>
+            <div style="font-size:14px;font-weight:500;color:var(--slate);margin-bottom:2px;">Alaska Heavenly Lodge</div>
+            <div style="font-size:12px;font-weight:300;color:#8A9BAB;">34950 Blakley Road, Cooper Landing, AK 99572</div>
+            <div style="font-size:12px;font-weight:300;color:#8A9BAB;">Fishing Guide Office: 19260 Sterling Hwy, Cooper Landing</div>
+          </div>
+          <div style="padding:20px 24px;border-left:3px solid var(--gold);background:#fff;border-radius:0 8px 8px 0;box-shadow:0 2px 12px rgba(44,62,80,0.06);">
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Hub 2 · The Heartbeat</div>
+            <div style="font-size:14px;font-weight:500;color:var(--slate);margin-bottom:2px;">Alaska Moose &amp; Spruce / Keen Eye</div>
+            <div style="font-size:12px;font-weight:300;color:#8A9BAB;">Brenda Way, Soldotna, AK</div>
+          </div>
+          <div style="padding:20px 24px;border-left:3px solid #4A7898;background:#fff;border-radius:0 8px 8px 0;box-shadow:0 2px 12px rgba(44,62,80,0.06);">
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#4A7898;margin-bottom:4px;">Hub 3 · The Horizon</div>
+            <div style="font-size:14px;font-weight:500;color:var(--slate);margin-bottom:2px;">Baycrest Lodge · Driftwood Inn · Flat Fish Lodge</div>
+            <div style="font-size:12px;font-weight:300;color:#8A9BAB;">Homer, Alaska</div>
+          </div>
+        </div>
+
+        <!-- Social Media -->
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--slate);font-weight:400;margin-bottom:20px;">Follow the Journey</h3>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="https://www.youtube.com/@cooperlandingfishingguide" target="_blank" style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:8px;text-decoration:none;transition:all 0.25s;">
+            <div style="width:36px;height:36px;background:#FF0000;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+              <div style="width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:14px solid #fff;margin-left:2px;"></div>
+            </div>
+            <div><div style="font-size:12px;font-weight:600;color:var(--slate);">YouTube</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;">Fishing videos, trip reports, fly tying tutorials</div></div>
+          </a>
+          <a href="https://www.instagram.com/cooperlandingfishingguide" target="_blank" style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:8px;text-decoration:none;transition:all 0.25s;">
+            <div style="width:36px;height:36px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+              <div style="width:16px;height:16px;border:2px solid #fff;border-radius:4px;"></div>
+            </div>
+            <div><div style="font-size:12px;font-weight:600;color:var(--slate);">Instagram</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;">Daily Alaska — fish, lodges, wildlife, and life on the Kenai</div></div>
+          </a>
+          <a href="https://www.facebook.com/cooperlandingfishingguide" target="_blank" style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:8px;text-decoration:none;transition:all 0.25s;">
+            <div style="width:36px;height:36px;background:#1877F2;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+              <div style="font-size:20px;font-weight:700;color:#fff;font-family:serif;">f</div>
+            </div>
+            <div><div style="font-size:12px;font-weight:600;color:var(--slate);">Facebook</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;">Trip updates, guest photos, and seasonal reports</div></div>
+          </a>
+          <a href="https://www.tripadvisor.com/Attraction_Review-g60955-d7190087-Reviews-Cooper_Landing_Fishing_Guide-Cooper_Landing_Alaska.html" target="_blank" style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:8px;text-decoration:none;transition:all 0.25s;">
+            <div style="width:36px;height:36px;background:#00AF87;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+              <div style="font-size:18px;font-weight:900;color:#fff;">O</div>
+            </div>
+            <div><div style="font-size:12px;font-weight:600;color:var(--slate);">TripAdvisor</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;">Top-rated · Read verified guest reviews</div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING NOTE -->
+<section style="padding:80px 0;background:var(--slate);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;text-align:center;" class="reveal">
+    <div style="font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Powered by FareHarbor</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:#fff;font-weight:400;margin-bottom:16px;">Online Booking Coming Soon</h2>
+    <p style="font-size:15px;font-weight:300;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto 32px;line-height:1.85;">We are integrating FareHarbor for real-time availability and instant booking. Until then, all reservations are handled by phone or email — same-day response guaranteed during the season.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="tel:9075990126" class="btn-gold" style="width:auto;">Call (907) 599-0126</a>
+      <a href="mailto:cooperlandingguide@gmail.com" class="btn-ghost" style="width:auto;">Email Us</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--slate);border-top:1px solid rgba(255,255,255,0.08);padding:40px 0 32px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:flex;gap:32px;flex-wrap:wrap;margin-bottom:24px;">
+      <a href="index.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Main Site</a>
+      <a href="hub1.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Hub 1 — Cooper Landing</a>
+      <a href="hub2.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Hub 2 — Soldotna</a>
+      <a href="hub3.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Hub 3 — Homer</a>
+      <a href="events.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Events</a>
+      <a href="blog.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Blog</a>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;display:flex;justify-content:space-between;">
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);font-weight:300;">© 2025 The Last Frontier Collection · Cooper Landing Fishing Guide, LLC</p>
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);font-weight:300;">19260 Sterling Hwy, Cooper Landing, AK 99572</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{const nav=document.getElementById('nav');if(window.scrollY>40)nav.classList.add('scrolled');else nav.classList.remove('scrolled');});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+function selectLocation(btn,value){
+  document.querySelectorAll('.location-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('locationInput').value=value;
+}
+</script>
+</body>
+</html>

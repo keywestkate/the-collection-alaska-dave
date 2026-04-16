@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rates · Hub 1 Cooper Landing | The Last Frontier Collection</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C5A059;--slate:#2C3E50;--glacier:#F8FAFB;--forest:#4A7A4A;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-serif;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;transition:all 0.4s;}
+.nav.scrolled{background:rgba(248,250,251,0.97);backdrop-filter:blur(20px);box-shadow:0 1px 24px rgba(44,62,80,0.07);}
+.btn-gold{background:var(--gold);color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:14px 36px;border:none;cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}
+.btn-gold:hover{background:#A07830;transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:13px 36px;border:1.5px solid rgba(255,255,255,0.5);cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}
+.btn-ghost:hover{background:rgba(255,255,255,0.15);}
+.section-label{display:inline-flex;align-items:center;gap:12px;margin-bottom:16px;}
+.section-label::before,.section-label::after{content:'';display:block;width:28px;height:1px;background:var(--gold);}
+.section-label span{font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);}
+.hub-nav-tab{padding:14px 20px;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8A9BAB;border-bottom:2px solid transparent;cursor:pointer;transition:all 0.25s;text-decoration:none;display:inline-block;}
+.hub-nav-tab:hover,.hub-nav-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+.reveal{opacity:0;transform:translateY(20px);transition:all 0.6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.rate-row{display:flex;justify-content:space-between;align-items:center;padding:20px 28px;border-bottom:1px solid rgba(44,62,80,0.06);}
+.rate-row:last-child{border-bottom:none;}
+.rate-row:hover{background:rgba(197,160,89,0.04);}
+.cabin-card{background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:12px;overflow:hidden;transition:all 0.3s;}
+.cabin-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(44,62,80,0.12);}
+.pkg-card{border-radius:16px;overflow:hidden;padding:36px;}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(44,62,80,0.06);">
+      <a href="index.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">← The Last Frontier Collection</a>
+      <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">Hub 1 of 3</div>
+      <a href="hub2.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">Hub 2 · Soldotna →</a>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;">
+      <a href="hub1.html" style="text-decoration:none;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--slate);line-height:1.1;">The Gateway</div>
+        <div style="font-size:8px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Hub 1 · Cooper Landing</div>
+      </a>
+      <div style="display:flex;align-items:center;">
+        <a href="hub1.html" class="hub-nav-tab">Home</a>
+        <a href="hub1-about.html" class="hub-nav-tab">About</a>
+        <a href="hub1-services.html" class="hub-nav-tab">Services</a>
+        <a href="hub1-rates.html" class="hub-nav-tab active">Rates</a>
+        <a href="contact.html" class="hub-nav-tab">Contact</a>
+      </div>
+      <a href="contact.html" class="btn-gold" style="font-size:9px;padding:11px 22px;">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="min-height:50vh;background:linear-gradient(160deg,#C4D8C4 0%,#E8F0E8 50%,#F8FAFB 100%);display:flex;align-items:center;padding-top:130px;padding-bottom:80px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div class="section-label"><span>2025 Pricing</span></div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:64px;color:var(--slate);font-weight:400;line-height:1.05;margin-bottom:20px;">Rates &amp;<br><em style="color:var(--gold);">Packages.</em></h1>
+    <p style="font-size:16px;font-weight:300;color:#4A6070;line-height:1.85;max-width:520px;">Transparent pricing on guided fishing, lodging, and curated Alaska circuit packages. All rates are per-person unless otherwise noted. Alaska fishing license not included.</p>
+  </div>
+</section>
+
+<!-- FISHING RATES -->
+<section style="padding:100px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="margin-bottom:48px;" class="reveal">
+      <div class="section-label"><span>Guide Service</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:12px;">2024 Fishing Rates</h2>
+      <p style="font-size:15px;font-weight:300;color:#8A9BAB;max-width:540px;">Cooper Landing Fishing Guide, LLC. All trips include drift boat, waders, rods, tackle, flies, and salmon filleting. License, weather gear, and gratuity not included.</p>
+    </div>
+
+    <!-- King Salmon -->
+    <div style="margin-bottom:32px;" class="reveal">
+      <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;padding-left:28px;">King Salmon · May – July</div>
+      <div style="border:1px solid rgba(44,62,80,0.08);border-radius:12px;overflow:hidden;">
+        <div class="rate-row">
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);">Full Day</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-top:2px;">Approx. 8 hours · shared boat</div></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);">$295 <span style="font-size:14px;color:#8A9BAB;font-family:'Montserrat',sans-serif;font-weight:300;">/person</span></div>
+        </div>
+        <div class="rate-row">
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);">3/4 Day</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-top:2px;">6 hours · shared boat</div></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);">$235 <span style="font-size:14px;color:#8A9BAB;font-family:'Montserrat',sans-serif;font-weight:300;">/person</span></div>
+        </div>
+        <div class="rate-row" style="background:rgba(197,160,89,0.04);">
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);">Private Boat – Full Day</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-top:2px;">Exclusive vessel · 1–4 guests</div></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);">$885 <span style="font-size:14px;color:#8A9BAB;font-family:'Montserrat',sans-serif;font-weight:300;">/boat</span></div>
+        </div>
+        <div class="rate-row">
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);">Private Boat – 3/4 Day</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-top:2px;">Exclusive vessel · 1–4 guests</div></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);">$705 <span style="font-size:14px;color:#8A9BAB;font-family:'Montserrat',sans-serif;font-weight:300;">/boat</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sockeye / Silver -->
+    <div style="margin-bottom:32px;" class="reveal">
+      <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;padding-left:28px;">Sockeye &amp; Silver Salmon · June – October</div>
+      <div style="border:1px solid rgba(44,62,80,0.08);border-radius:12px;overflow:hidden;">
+        <div class="rate-row">
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);">Full Day</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-top:2px;">Sockeye June–Aug · Silver Aug–Oct</div></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);">$295 <span style="font-size:14px;color:#8A9BAB;font-family:'Montserrat',sans-serif;font-weight:300;">/person</span></div>
+        </div>
+        <div class="rate-row">
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);">3/4 Day</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-top:2px;">6 hours</div></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);">$235 <span style="font-size:14px;color:#8A9BAB;font-family:'Montserrat',sans-serif;font-weight:300;">/person</span></div>
+        </div>
+        <div class="rate-row" style="background:rgba(197,160,89,0.04);">
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);">Private Boat – Full Day</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-top:2px;">Exclusive vessel</div></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);">$885 <span style="font-size:14px;color:#8A9BAB;font-family:'Montserrat',sans-serif;font-weight:300;">/boat</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rainbow Trout -->
+    <div style="margin-bottom:32px;" class="reveal">
+      <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;padding-left:28px;">Rainbow Trout &amp; Dolly Varden · May – October</div>
+      <div style="border:1px solid rgba(44,62,80,0.08);border-radius:12px;overflow:hidden;">
+        <div class="rate-row">
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);">Full Day</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-top:2px;">Upper Kenai June–Oct: $350/person</div></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);">$295 <span style="font-size:14px;color:#8A9BAB;font-family:'Montserrat',sans-serif;font-weight:300;">/person</span></div>
+        </div>
+        <div class="rate-row">
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);">3/4 Day</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-top:2px;">6 hours</div></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);">$235 <span style="font-size:14px;color:#8A9BAB;font-family:'Montserrat',sans-serif;font-weight:300;">/person</span></div>
+        </div>
+        <div class="rate-row">
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);">Half Day</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-top:2px;">4 hours · ideal for families</div></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);">$195 <span style="font-size:14px;color:#8A9BAB;font-family:'Montserrat',sans-serif;font-weight:300;">/person</span></div>
+        </div>
+        <div class="rate-row" style="background:rgba(197,160,89,0.04);">
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);">Private Boat – Full Day</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-top:2px;">Exclusive vessel · 1–4 guests</div></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);">$885 <span style="font-size:14px;color:#8A9BAB;font-family:'Montserrat',sans-serif;font-weight:300;">/boat</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Steelhead -->
+    <div style="margin-bottom:48px;" class="reveal">
+      <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;padding-left:28px;">Steelhead · August – October</div>
+      <div style="border:1px solid rgba(44,62,80,0.08);border-radius:12px;overflow:hidden;">
+        <div class="rate-row" style="background:rgba(197,160,89,0.04);">
+          <div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--slate);">Private Boat – Full Day Only</div><div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-top:2px;">1–2 guests · exclusive vessel · prime steelhead season</div></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);">$885 <span style="font-size:14px;color:#8A9BAB;font-family:'Montserrat',sans-serif;font-weight:300;">/boat</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inclusions / Exclusions -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" class="reveal">
+      <div style="padding:32px;background:var(--glacier);border-radius:12px;">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">What's Included</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:300;color:#4A6070;"><div style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></div>20' drift boat (Willie's, Koffler, or Willie)</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:300;color:#4A6070;"><div style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></div>Chest waders and wading boots</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:300;color:#4A6070;"><div style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></div>Rods, reels, and all tackle</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:300;color:#4A6070;"><div style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></div>Hand-tied flies</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:300;color:#4A6070;"><div style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></div>Salmon filleting and vacuum packing</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:300;color:#4A6070;"><div style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></div>Licensed and insured guide</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:300;color:#4A6070;"><div style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></div>Safety equipment on all vessels</div>
+        </div>
+      </div>
+      <div style="padding:32px;background:var(--glacier);border-radius:12px;">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;margin-bottom:16px;">Not Included</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:300;color:#4A6070;"><div style="width:6px;height:6px;background:#D0D8E0;border-radius:50%;flex-shrink:0;"></div>Alaska sport fishing license</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:300;color:#4A6070;"><div style="width:6px;height:6px;background:#D0D8E0;border-radius:50%;flex-shrink:0;"></div>Weather-appropriate clothing</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:300;color:#4A6070;"><div style="width:6px;height:6px;background:#D0D8E0;border-radius:50%;flex-shrink:0;"></div>Sunscreen and insect repellent</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:300;color:#4A6070;"><div style="width:6px;height:6px;background:#D0D8E0;border-radius:50%;flex-shrink:0;"></div>Fish shipping (available as add-on)</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:300;color:#4A6070;"><div style="width:6px;height:6px;background:#D0D8E0;border-radius:50%;flex-shrink:0;"></div>Gratuity (~20% customary)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LODGING RATES -->
+<section style="padding:100px 0;background:var(--glacier);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="margin-bottom:48px;" class="reveal">
+      <div class="section-label"><span>Accommodations</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:12px;">Lodging Rates</h2>
+      <p style="font-size:15px;font-weight:300;color:#8A9BAB;max-width:540px;">Alaska Heavenly Lodge — 34950 Blakley Road, Cooper Landing, AK 99572. All rates exclude 3% Kenai Peninsula Borough sales tax.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:20px;" class="reveal">
+
+      <div class="cabin-card">
+        <div style="height:180px;background:linear-gradient(145deg,#7A9E7A,#3A6A3A);display:flex;align-items:flex-end;padding:20px;position:relative;">
+          <div style="position:absolute;top:12px;left:12px;font-size:8px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#2A5230;padding:4px 10px;border-radius:2px;">Photo: cabin-main-lodge.jpg</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">The Main Lodge</div>
+        </div>
+        <div style="padding:28px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
+            <div>
+              <div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-bottom:4px;">Historic 1974 hand-hewn log building</div>
+              <div style="font-size:12px;font-weight:600;color:var(--slate);">4 BR / 3 BA · Sleeps 6–10 · Built 1974</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold);">$725–$1,125</div>
+              <div style="font-size:10px;color:#8A9BAB;font-weight:300;">per night</div>
+            </div>
+          </div>
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">Stone fireplace, modern kitchen, dining for 16, loft library, deck overlooking the Kenai River. Rooms: Skilak (Queen), Ninilchik (Queen + Twin), Kenai (2 Twins), Kasilof (Queen), Loft (Futon).</p>
+          <a href="contact.html" class="btn-gold" style="font-size:9px;padding:9px 18px;">Inquire</a>
+        </div>
+      </div>
+
+      <div class="cabin-card">
+        <div style="height:180px;background:linear-gradient(145deg,#8AAE8A,#4A7A4A);display:flex;align-items:flex-end;padding:20px;position:relative;">
+          <div style="position:absolute;top:12px;left:12px;font-size:8px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#2A5230;padding:4px 10px;border-radius:2px;">Photo: cabin-mt-cecil.jpg</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">Mt. Cecil Cabin</div>
+        </div>
+        <div style="padding:28px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
+            <div>
+              <div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-bottom:4px;">Panoramic deck · mountain views</div>
+              <div style="font-size:12px;font-weight:600;color:var(--slate);">3 BR / 3 BA · Sleeps 3–10 · Built 2002</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold);">$400–$850</div>
+              <div style="font-size:10px;color:#8A9BAB;font-weight:300;">per night</div>
+            </div>
+          </div>
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">Three spacious bedrooms with panoramic deck and charcoal grill. Rooms: Katchemak (2 Fulls), Iliamna (2 Fulls), K'beq (2 Queens).</p>
+          <a href="contact.html" class="btn-gold" style="font-size:9px;padding:9px 18px;">Inquire</a>
+        </div>
+      </div>
+
+      <div class="cabin-card">
+        <div style="height:180px;background:linear-gradient(145deg,#C4A878,#8A7848);display:flex;align-items:flex-end;padding:20px;position:relative;">
+          <div style="position:absolute;top:12px;left:12px;font-size:8px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#5A3A10;padding:4px 10px;border-radius:2px;">Photo: cabin-russian-river.jpg</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">Russian River Cabin</div>
+        </div>
+        <div style="padding:28px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
+            <div>
+              <div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-bottom:4px;">Honeymoon suite · hot tub · sauna</div>
+              <div style="font-size:12px;font-weight:600;color:var(--slate);">1 BR Suite · Sleeps 2–4 · Remodeled 2001</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold);">$375–$450</div>
+              <div style="font-size:10px;color:#8A9BAB;font-weight:300;">per night</div>
+            </div>
+          </div>
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">7-person jacuzzi hot tub, private sauna, billiards table, glass sun room, 55" Smart TV. Honeymoon suite with Queen bed + custom log futon.</p>
+          <a href="contact.html" class="btn-gold" style="font-size:9px;padding:9px 18px;">Inquire</a>
+        </div>
+      </div>
+
+      <div class="cabin-card">
+        <div style="height:180px;background:linear-gradient(145deg,#9AB888,#5A8848);display:flex;align-items:flex-end;padding:20px;position:relative;">
+          <div style="position:absolute;top:12px;left:12px;font-size:8px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#2A5230;padding:4px 10px;border-radius:2px;">Photo: cabin-caribou.jpg</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">Caribou Cabin</div>
+        </div>
+        <div style="padding:28px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
+            <div>
+              <div style="font-size:11px;font-weight:300;color:#8A9BAB;margin-bottom:4px;">Loft style · outdoor picnic area</div>
+              <div style="font-size:12px;font-weight:600;color:var(--slate);">2 BR / Loft · Sleeps 2–6</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold);">$275–$375</div>
+              <div style="font-size:10px;color:#8A9BAB;font-weight:300;">per night</div>
+            </div>
+          </div>
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">Updated loft with two bedrooms, living area, small kitchen, 43" Smart TV, grill, and outdoor picnic area. North Loft (Queen), South Loft (Queen), plus convertible sofa.</p>
+          <a href="contact.html" class="btn-gold" style="font-size:9px;padding:9px 18px;">Inquire</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full Lodge Package -->
+    <div style="border:2px solid var(--gold);border-radius:16px;padding:40px;background:#fff;margin-bottom:20px;" class="reveal">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;">
+        <div style="max-width:600px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Exclusive Use</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--slate);margin-bottom:12px;">Full Lodge Package</div>
+          <p style="font-size:14px;font-weight:300;color:#4A6070;line-height:1.85;">Entire Alaska Heavenly Lodge property — all cabins, main lodge, lawns, fire pit, and facilities exclusively yours. Ideal for weddings, corporate retreats, family reunions, and large group events. Up to 30 overnight guests, 50 for events.</p>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--gold);">$1,900–$2,950</div>
+          <div style="font-size:11px;color:#8A9BAB;font-weight:300;margin-bottom:8px;">per night · 16–30 guests</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--slate);">$9,500–$15,500</div>
+          <div style="font-size:11px;color:#8A9BAB;font-weight:300;">weekly rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CIRCUIT PACKAGES -->
+<section style="padding:100px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="text-align:center;margin-bottom:48px;" class="reveal">
+      <div class="section-label" style="justify-content:center;"><span>The Last Frontier Collection</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:12px;">All-Inclusive Packages</h2>
+      <p style="font-size:15px;font-weight:300;color:#8A9BAB;max-width:540px;">Curated Alaska adventures starting at Hub 1, Cooper Landing. Lodging, guiding, and transport — all handled.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;" class="reveal">
+      <div class="pkg-card" style="background:var(--glacier);border:1px solid rgba(44,62,80,0.08);">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Package 1</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--slate);margin-bottom:4px;">Kenai River Adventure</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--gold);margin-bottom:16px;">$1,295 <span style="font-size:18px;color:#8A9BAB;font-family:'Montserrat',sans-serif;font-weight:300;">/person</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px;">
+          <div style="font-size:12px;font-weight:300;color:#4A6070;">3 nights lodging at Hub 1</div>
+          <div style="font-size:12px;font-weight:300;color:#4A6070;">2 days guided Kenai River fishing</div>
+          <div style="font-size:12px;font-weight:300;color:#4A6070;">All gear and tackle included</div>
+          <div style="font-size:12px;font-weight:300;color:#4A6070;">Concierge support throughout</div>
+        </div>
+        <a href="contact.html" class="btn-gold" style="font-size:9px;padding:11px 22px;display:block;text-align:center;">Book This Package</a>
+      </div>
+      <div class="pkg-card" style="background:var(--slate);">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Package 2 · Most Popular</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:#fff;margin-bottom:4px;">Kenai Peninsula Explorer</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--gold);margin-bottom:16px;">$2,395 <span style="font-size:18px;color:rgba(255,255,255,0.5);font-family:'Montserrat',sans-serif;font-weight:300;">/person</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px;">
+          <div style="font-size:12px;font-weight:300;color:rgba(255,255,255,0.7);">4 nights lodging at Hub 1 or 2</div>
+          <div style="font-size:12px;font-weight:300;color:rgba(255,255,255,0.7);">2 days river fishing</div>
+          <div style="font-size:12px;font-weight:300;color:rgba(255,255,255,0.7);">1 day ocean fishing</div>
+          <div style="font-size:12px;font-weight:300;color:rgba(255,255,255,0.7);">All gear, tackle, and transport</div>
+          <div style="font-size:12px;font-weight:300;color:rgba(255,255,255,0.7);">Concierge support throughout</div>
+        </div>
+        <a href="contact.html" class="btn-gold" style="font-size:9px;padding:11px 22px;display:block;text-align:center;">Book This Package</a>
+      </div>
+      <div class="pkg-card" style="background:var(--glacier);border:1px solid rgba(44,62,80,0.08);">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Package 3 · The Full Circuit</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--slate);margin-bottom:4px;">Ultimate Alaska Adventure</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--gold);margin-bottom:16px;">$3,499 <span style="font-size:18px;color:#8A9BAB;font-family:'Montserrat',sans-serif;font-weight:300;">/person</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px;">
+          <div style="font-size:12px;font-weight:300;color:#4A6070;">6 nights across all 3 hubs</div>
+          <div style="font-size:12px;font-weight:300;color:#4A6070;">2 days river fishing</div>
+          <div style="font-size:12px;font-weight:300;color:#4A6070;">1 day ocean fishing</div>
+          <div style="font-size:12px;font-weight:300;color:#4A6070;">1 floatplane fly-out trip</div>
+          <div style="font-size:12px;font-weight:300;color:#4A6070;">Whale watching cruise</div>
+          <div style="font-size:12px;font-weight:300;color:#4A6070;">All transport and concierge</div>
+        </div>
+        <a href="contact.html" class="btn-gold" style="font-size:9px;padding:11px 22px;display:block;text-align:center;">Book This Package</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--slate);padding:60px 0 32px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;">
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;margin-bottom:4px;">The Gateway</div>
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Hub 1 · Cooper Landing</div>
+      </div>
+      <a href="index.html" class="btn-ghost" style="font-size:9px;padding:10px 22px;">The Last Frontier Collection</a>
+    </div>
+    <div style="display:flex;gap:32px;flex-wrap:wrap;margin-bottom:40px;">
+      <a href="hub1.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Home</a>
+      <a href="hub1-about.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">About</a>
+      <a href="hub1-services.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Services</a>
+      <a href="hub1-rates.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Rates</a>
+      <a href="contact.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Contact</a>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;">
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);font-weight:300;">© 2025 The Last Frontier Collection. All rights reserved.</p>
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);font-weight:300;">(907) 599-0126 · cooperlandingguide@gmail.com</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{const nav=document.getElementById('nav');if(window.scrollY>40)nav.classList.add('scrolled');else nav.classList.remove('scrolled');});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+</script>
+</body>
+</html>

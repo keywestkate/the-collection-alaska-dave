@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services · Hub 1 Cooper Landing | The Last Frontier Collection</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C5A059;--slate:#2C3E50;--glacier:#F8FAFB;--forest:#4A7A4A;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-serif;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;transition:all 0.4s;}
+.nav.scrolled{background:rgba(248,250,251,0.97);backdrop-filter:blur(20px);box-shadow:0 1px 24px rgba(44,62,80,0.07);}
+.btn-gold{background:var(--gold);color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:14px 36px;border:none;cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}
+.btn-gold:hover{background:#A07830;transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:13px 36px;border:1.5px solid rgba(255,255,255,0.5);cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}
+.btn-ghost:hover{background:rgba(255,255,255,0.15);}
+.section-label{display:inline-flex;align-items:center;gap:12px;margin-bottom:16px;}
+.section-label::before,.section-label::after{content:'';display:block;width:28px;height:1px;background:var(--gold);}
+.section-label span{font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);}
+.hub-nav-tab{padding:14px 20px;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8A9BAB;border-bottom:2px solid transparent;cursor:pointer;transition:all 0.25s;text-decoration:none;display:inline-block;}
+.hub-nav-tab:hover,.hub-nav-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+.reveal{opacity:0;transform:translateY(20px);transition:all 0.6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.svc-card{background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:12px;overflow:hidden;transition:all 0.3s;}
+.svc-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(44,62,80,0.12);}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(44,62,80,0.06);">
+      <a href="index.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">← The Last Frontier Collection</a>
+      <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">Hub 1 of 3</div>
+      <a href="hub2.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">Hub 2 · Soldotna →</a>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;">
+      <a href="hub1.html" style="text-decoration:none;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--slate);">The Gateway</div>
+        <div style="font-size:8px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Hub 1 · Cooper Landing</div>
+      </a>
+      <div style="display:flex;align-items:center;">
+        <a href="hub1.html" class="hub-nav-tab">Home</a>
+        <a href="hub1-about.html" class="hub-nav-tab">About</a>
+        <a href="hub1-services.html" class="hub-nav-tab active">Services</a>
+        <a href="hub1-rates.html" class="hub-nav-tab">Rates</a>
+        <a href="contact.html" class="hub-nav-tab">Contact</a>
+      </div>
+      <a href="contact.html" class="btn-gold" style="font-size:9px;padding:11px 22px;">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="min-height:50vh;background:linear-gradient(160deg,#C4D8C4 0%,#E8F0E8 50%,#F8FAFB 100%);display:flex;align-items:center;padding-top:130px;padding-bottom:80px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div class="section-label"><span>Cooper Landing, Alaska</span></div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:64px;color:var(--slate);font-weight:400;line-height:1.05;margin-bottom:20px;">What We<br><em style="color:var(--gold);">Offer.</em></h1>
+    <p style="font-size:16px;font-weight:300;color:#4A6070;line-height:1.85;max-width:520px;">Guided fishing, wilderness activities, celebrations, and curated Alaska experiences — all rooted in the Upper Kenai River corridor.</p>
+  </div>
+</section>
+
+<!-- GUIDED FISHING -->
+<section style="padding:100px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="margin-bottom:48px;" class="reveal">
+      <div class="section-label"><span>Core Service</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:12px;">Guided Fishing</h2>
+      <p style="font-size:15px;font-weight:300;color:#8A9BAB;max-width:560px;">Cooper Landing Fishing Guide, LLC has been guiding on the Kenai and Kasilof Rivers for over 20 years. Every trip is customized — species, technique, duration, and group size.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:48px;" class="reveal">
+      <div class="svc-card">
+        <div style="height:160px;background:linear-gradient(145deg,#8AAE8A,#4A7A4A);display:flex;align-items:flex-end;padding:20px;">
+          <div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:4px;">May – July</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">King Salmon</div>
+          </div>
+        </div>
+        <div style="padding:24px;">
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">The King of all Alaska salmon. Trophy Chinook on the Kenai River — drift boat, gear and fly fishing. Full day and private boat options. Up to 4 anglers per boat.</p>
+          <a href="hub1-rates.html" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">View Rates</a>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div style="height:160px;background:linear-gradient(145deg,#7A9E6A,#3A6A2A);display:flex;align-items:flex-end;padding:20px;">
+          <div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:4px;">June – August</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">Sockeye Salmon</div>
+          </div>
+        </div>
+        <div style="padding:24px;">
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">The most abundant run on the Kenai — up to 300,000 fish per day at peak. Bank and drift fishing with fly and conventional gear. A bucket-list experience for every angler.</p>
+          <a href="hub1-rates.html" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">View Rates</a>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div style="height:160px;background:linear-gradient(145deg,#9AAE7A,#5A7A3A);display:flex;align-items:flex-end;padding:20px;">
+          <div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:4px;">August – October</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">Silver Salmon</div>
+          </div>
+        </div>
+        <div style="padding:24px;">
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">Aggressive fighters in the 10–20 lb range. Silver (Coho) salmon on the Kenai are a fly angler's dream — great on streamers, excellent for all skill levels.</p>
+          <a href="hub1-rates.html" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">View Rates</a>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div style="height:160px;background:linear-gradient(145deg,#A8C4A8,#6A9A6A);display:flex;align-items:flex-end;padding:20px;">
+          <div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:4px;">May – October</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">Rainbow Trout</div>
+          </div>
+        </div>
+        <div style="padding:24px;">
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">World-class rainbow trout on the Upper Kenai River. These are big fish — 20"+ specimens are common. Dave's signature trout spey technique is world-renowned in fly fishing circles.</p>
+          <a href="hub1-rates.html" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">View Rates</a>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div style="height:160px;background:linear-gradient(145deg,#C4B890,#8A8060);display:flex;align-items:flex-end;padding:20px;">
+          <div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:4px;">Year-Round</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">Dolly Varden</div>
+          </div>
+        </div>
+        <div style="padding:24px;">
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">Dolly Varden char run the Kenai throughout the season, often in company with salmon. A hard-fighting, beautifully colored fish — excellent on streamer flies and great for beginners.</p>
+          <a href="hub1-rates.html" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">View Rates</a>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div style="height:160px;background:linear-gradient(145deg,#8AA0B0,#4A6878);display:flex;align-items:flex-end;padding:20px;">
+          <div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:4px;">August – October</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">Steelhead</div>
+          </div>
+        </div>
+        <div style="padding:24px;">
+          <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">Alaska steelhead are rare — and that rarity makes every hookup extraordinary. Private boat only, 1–2 anglers. Dave's most specialized and sought-after trip.</p>
+          <a href="hub1-rates.html" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">View Rates</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fly fishing callout -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;" class="reveal">
+      <div style="padding:36px;background:var(--slate);border-radius:16px;color:#fff;">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Specialty</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#fff;margin-bottom:16px;">Fly Fishing &amp; Trout Spey</h3>
+        <p style="font-size:14px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.85;margin-bottom:20px;">Dave Lisi is a published fly fishing contributor and trout spey specialist. His signature technique — trout spey on the Upper Kenai — has been featured in national fly fishing publications and on YouTube. The Cooper Landing Fly Shop carries his custom patterns.</p>
+        <a href="contact.html" class="btn-ghost" style="font-size:9px;padding:10px 22px;">Book Fly Trip</a>
+      </div>
+      <div style="padding:36px;background:var(--glacier);border-radius:16px;border:1px solid rgba(44,62,80,0.08);">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Walk-In Fishing</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--slate);margin-bottom:16px;">Bank Access</h3>
+        <p style="font-size:14px;font-weight:300;color:#4A6070;line-height:1.85;margin-bottom:20px;">Guided walk-in fishing at the Russian River, Quartz Creek, and Anchor River. No boat required — ideal for guests who prefer shore fishing or who want a different experience from the drift boat.</p>
+        <a href="contact.html" class="btn-gold" style="font-size:9px;padding:10px 22px;">Book Walk-In</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLY-OUT FISHING -->
+<section style="padding:100px 0;background:var(--glacier);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="margin-bottom:48px;" class="reveal">
+      <div class="section-label"><span>Premium Experience</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:12px;">Fly-Out Fishing</h2>
+      <p style="font-size:15px;font-weight:300;color:#8A9BAB;max-width:540px;">30–40 minute floatplane flights to remote, pristine streams with no other anglers. True Alaska backcountry fishing arranged through the Hub 1 concierge.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;" class="reveal">
+      <div class="svc-card" style="padding:36px;">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Backcountry</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--slate);margin-bottom:16px;">Remote Stream Drop-Off</h3>
+        <p style="font-size:14px;font-weight:300;color:#4A6070;line-height:1.85;margin-bottom:20px;">Floatplane access to trophy rainbow trout and salmon streams in the Kenai Mountains — unreachable by road or foot. A full day on water you may never share with another angler.</p>
+        <a href="contact.html" class="btn-gold" style="font-size:9px;padding:10px 22px;">Inquire</a>
+      </div>
+      <div class="svc-card" style="padding:36px;">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Wildlife</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--slate);margin-bottom:16px;">Katmai Bear Viewing</h3>
+        <p style="font-size:14px;font-weight:300;color:#4A6070;line-height:1.85;margin-bottom:20px;">Scenic flight to Katmai National Park to watch Alaska's brown bears fishing for sockeye salmon. One of the most iconic wildlife experiences on the planet — arranged through the collection concierge.</p>
+        <a href="contact.html" class="btn-gold" style="font-size:9px;padding:10px 22px;">Inquire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section style="padding:100px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="margin-bottom:48px;" class="reveal">
+      <div class="section-label"><span>Beyond Fishing</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--slate);font-weight:400;margin-bottom:12px;">Activities at Hub 1</h2>
+      <p style="font-size:15px;font-weight:300;color:#8A9BAB;max-width:540px;">Cooper Landing sits at the gateway to the Kenai Peninsula. When the rods are put away, the adventure continues.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:48px;" class="reveal">
+      <div style="padding:28px;background:var(--glacier);border-radius:12px;border:1px solid rgba(44,62,80,0.06);">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">River</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Kenai River Rafting</div>
+        <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">Scenic float tours and Class V rapid experiences at Six-Mile Creek. From family-friendly drift to white-knuckle whitewater — arranged through the lodge concierge.</p>
+      </div>
+      <div style="padding:28px;background:var(--glacier);border-radius:12px;border:1px solid rgba(44,62,80,0.06);">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Equestrian</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Horseback Riding</div>
+        <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">Guided trail rides through the hills above Cooper Landing. Arranged through the lodge — all skill levels accommodated, from first-time riders to experienced equestrians.</p>
+      </div>
+      <div style="padding:28px;background:var(--glacier);border-radius:12px;border:1px solid rgba(44,62,80,0.06);">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Trails</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">300+ Miles of Hiking</div>
+        <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">The Kenai Peninsula offers over 300 miles of maintained trails. Riverside walks, ridge hikes, and high-elevation routes with panoramic views of the Chugach and Kenai Mountains.</p>
+      </div>
+      <div style="padding:28px;background:var(--glacier);border-radius:12px;border:1px solid rgba(44,62,80,0.06);">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Water</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Kayaking</div>
+        <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">Afternoon paddling on Kenai Lake with local guides, or sea kayak expeditions in Resurrection Bay near Seward. Guided trips arranged through the concierge.</p>
+      </div>
+      <div style="padding:28px;background:var(--glacier);border-radius:12px;border:1px solid rgba(44,62,80,0.06);">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Historic</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Gold Panning</div>
+        <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">Search for Alaska gold with local panning services. A classic Alaska experience — great for families, and genuinely productive in the Cooper Landing area streams.</p>
+      </div>
+      <div style="padding:28px;background:var(--glacier);border-radius:12px;border:1px solid rgba(44,62,80,0.06);">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Marine</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Whale Watching</div>
+        <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;">Guided day trips to witness Alaska's marine life — humpback and orca whale watching in Kenai Fjords National Park, departing from Seward. A 2-hour drive from Hub 1.</p>
+      </div>
+    </div>
+
+    <!-- Celebrations -->
+    <div style="padding:48px;background:linear-gradient(135deg,#C4D8C4,#E8F0E8);border-radius:20px;" class="reveal">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+        <div>
+          <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--forest);margin-bottom:12px;">Celebrations</div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--slate);margin-bottom:16px;">Weddings &amp; Events</h3>
+          <p style="font-size:14px;font-weight:300;color:#4A6070;line-height:1.85;margin-bottom:24px;">Alaska Heavenly Lodge hosts ceremonies, receptions, and private events on its 12,000 sq ft of manicured riverfront lawns. Up to 25 overnight guests, 50 for events. Ceremony arbor, round tables, linens, and full kitchen included.</p>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;">
+            <a href="events.html" class="btn-gold" style="background:var(--forest);font-size:9px;padding:10px 22px;">Explore Events</a>
+            <a href="contact.html" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--forest);padding:10px 0;text-decoration:none;">Inquire</a>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="display:flex;justify-content:space-between;padding:16px 20px;background:#fff;border-radius:8px;">
+            <span style="font-size:13px;font-weight:500;color:var(--slate);">Overnight Lodging</span>
+            <span style="font-size:13px;color:var(--gold);font-weight:600;">Up to 25 guests</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:16px 20px;background:#fff;border-radius:8px;">
+            <span style="font-size:13px;font-weight:500;color:var(--slate);">Reception Capacity</span>
+            <span style="font-size:13px;color:var(--gold);font-weight:600;">Up to 50 guests</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:16px 20px;background:#fff;border-radius:8px;">
+            <span style="font-size:13px;font-weight:500;color:var(--slate);">Outdoor Ceremony Space</span>
+            <span style="font-size:13px;color:var(--gold);font-weight:600;">12,000 sq ft</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:16px 20px;background:#fff;border-radius:8px;">
+            <span style="font-size:13px;font-weight:500;color:var(--slate);">Honeymoon Suite</span>
+            <span style="font-size:13px;color:var(--gold);font-weight:600;">Hot tub + sauna</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--slate);padding:60px 0 32px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;">
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;margin-bottom:4px;">The Gateway</div>
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Hub 1 · Cooper Landing</div>
+      </div>
+      <a href="index.html" class="btn-ghost" style="font-size:9px;padding:10px 22px;">The Last Frontier Collection</a>
+    </div>
+    <div style="display:flex;gap:32px;flex-wrap:wrap;margin-bottom:40px;">
+      <a href="hub1.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Home</a>
+      <a href="hub1-about.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">About</a>
+      <a href="hub1-services.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Services</a>
+      <a href="hub1-rates.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Rates</a>
+      <a href="contact.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Contact</a>
+      <a href="hub2.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Hub 2 — Soldotna</a>
+      <a href="hub3.html" style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:300;text-decoration:none;">Hub 3 — Homer</a>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;">
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);font-weight:300;">© 2025 The Last Frontier Collection. All rights reserved.</p>
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);font-weight:300;">(907) 599-0126 · cooperlandingguide@gmail.com</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{const nav=document.getElementById('nav');if(window.scrollY>40)nav.classList.add('scrolled');else nav.classList.remove('scrolled');});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+</script>
+</body>
+</html>
