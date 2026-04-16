@@ -158,7 +158,6 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
             <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:4px 10px;">Celebrations</span>
           </div>
           <div style="display:flex;gap:12px;align-items:center;">
-            <a href="hub1.html" class="btn-gold" style="font-size:9px;padding:10px 20px;">Book Hub 1</a>
             <a href="hub1.html" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Explore →</a>
           </div>
         </div>
@@ -409,12 +408,12 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{at
 
 function makeIcon(label,color){return L.divIcon({className:'',html:`<div style="width:44px;height:44px;border-radius:50%;background:${color};display:flex;align-items:center;justify-content:center;font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;color:#fff;box-shadow:0 4px 16px rgba(0,0,0,0.25);border:3px solid #fff;cursor:pointer;">${label}</div>`,iconSize:[44,44],iconAnchor:[22,22],popupAnchor:[0,-26]});}
 
-function popup(title,sub,cap,btn){return`<div style="padding:20px 24px;min-width:210px;font-family:Montserrat,sans-serif;"><div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#C5A059;margin-bottom:6px;">${sub}</div><div style="font-size:17px;font-weight:500;color:#2C3E50;margin-bottom:${cap?'4px':'14px'}">${title}</div>${cap?`<div style="font-size:11px;color:#8A9BAB;font-weight:300;margin-bottom:14px;">Max capacity: ${cap}</div>`:''}<a href="#" style="display:inline-block;background:#C5A059;color:#fff;font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:9px 18px;text-decoration:none;">${btn}</a></div>`;}
+function popup(title,sub,cap,btn,url){return`<div style="padding:20px 24px;min-width:210px;font-family:Montserrat,sans-serif;"><div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#C5A059;margin-bottom:6px;">${sub}</div><div style="font-size:17px;font-weight:500;color:#2C3E50;margin-bottom:${cap?'4px':'14px'}">${title}</div>${cap?`<div style="font-size:11px;color:#8A9BAB;font-weight:300;margin-bottom:14px;">Max capacity: ${cap}</div>`:''}<a href="${url||'#'}" style="display:inline-block;background:#C5A059;color:#fff;font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:9px 18px;text-decoration:none;">${btn}</a></div>`;}
 
-L.marker([61.174,-149.996],{icon:makeIcon('ANC','#4A6070')}).addTo(map).bindPopup(popup("Anchorage Int'l Airport","Your Starting Point",null,"Plan My Trip →"));
-L.marker([60.488,-149.988],{icon:makeIcon('H1','#5A8A5A')}).addTo(map).bindPopup(popup("The Gateway","Hub 1 · Cooper Landing","~75 guests","Explore Hub 1 →"));
-L.marker([60.488,-150.757],{icon:makeIcon('H2','#C5A059')}).addTo(map).bindPopup(popup("The Heartbeat","Hub 2 · Soldotna / Sterling","~55 guests","Explore Hub 2 →"));
-L.marker([59.643,-151.549],{icon:makeIcon('H3','#4A7898')}).addTo(map).bindPopup(popup("The Horizon","Hub 3 · Homer","85+ guests","Explore Hub 3 →"));
+L.marker([61.174,-149.996],{icon:makeIcon('ANC','#4A6070')}).addTo(map).bindPopup(popup("Anchorage Int'l Airport","Your Starting Point",null,"Plan My Trip →","#"));
+L.marker([60.488,-149.988],{icon:makeIcon('H1','#5A8A5A')}).addTo(map).bindPopup(popup("The Gateway","Hub 1 · Cooper Landing","~75 guests","Explore Hub 1 →","hub1.html"));
+L.marker([60.488,-150.757],{icon:makeIcon('H2','#C5A059')}).addTo(map).bindPopup(popup("The Heartbeat","Hub 2 · Soldotna / Sterling","~55 guests","Explore Hub 2 →","#"));
+L.marker([59.643,-151.549],{icon:makeIcon('H3','#4A7898')}).addTo(map).bindPopup(popup("The Horizon","Hub 3 · Homer","85+ guests","Explore Hub 3 →","#"));
 L.polyline([[61.174,-149.996],[60.488,-149.988],[60.488,-150.757],[59.643,-151.549]],{color:'#C5A059',weight:2.5,opacity:0.6,dashArray:'8,8'}).addTo(map);
 
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1});
