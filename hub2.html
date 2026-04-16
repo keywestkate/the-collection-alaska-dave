@@ -73,17 +73,15 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
 </nav>
 
 <!-- HERO -->
-<section class="hero-split" style="min-height:100vh;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 380px;">
+<section class="hero-split" style="min-height:100vh;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 420px;">
 
-  <!-- Background photo -->
+  <!-- Background photo — NO overlay, full color -->
   <img src="photos/kasilof-river.jpg" alt="Kasilof River Alaska fishing" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;">
-  <!-- Cinematic overlay — light enough to show the river -->
-  <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(8,18,12,0.68) 0%,rgba(8,18,12,0.42) 55%,rgba(8,18,12,0.12) 100%);z-index:1;"></div>
   <!-- Gold top bar -->
   <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 0%,var(--gold) 30%,rgba(197,160,89,0.4) 70%,transparent 100%);z-index:10;"></div>
 
-  <!-- LEFT: Content -->
-  <div class="hero-split-left" style="position:relative;z-index:5;display:flex;flex-direction:column;justify-content:center;padding:140px 60px 80px 80px;min-height:100vh;">
+  <!-- LEFT: White content panel — text reads cleanly, photo shows fully on right -->
+  <div class="hero-split-left" style="position:relative;z-index:5;display:flex;flex-direction:column;justify-content:center;padding:140px 60px 80px 80px;min-height:100vh;background:rgba(255,255,255,0.92);">
 
     <div style="display:inline-flex;align-items:center;gap:14px;margin-bottom:32px;">
       <div style="width:36px;height:1px;background:var(--gold);"></div>
@@ -92,57 +90,51 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
     </div>
 
     <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.0;margin-bottom:28px;">
-      <span style="display:block;font-size:clamp(52px,6.5vw,90px);color:#fff;letter-spacing:-0.01em;">The</span>
+      <span style="display:block;font-size:clamp(52px,6.5vw,90px);color:var(--slate);letter-spacing:-0.01em;">The</span>
       <span style="display:block;font-size:clamp(58px,7.5vw,100px);color:var(--gold);font-style:italic;letter-spacing:-0.01em;">Heartbeat.</span>
     </h1>
 
-    <p style="font-size:16px;font-weight:300;color:rgba(255,255,255,0.65);line-height:1.85;max-width:480px;margin-bottom:20px;">King salmon on the Lower Kenai River. Wilderness log cabins on 10 private acres. Hub 2 is the pulse of the Alaska Circuit — raw, wild, and purpose-built for serious anglers.</p>
+    <p style="font-size:16px;font-weight:300;color:#4A6070;line-height:1.85;max-width:480px;margin-bottom:20px;">King salmon on the Lower Kenai River. Wilderness log cabins on 10 private acres. Hub 2 is the pulse of the Alaska Circuit — raw, wild, and purpose-built for serious anglers.</p>
 
     <div style="margin-bottom:40px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
-      <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,30px);color:#fff;font-style:italic;">Book your flight.</span>
-      <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,30px);color:#fff;font-style:italic;">Get to ANC.</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,30px);color:var(--slate);font-style:italic;">Book your flight.</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,30px);color:var(--slate);font-style:italic;">Get to ANC.</span>
       <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.6vw,32px);color:var(--gold);font-style:italic;">We do the rest.</span>
     </div>
 
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px;">
       <a href="#stay" style="background:var(--gold);color:#fff;font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;padding:16px 40px;text-decoration:none;transition:all 0.25s;" onmouseover="this.style.background='#A07830'" onmouseout="this.style.background='var(--gold)'">Explore Properties</a>
-      <a href="#fish" style="background:transparent;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;padding:15px 40px;border:1.5px solid rgba(255,255,255,0.3);text-decoration:none;transition:all 0.25s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)';this.style.color='#fff'">Plan Your Trip</a>
+      <a href="#fish" class="btn-outline" style="font-size:11px;padding:15px 40px;">Plan Your Trip</a>
     </div>
 
-    <div class="hero-stats" style="display:flex;gap:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.1);">
-      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#fff;">3</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:4px;">Properties</div></div>
-      <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
-      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#fff;">55</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:4px;">Guest Capacity</div></div>
-      <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
-      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#fff;">10</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:4px;">Private Acres</div></div>
-      <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
-      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#fff;">2</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:4px;">Rivers</div></div>
+    <div class="hero-stats" style="display:flex;gap:36px;padding-top:28px;border-top:1px solid rgba(44,62,80,0.12);">
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--slate);">3</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#8A9BAB;margin-top:4px;">Properties</div></div>
+      <div style="width:1px;background:rgba(44,62,80,0.1);"></div>
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--slate);">55</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#8A9BAB;margin-top:4px;">Guest Capacity</div></div>
+      <div style="width:1px;background:rgba(44,62,80,0.1);"></div>
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--slate);">10</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#8A9BAB;margin-top:4px;">Private Acres</div></div>
+      <div style="width:1px;background:rgba(44,62,80,0.1);"></div>
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--slate);">2</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#8A9BAB;margin-top:4px;">Rivers</div></div>
     </div>
   </div>
 
-  <!-- RIGHT: Photo stack -->
+  <!-- RIGHT: Pure photos — NO overlays at all -->
   <div class="hero-split-right" style="position:relative;z-index:5;display:flex;flex-direction:column;gap:6px;padding:110px 40px 60px 0;">
-    <div style="flex:1;border-radius:14px 14px 0 0;overflow:hidden;position:relative;min-height:170px;">
+    <div style="flex:1;border-radius:14px 14px 0 0;overflow:hidden;min-height:170px;">
       <img loading="lazy" src="photos/guide-kid-fishing.jpg" alt="Kids fishing the Kenai River" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,12,0.45) 0%,transparent 60%);"></div>
-      <div style="position:absolute;bottom:14px;left:16px;font-size:9px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.9);">Family Guided Trips</div>
     </div>
-    <div style="flex:1;overflow:hidden;position:relative;min-height:170px;">
+    <div style="flex:1;overflow:hidden;min-height:170px;">
       <img loading="lazy" src="photos/girl-fishing.jpg" alt="Girl fishing Lower Kenai River" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,12,0.40) 0%,transparent 60%);"></div>
-      <div style="position:absolute;bottom:14px;left:16px;font-size:9px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.9);">Lower Kenai · World Class</div>
     </div>
-    <div style="flex:1;border-radius:0 0 14px 14px;overflow:hidden;position:relative;min-height:170px;">
+    <div style="flex:1;border-radius:0 0 14px 14px;overflow:hidden;min-height:170px;">
       <img loading="lazy" src="photos/salmon-catch.jpg" alt="King Salmon on the Kenai" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,12,0.45) 0%,transparent 60%);"></div>
-      <div style="position:absolute;bottom:14px;left:16px;font-size:9px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.9);">King Salmon · Lower Kenai</div>
     </div>
   </div>
 
   <!-- Scroll indicator -->
   <div style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:6px;">
-    <span style="font-size:8px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.3);">Scroll</span>
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="animation:scrollBounce 1.6s ease-in-out infinite;"><path d="M5 8L10 13L15 8" stroke="rgba(197,160,89,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span style="font-size:8px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:rgba(44,62,80,0.4);">Scroll</span>
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="animation:scrollBounce 1.6s ease-in-out infinite;"><path d="M5 8L10 13L15 8" stroke="rgba(197,160,89,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </div>
 </section>
 <style>@keyframes scrollBounce{0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}</style>
@@ -172,14 +164,11 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
     <div class="prop-card reveal" style="margin-bottom:24px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;">
       <div style="min-height:360px;position:relative;overflow:hidden;">
         <img loading="lazy" src="photos/fishing-angler.jpg" alt="Alaska Moose & Spruce" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,20,8,0.60) 0%,rgba(8,20,8,0.12) 55%,transparent 100%);"></div>
-        <div style="position:absolute;top:20px;left:20px;font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#6A4A10;padding:5px 12px;border-radius:2px;">Flagship · VRBO #717208</div>
-        <div style="position:absolute;bottom:28px;left:28px;">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.4);margin-bottom:4px;">Alaska Moose &amp; Spruce</div>
-          <div style="font-size:11px;color:rgba(255,255,255,0.7);font-weight:300;">Brenda Way · Soldotna, AK — Keen Eye Recovery Program</div>
-        </div>
+        <div style="position:absolute;top:20px;left:20px;font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;background:rgba(255,255,255,0.95);color:#6A4A10;padding:5px 12px;border-radius:2px;">Flagship · VRBO #717208</div>
       </div>
       <div style="padding:40px;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--slate);margin-bottom:4px;">Alaska Moose &amp; Spruce</div>
+        <div style="font-size:11px;color:#8A9BAB;font-weight:300;margin-bottom:20px;">Brenda Way · Soldotna, AK — Keen Eye Recovery Program</div>
         <p style="font-size:14px;font-weight:300;color:#4A6070;line-height:1.85;margin-bottom:24px;">The crown jewel of Hub 2. A 10-acre wilderness property featuring 7 private cabins, a full house, and a maintenance facility. Home to the Keen Eye active recovery program — purpose-built for groups seeking the full Alaska experience off Airbnb and VRBO.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;">
           <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:4px 10px;border-radius:2px;">10 Acres</span>
@@ -203,12 +192,11 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;" class="reveal">
 
       <div class="prop-card">
-        <div style="height:180px;position:relative;overflow:hidden;">
-          <img loading="lazy" src="photos/angler-2.jpg" alt="Kenai Adventure Cabins" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,12,0.48) 0%,transparent 60%);"></div>
-          <div style="position:absolute;bottom:16px;left:16px;font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,0.3);">Kenai Adventure Cabins</div>
+        <div style="height:200px;overflow:hidden;">
+          <img loading="lazy" src="photos/angler-2.jpg" alt="Kenai Adventure Cabins" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <div style="padding:24px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--slate);margin-bottom:12px;">Kenai Adventure Cabins</div>
           <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">Handcrafted log cabins with direct river access along the Sterling Highway corridor. The ideal base camp for multi-day salmon excursions and river exploration.</p>
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;">
             <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">River Access</span>
@@ -224,12 +212,11 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
       </div>
 
       <div class="prop-card">
-        <div style="height:180px;position:relative;overflow:hidden;">
-          <img loading="lazy" src="photos/moose-cabin.jpg" alt="Kenai Kuik Cabins" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,12,0.48) 0%,transparent 60%);"></div>
-          <div style="position:absolute;bottom:16px;left:16px;font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,0.3);">Kenai Kuik Cabins</div>
+        <div style="height:200px;overflow:hidden;">
+          <img loading="lazy" src="photos/moose-cabin.jpg" alt="Kenai Kuik Cabins" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <div style="padding:24px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--slate);margin-bottom:12px;">Kenai Kuik Cabins</div>
           <p style="font-size:13px;font-weight:300;color:#4A6070;line-height:1.75;margin-bottom:16px;">Wilderness-adjacent log cabins on the edge of the Kenai National Wildlife Refuge. Focused on nature immersion and quiet — best suited for small groups and couples seeking authentic Alaska solitude.</p>
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;">
             <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:3px 8px;border-radius:2px;">Wildlife Refuge</span>
@@ -346,13 +333,14 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
           </div>
         </div>
 
-        <div style="border-radius:12px;overflow:hidden;position:relative;min-height:240px;">
-          <img loading="lazy" src="photos/dave-lisi.jpg" alt="Dave Lisi — Master Guide" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,12,0.82) 0%,rgba(8,18,12,0.30) 60%,transparent 100%);"></div>
-          <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;">
-            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;margin-bottom:4px;">Dave Lisi</div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(44,62,80,0.08);">
+          <div style="height:200px;overflow:hidden;">
+            <img loading="lazy" src="photos/dave-lisi.jpg" alt="Dave Lisi — Master Guide" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div style="padding:24px;background:#fff;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--slate);margin-bottom:4px;">Dave Lisi</div>
             <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Master Guide · Lower Kenai Specialist</div>
-            <p style="font-size:12px;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.85);margin-bottom:16px;">Twenty-plus years on the Lower Kenai and Kasilof. King salmon is the specialty — but no species is off-limits.</p>
+            <p style="font-size:12px;font-weight:300;line-height:1.8;color:#4A6070;margin-bottom:16px;">Twenty-plus years on the Lower Kenai and Kasilof. King salmon is the specialty — but no species is off-limits.</p>
             <a href="contact.html" class="btn-gold" style="font-size:9px;padding:10px 20px;">Book a Trip</a>
           </div>
         </div>
