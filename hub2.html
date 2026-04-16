@@ -41,13 +41,14 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
 .vendor-card{background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:12px;padding:24px;transition:all 0.3s;}
 .vendor-card:hover{box-shadow:0 8px 32px rgba(44,62,80,0.10);}
 </style>
+<link rel="stylesheet" href="mobile.css">
 </head>
 <body>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(44,62,80,0.06);">
+    <div class="hub-topbar" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(44,62,80,0.06);">
       <a href="hub1.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;display:flex;align-items:center;gap:8px;">
         <span>←</span> Hub 1 · Cooper Landing
       </a>
@@ -59,7 +60,7 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
         <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--slate);line-height:1.1;">The Heartbeat</div>
         <div style="font-size:8px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Hub 2 · Soldotna / Sterling</div>
       </div>
-      <div style="display:flex;align-items:center;">
+      <div class="hub-nav-row" style="display:flex;align-items:center;">
         <a href="hub2.html" class="hub-nav-tab active">Home</a>
         <a href="hub2-about.html" class="hub-nav-tab">About</a>
         <a href="hub2-services.html" class="hub-nav-tab">Services</a>
@@ -72,7 +73,7 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
 </nav>
 
 <!-- HERO -->
-<section style="min-height:100vh;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 380px;">
+<section class="hero-split" style="min-height:100vh;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 380px;">
 
   <!-- Background photo -->
   <img src="photos/kasilof-river.jpg" alt="Kasilof River Alaska fishing" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;">
@@ -82,7 +83,7 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
   <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 0%,var(--gold) 30%,rgba(197,160,89,0.4) 70%,transparent 100%);z-index:10;"></div>
 
   <!-- LEFT: Content -->
-  <div style="position:relative;z-index:5;display:flex;flex-direction:column;justify-content:center;padding:140px 60px 80px 80px;min-height:100vh;">
+  <div class="hero-split-left" style="position:relative;z-index:5;display:flex;flex-direction:column;justify-content:center;padding:140px 60px 80px 80px;min-height:100vh;">
 
     <div style="display:inline-flex;align-items:center;gap:14px;margin-bottom:32px;">
       <div style="width:36px;height:1px;background:var(--gold);"></div>
@@ -108,7 +109,7 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
       <a href="#fish" style="background:transparent;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;padding:15px 40px;border:1.5px solid rgba(255,255,255,0.3);text-decoration:none;transition:all 0.25s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)';this.style.color='#fff'">Plan Your Trip</a>
     </div>
 
-    <div style="display:flex;gap:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.1);">
+    <div class="hero-stats" style="display:flex;gap:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.1);">
       <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#fff;">3</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:4px;">Properties</div></div>
       <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
       <div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#fff;">55</div><div style="font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:4px;">Guest Capacity</div></div>
@@ -120,19 +121,19 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
   </div>
 
   <!-- RIGHT: Photo stack -->
-  <div style="position:relative;z-index:5;display:flex;flex-direction:column;gap:6px;padding:110px 40px 60px 0;">
+  <div class="hero-split-right" style="position:relative;z-index:5;display:flex;flex-direction:column;gap:6px;padding:110px 40px 60px 0;">
     <div style="flex:1;border-radius:14px 14px 0 0;overflow:hidden;position:relative;min-height:170px;">
-      <img src="photos/salmon-catch.jpg" alt="King Salmon Kenai River" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <img loading="lazy" src="photos/salmon-catch.jpg" alt="King Salmon Kenai River" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
       <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,12,0.68) 0%,transparent 55%);"></div>
       <div style="position:absolute;bottom:14px;left:16px;font-size:9px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.8);">King Salmon · Lower Kenai</div>
     </div>
     <div style="flex:1;overflow:hidden;position:relative;min-height:170px;">
-      <img src="photos/salmon-fishing.jpg" alt="Kenai River Fishing Guide" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <img loading="lazy" src="photos/salmon-fishing.jpg" alt="Kenai River Fishing Guide" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
       <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,12,0.68) 0%,transparent 55%);"></div>
       <div style="position:absolute;bottom:14px;left:16px;font-size:9px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.8);">Guided Float Trips</div>
     </div>
     <div style="flex:1;border-radius:0 0 14px 14px;overflow:hidden;position:relative;min-height:170px;">
-      <img src="photos/fly-guide.jpg" alt="Alaska Moose & Spruce Lodge" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <img loading="lazy" src="photos/fly-guide.jpg" alt="Alaska Moose & Spruce Lodge" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
       <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,12,0.68) 0%,transparent 55%);"></div>
       <div style="position:absolute;bottom:14px;left:16px;font-size:9px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.8);">Alaska Moose &amp; Spruce · 10 Acres</div>
     </div>
@@ -145,6 +146,7 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
   </div>
 </section>
 <style>@keyframes scrollBounce{0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}</style>
+<link rel="stylesheet" href="mobile.css">
 
 <!-- SECTION TABS NAV -->
 <div style="background:#fff;border-bottom:1px solid rgba(44,62,80,0.08);position:sticky;top:110px;z-index:800;">
@@ -169,7 +171,7 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
     <!-- Featured: Alaska Moose & Spruce -->
     <div class="prop-card reveal" style="margin-bottom:24px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;">
       <div style="min-height:360px;position:relative;overflow:hidden;">
-        <img src="photos/salmon-fishing-3.jpg" alt="Alaska Moose & Spruce" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+        <img loading="lazy" src="photos/salmon-fishing-3.jpg" alt="Alaska Moose & Spruce" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,20,8,0.82) 0%,rgba(8,20,8,0.3) 60%,transparent 100%);"></div>
         <div style="position:absolute;top:20px;left:20px;font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;background:rgba(255,255,255,0.9);color:#6A4A10;padding:5px 12px;border-radius:2px;">Flagship · Direct Booking</div>
         <div style="position:absolute;bottom:28px;left:28px;">
@@ -202,7 +204,7 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
 
       <div class="prop-card">
         <div style="height:180px;position:relative;overflow:hidden;">
-          <img src="photos/salmon-fishing-2.jpg" alt="Kenai Adventure Cabins" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+          <img loading="lazy" src="photos/salmon-fishing-2.jpg" alt="Kenai Adventure Cabins" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,12,0.75) 0%,transparent 55%);"></div>
           <div style="position:absolute;bottom:16px;left:16px;font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,0.3);">Kenai Adventure Cabins</div>
         </div>
@@ -223,7 +225,7 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
 
       <div class="prop-card">
         <div style="height:180px;position:relative;overflow:hidden;">
-          <img src="photos/alaska-night-1.jpg" alt="Kenai Kuik Cabins" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+          <img loading="lazy" src="photos/alaska-night-1.jpg" alt="Kenai Kuik Cabins" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,12,0.75) 0%,transparent 55%);"></div>
           <div style="position:absolute;bottom:16px;left:16px;font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,0.3);">Kenai Kuik Cabins</div>
         </div>

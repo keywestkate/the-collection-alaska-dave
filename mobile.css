@@ -1,0 +1,414 @@
+/* ═══════════════════════════════════════════════════════════
+   The Last Frontier Collection — iOS / Mobile Optimisation
+   Linked by all pages. Handles 375px–1024px viewports.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── 1. Global iOS polish ── */
+*, *::before, *::after {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+html {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* ── 2. Responsive images ── */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Override inline height:100% on cover images — only where explicitly needed */
+img[style*="object-fit:cover"] {
+  max-width: unset;   /* covers need to fill their container, not shrink */
+}
+
+/* ── 3. Touch targets — Apple HIG minimum 44×44 pt ── */
+.btn-gold,
+.btn-outline,
+.btn-ghost,
+.btn-goutline {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.hub-nav-tab,
+.section-tab {
+  min-height: 44px;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero service pills */
+.hero-service-pill {
+  touch-action: manipulation;
+}
+
+/* ── 4. iOS Safari full-height (dynamic address bar) ── */
+/* Targets any section whose inline style sets min-height:100vh */
+@supports (min-height: 100svh) {
+  section[style*="min-height:100vh"] {
+    min-height: 100svh !important;
+  }
+}
+
+/* Named class for the new cinematic hero sections */
+.hero-split {
+  min-height: 100svh !important;
+}
+
+.hero-split-left {
+  min-height: 100svh !important;
+}
+
+/* ── 5. Inputs — prevent iOS auto-zoom (requires ≥ 16px) ── */
+input,
+select,
+textarea,
+.form-input,
+.location-btn {
+  font-size: 16px !important;
+  -webkit-appearance: none;
+  border-radius: 6px;       /* override iOS default rounded corners on inputs */
+}
+
+/* Restore location-btn radius */
+.location-btn {
+  border-radius: 6px;
+}
+
+/* ── 6. Momentum scrolling for overflow containers ── */
+.hub-nav-row,
+.marquee-track-wrapper {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.hub-nav-row::-webkit-scrollbar { display: none; }
+
+/* ═══════════════════════════════════════════════════════════
+   TABLET  ≤ 900px
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+
+  /* Hide hero right photo mosaic — full text layout instead */
+  .hero-split-right {
+    display: none !important;
+  }
+
+  /* Hero becomes single-column */
+  .hero-split {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .hero-split-left {
+    padding: 130px 40px 60px !important;
+  }
+
+  /* Hide desktop nav links (index.html) */
+  .nav-links {
+    display: none !important;
+  }
+
+  /* Hub top breadcrumb row — suppress on tablet */
+  .hub-topbar {
+    display: none !important;
+  }
+
+  /* Hub nav tabs: allow horizontal scroll if they overflow */
+  .hub-nav-row {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE  ≤ 768px
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Content wrappers: safe horizontal padding ── */
+  [style*="max-width:1280px"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* ── Section vertical padding: reduce on mobile ── */
+  section[style*="padding:100px 0"] {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+
+  section[style*="padding:80px 0"] {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+
+  /* ── Hero: tighter padding ── */
+  .hero-split-left {
+    padding: 110px 20px 48px !important;
+  }
+
+  /* ── Service pills: tighter sizing ── */
+  .hero-service-pill {
+    font-size: 9px !important;
+    padding: 7px 12px !important;
+  }
+
+  /* ── Hero stats row: wrap and remove dividers ── */
+  .hero-stats {
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+  }
+
+  .hero-stats > [style*="width:1px"] {
+    display: none !important;
+  }
+
+  /* ── 4-col → 2-col on mobile ── */
+  [style*="grid-template-columns:repeat(4,1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* ── 3-col → 1-col on mobile ── */
+  [style*="grid-template-columns:repeat(3,1fr)"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* ── Generic 2-col → 1-col ── */
+  [style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* ── Footer 4-col → 2-col ── */
+  [style*="grid-template-columns:2fr 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px !important;
+  }
+
+  /* ── Property card featured (2-col split) → stack ── */
+  [style*="grid-template-columns:1fr 1fr;overflow:hidden"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Media section (2-col 72px gap) → stack ── */
+  [style*="gap:72px"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* ── Two Paths / large-gap 2-col ── */
+  [style*="gap:28px"][style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Card padding: reduce for mobile ── */
+  [style*="padding:52px 44px"] {
+    padding: 32px 20px !important;
+  }
+
+  [style*="padding:40px"] {
+    padding: 24px 20px !important;
+  }
+
+  /* ── Heading scale-down ── */
+  [style*="font-size:72px"],
+  [style*="font-size:80px"],
+  [style*="font-size:90px"],
+  [style*="font-size:96px"],
+  [style*="font-size:100px"],
+  [style*="font-size:104px"] {
+    font-size: clamp(38px, 9vw, 58px) !important;
+    line-height: 1.05 !important;
+  }
+
+  [style*="font-size:64px"] {
+    font-size: clamp(34px, 8vw, 48px) !important;
+  }
+
+  [style*="font-size:52px"],
+  [style*="font-size:54px"],
+  [style*="font-size:56px"] {
+    font-size: clamp(30px, 7.5vw, 44px) !important;
+  }
+
+  [style*="font-size:44px"],
+  [style*="font-size:46px"] {
+    font-size: clamp(28px, 7vw, 38px) !important;
+  }
+
+  /* ── Season bar months: wrap ── */
+  [style*="border-radius:6px;overflow:hidden;border:1px solid rgba(197,160,89,0.3)"] {
+    flex-wrap: wrap !important;
+    border-radius: 8px !important;
+  }
+
+  [style*="border-radius:6px;overflow:hidden;border:1px solid rgba(197,160,89,0.3)"] > div {
+    flex: 1 0 calc(100% / 6) !important;
+    text-align: center;
+  }
+
+  /* ── Social bar: stack ── */
+  [style*="background:var(--slate);padding:60px 0"] > div[style*="display:flex"] {
+    flex-direction: column !important;
+    gap: 24px !important;
+    align-items: flex-start !important;
+  }
+
+  /* ── Map: reduce height ── */
+  #circuit-map {
+    height: 320px !important;
+  }
+
+  /* ── Ticker: ensure no overflow ── */
+  .marquee-track {
+    will-change: transform;
+  }
+
+  /* ── Button groups: stack ── */
+  [style*="display:flex;gap:16px;flex-wrap:wrap"],
+  [style*="display:flex;gap:14px;flex-wrap:wrap"] {
+    flex-direction: column !important;
+  }
+
+  .btn-gold,
+  .btn-outline,
+  .btn-ghost {
+    width: 100% !important;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* ── Footer bottom bar ── */
+  footer [style*="justify-content:space-between"] {
+    flex-direction: column !important;
+    gap: 12px !important;
+    text-align: center;
+  }
+
+  /* ── Hub home hero (hub1, old-style) ── */
+  [style*="grid-template-columns:1fr 1fr;gap:60px"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* Hub property grid 2-col */
+  [style*="grid-template-columns:repeat(2,1fr)"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* ── Hub nav tabs: make scrollable not wrapping ── */
+  div[style*="display:flex;align-items:center;"] > a.hub-nav-tab {
+    flex-shrink: 0;
+    padding: 14px 14px !important;
+    font-size: 9px !important;
+  }
+
+  /* ── Contact form ── */
+  [style*="grid-template-columns:1fr 1fr;gap:16px"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* ── Location buttons: 2-col on mobile ── */
+  [style*="display:flex;gap:12px;flex-wrap:wrap"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* ── Concierge dark section ── */
+  [style*="grid-template-columns:1fr 1fr;gap:80px"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SMALL PHONE  ≤ 430px  (iPhone 14 Pro Max and below)
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 430px) {
+
+  /* 4-col → 1-col on smallest phones */
+  [style*="grid-template-columns:repeat(4,1fr)"] {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* Stat bars: wrap and remove dividers */
+  .hero-stats [style*="width:1px"] {
+    display: none !important;
+  }
+
+  /* Nav: tightest padding */
+  #nav > div {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Footer: single column */
+  [style*="grid-template-columns:2fr 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* Denali teaser: stack */
+  [style*="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:32px"] {
+    flex-direction: column !important;
+    text-align: left;
+  }
+
+  /* Concierge service icon rows */
+  [style*="grid-template-columns:repeat(4,1fr)"],
+  [style*="grid-template-columns:repeat(3,1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ACCESSIBILITY & PRINT SAFETY
+   ═══════════════════════════════════════════════════════════ */
+
+/* Prevent animation for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .marquee-track {
+    animation: none !important;
+  }
+
+  .hero-word {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hero-badge {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}

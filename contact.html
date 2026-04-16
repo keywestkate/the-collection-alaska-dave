@@ -25,18 +25,19 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
 .hub-nav-tab:hover,.hub-nav-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
 .reveal{opacity:0;transform:translateY(20px);transition:all 0.6s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
-.form-input{width:100%;padding:14px 18px;border:1.5px solid rgba(44,62,80,0.15);border-radius:6px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:300;color:var(--slate);background:#fff;transition:border-color 0.25s;outline:none;}
+.form-input{width:100%;padding:14px 18px;border:1.5px solid rgba(44,62,80,0.15);border-radius:6px;font-family:'Montserrat',sans-serif;font-size:16px;-webkit-appearance:none;font-weight:300;color:var(--slate);background:#fff;transition:border-color 0.25s;outline:none;}
 .form-input:focus{border-color:var(--gold);}
 .form-label{font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#8A9BAB;margin-bottom:8px;display:block;}
 .location-btn{padding:14px 20px;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;border:1.5px solid rgba(44,62,80,0.15);border-radius:6px;background:#fff;cursor:pointer;transition:all 0.25s;font-family:'Montserrat',sans-serif;color:#8A9BAB;}
 .location-btn.active,.location-btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(197,160,89,0.06);}
 </style>
+<link rel="stylesheet" href="mobile.css">
 </head>
 <body>
 
 <nav class="nav" id="nav">
   <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(44,62,80,0.06);">
+    <div class="hub-topbar" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(44,62,80,0.06);">
       <a href="index.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">← The Last Frontier Collection</a>
       <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">Contact &amp; Book</div>
       <a href="index.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">Back to Collection</a>
@@ -46,7 +47,7 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
         <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--slate);">The Last Frontier Collection</div>
         <div style="font-size:8px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Alaska · Three Hubs · One Circuit</div>
       </a>
-      <div style="display:flex;align-items:center;">
+      <div class="hub-nav-row" style="display:flex;align-items:center;">
         <a href="hub1.html" class="hub-nav-tab">Hub 1</a>
         <a href="hub2.html" class="hub-nav-tab">Hub 2</a>
         <a href="hub3.html" class="hub-nav-tab">Hub 3</a>

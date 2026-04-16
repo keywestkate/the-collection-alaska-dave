@@ -29,12 +29,13 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
 .svc-card{background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:12px;overflow:hidden;transition:all 0.3s;}
 .svc-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(44,62,80,0.12);}
 </style>
+<link rel="stylesheet" href="mobile.css">
 </head>
 <body>
 
 <nav class="nav" id="nav">
   <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(44,62,80,0.06);">
+    <div class="hub-topbar" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(44,62,80,0.06);">
       <a href="index.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">← The Last Frontier Collection</a>
       <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">Hub 1 of 3</div>
       <a href="hub2.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">Hub 2 · Soldotna →</a>
@@ -44,7 +45,7 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
         <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--slate);">The Gateway</div>
         <div style="font-size:8px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Hub 1 · Cooper Landing</div>
       </a>
-      <div style="display:flex;align-items:center;">
+      <div class="hub-nav-row" style="display:flex;align-items:center;">
         <a href="hub1.html" class="hub-nav-tab">Home</a>
         <a href="hub1-about.html" class="hub-nav-tab">About</a>
         <a href="hub1-services.html" class="hub-nav-tab active">Services</a>
