@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About · Hub 3 Homer | The Last Frontier Collection</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C5A059;--slate:#2C3E50;--glacier:#F8FAFB;--ocean:#2A5070;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-serif;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--gold);}
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;transition:all 0.4s;}.nav.scrolled{background:rgba(248,250,251,0.97);backdrop-filter:blur(20px);box-shadow:0 1px 24px rgba(44,62,80,0.07);}
+.btn-gold{background:var(--gold);color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:14px 36px;border:none;cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}.btn-gold:hover{background:#A07830;}
+.btn-ghost{background:transparent;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:13px 36px;border:1.5px solid rgba(255,255,255,0.5);cursor:pointer;transition:all 0.25s;display:inline-block;text-decoration:none;}
+.section-label{display:inline-flex;align-items:center;gap:12px;margin-bottom:16px;}.section-label::before,.section-label::after{content:'';display:block;width:28px;height:1px;background:var(--gold);}.section-label span{font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);}
+.hub-nav-tab{padding:14px 20px;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8A9BAB;border-bottom:2px solid transparent;cursor:pointer;transition:all 0.25s;text-decoration:none;display:inline-block;}.hub-nav-tab:hover,.hub-nav-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+.reveal{opacity:0;transform:translateY(20px);transition:all 0.6s ease;}.reveal.visible{opacity:1;transform:translateY(0);}
+.guide-card{background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:12px;overflow:hidden;transition:all 0.3s;}.guide-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(44,62,80,0.12);}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#fff;border:1px solid rgba(197,160,89,0.25);border-radius:40px;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--slate);}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(44,62,80,0.06);">
+      <a href="hub2.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">← Hub 2 · Soldotna</a>
+      <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">Hub 3 of 3</div>
+      <a href="index.html" style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9BAB;text-decoration:none;">The Collection</a>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;">
+      <a href="hub3.html" style="text-decoration:none;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--slate);">The Horizon</div>
+        <div style="font-size:8px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Hub 3 · Homer</div>
+      </a>
+      <div style="display:flex;">
+        <a href="hub3.html" class="hub-nav-tab">Home</a>
+        <a href="hub3-about.html" class="hub-nav-tab active">About</a>
+        <a href="hub3-services.html" class="hub-nav-tab">Services</a>
+        <a href="hub3-rates.html" class="hub-nav-tab">Rates</a>
+        <a href="contact.html" class="hub-nav-tab">Contact</a>
+      </div>
+      <a href="contact.html" class="btn-gold" style="font-size:9px;padding:11px 22px;">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="min-height:60vh;background:linear-gradient(160deg,#90B8C8 0%,#C8DCE8 50%,#F8FAFB 100%);display:flex;align-items:center;padding-top:130px;padding-bottom:80px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div class="section-label"><span>Homer, Alaska — The End of the Road</span></div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:64px;color:var(--slate);font-weight:400;line-height:1.05;margin-bottom:20px;">The Guide Team<br>at the <em style="color:var(--gold);">Horizon.</em></h1>
+    <p style="font-size:15px;line-height:1.8;color:#5A6E7F;max-width:560px;">Homer sits at the edge of the road system — and the edge of something vast. The Kachemak Bay, the open Pacific, Katmai, and the Gulf of Alaska spread before you. Our captains and guides bring decades of deep-water and coastal experience to every trip.</p>
+  </div>
+</section>
+
+<!-- DAVE BIO -->
+<section style="padding:100px 32px;max-width:1280px;margin:0 auto;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;" class="reveal">
+    <div>
+      <div class="section-label"><span>The Collection Founder</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:400;color:var(--slate);line-height:1.1;margin-bottom:24px;">David Lisi</h2>
+      <p style="font-size:14px;line-height:1.9;color:#5A6E7F;margin-bottom:18px;">Dave Lisi built The Last Frontier Collection from the ground up — starting with the Kenai River and expanding outward along the Kenai Peninsula until he reached the edge of the continent. Homer represents the culmination of that journey: where the road ends and the sea begins.</p>
+      <p style="font-size:14px;line-height:1.9;color:#5A6E7F;margin-bottom:18px;">A licensed guide and lodge operator since the early 2000s, Dave has fished every major run on the peninsula — from trophy rainbow trout on the upper Kenai to Pacific halibut in Kachemak Bay. His reputation for putting clients on fish and delivering a premium experience is what built this collection one property at a time.</p>
+      <p style="font-size:14px;line-height:1.9;color:#5A6E7F;margin-bottom:32px;">At Homer, Dave partners with the captains and operators who know these waters best — because the deep ocean demands specialists. Every Flat Fish Lodge charter, every Baycrest Lodge stay, every Driftwood inn booking connects back to the same standard: world-class Alaska, guided properly.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <span class="badge">Licensed Guide & Operator</span>
+        <span class="badge">1% for Planet Member</span>
+        <span class="badge">AFFTA Certified</span>
+        <span class="badge">Fishmasters 2020</span>
+      </div>
+    </div>
+    <div>
+      <div style="aspect-ratio:4/5;background:linear-gradient(135deg,#90B8C8,#C8DCE8);border-radius:16px;display:flex;align-items:flex-end;padding:24px;">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(42,80,112,0.7);">Photo: dave-lisi-homer-halibut.jpg</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE HOMER DIFFERENCE -->
+<section style="background:#fff;padding:80px 32px;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:60px;" class="reveal">
+      <div class="section-label" style="justify-content:center;"><span>Why Homer</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:400;color:var(--slate);">The End of the Road Is the Beginning of Everything</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
+      <div style="padding:36px;border:1px solid rgba(197,160,89,0.2);border-radius:12px;" class="reveal">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold);margin-bottom:12px;">Pacific Ocean</div>
+        <p style="font-size:13px;line-height:1.8;color:#5A6E7F;">Homer sits on Kachemak Bay with direct access to the Gulf of Alaska. Halibut over 200 lbs, lingcod, rockfish, and Kachemak Bay silver salmon are all within reach of the harbor.</p>
+      </div>
+      <div style="padding:36px;border:1px solid rgba(197,160,89,0.2);border-radius:12px;" class="reveal">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold);margin-bottom:12px;">World-Class Views</div>
+        <p style="font-size:13px;line-height:1.8;color:#5A6E7F;">Baycrest Lodge and Ocean Bluff offer some of the most dramatic vistas in Alaska — panoramic bay views, volcanic peaks, and the constantly changing light of coastal Alaska. This is where guests come to breathe.</p>
+      </div>
+      <div style="padding:36px;border:1px solid rgba(197,160,89,0.2);border-radius:12px;" class="reveal">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold);margin-bottom:12px;">Flyout Country</div>
+        <p style="font-size:13px;line-height:1.8;color:#5A6E7F;">Homer is an air-service hub. Katmai bear viewing, remote river fly fishing, and wilderness lodges across the Alaska Peninsula are all accessible via float plane or bush plane from Homer airport.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPTAIN & GUIDE TEAM -->
+<section style="padding:100px 32px;max-width:1280px;margin:0 auto;">
+  <div style="text-align:center;margin-bottom:60px;" class="reveal">
+    <div class="section-label" style="justify-content:center;"><span>The Homer Team</span></div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:400;color:var(--slate);">Captains, Guides & Partners</h2>
+    <p style="font-size:14px;line-height:1.8;color:#5A6E7F;max-width:520px;margin:16px auto 0;">Our Homer operation runs on relationships — with captains who know every halibut hole in Kachemak Bay, lodge operators who have built decades of repeat business, and guides who live here year-round.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
+
+    <!-- Captain 1 -->
+    <div class="guide-card reveal">
+      <div style="aspect-ratio:3/2;background:linear-gradient(135deg,#2A5070,#4A7090);display:flex;align-items:flex-end;padding:16px;">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Photo: captain-flat-fish-lodge.jpg</div>
+      </div>
+      <div style="padding:24px;">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Flat Fish Lodge Captain</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Halibut Charter Lead</div>
+        <p style="font-size:12px;line-height:1.7;color:#5A6E7F;">Coast Guard licensed captain with 15+ seasons on Kachemak Bay. Flat Fish Lodge's halibut and salmon charter program runs on deep local knowledge and a track record of trophy fish.</p>
+      </div>
+    </div>
+
+    <!-- Captain 2 -->
+    <div class="guide-card reveal">
+      <div style="aspect-ratio:3/2;background:linear-gradient(135deg,#3A6080,#5A8090);display:flex;align-items:flex-end;padding:16px;">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Photo: captain-driftwood-charters.jpg</div>
+      </div>
+      <div style="padding:24px;">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Driftwood Inn & Lodges</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Charter & Excursion Lead</div>
+        <p style="font-size:12px;line-height:1.7;color:#5A6E7F;">The Driftwood's charter arm covers the full menu: halibut, salmon, crabbing, and guided Kachemak Bay State Park access. Decades of hosting guests from around the world.</p>
+      </div>
+    </div>
+
+    <!-- Dave Lisi -->
+    <div class="guide-card reveal">
+      <div style="aspect-ratio:3/2;background:linear-gradient(135deg,#C5A059,#D4B87A);display:flex;align-items:flex-end;padding:16px;">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Photo: dave-lisi-baycrest-lodge.jpg</div>
+      </div>
+      <div style="padding:24px;">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Collection Founder</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Dave Lisi</div>
+        <p style="font-size:12px;line-height:1.7;color:#5A6E7F;">Dave curates the Homer experience across all four properties and charters, ensuring the same standard that defines Cooper Landing and Soldotna carries through to the Horizon.</p>
+      </div>
+    </div>
+
+    <!-- Lodge Operator 1 -->
+    <div class="guide-card reveal">
+      <div style="aspect-ratio:3/2;background:linear-gradient(135deg,#4A5A6A,#6A7A8A);display:flex;align-items:flex-end;padding:16px;">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Photo: baycrest-lodge-team.jpg</div>
+      </div>
+      <div style="padding:24px;">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Baycrest Lodge</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Luxury Lodge Operations</div>
+        <p style="font-size:12px;line-height:1.7;color:#5A6E7F;">Baycrest Lodge has defined premium Homer lodging for years — panoramic Kachemak Bay views, exceptional hospitality, and a reputation that brings guests back season after season.</p>
+      </div>
+    </div>
+
+    <!-- Flyout Guide -->
+    <div class="guide-card reveal">
+      <div style="aspect-ratio:3/2;background:linear-gradient(135deg,#2A5070,#50789A);display:flex;align-items:flex-end;padding:16px;">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Photo: flyout-guide-katmai.jpg</div>
+      </div>
+      <div style="padding:24px;">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Flyout & Remote Guiding</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Alaska Peninsula Specialist</div>
+        <p style="font-size:12px;line-height:1.7;color:#5A6E7F;">Our flyout partner guides remote river fishing on the Alaska Peninsula, Katmai bear viewing excursions, and wilderness drop camps. Homer's air-service hub makes this accessible.</p>
+      </div>
+    </div>
+
+    <!-- Wellness / Experience -->
+    <div class="guide-card reveal">
+      <div style="aspect-ratio:3/2;background:linear-gradient(135deg,#708090,#90A0B0);display:flex;align-items:flex-end;padding:16px;">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Photo: homer-experience-host.jpg</div>
+      </div>
+      <div style="padding:24px;">
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Experience & Wellness</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);margin-bottom:10px;">Coastal Experience Host</div>
+        <p style="font-size:12px;line-height:1.7;color:#5A6E7F;">From whale watching in Kachemak Bay to art gallery tours on the Spit, our experience coordinators ensure non-fishing guests have as extraordinary a time as the anglers.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section style="background:var(--ocean);padding:80px 32px;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:48px;" class="reveal">
+      <div class="section-label" style="justify-content:center;"><span>Certifications & Standards</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:400;color:#fff;">Licensed. Insured. Accountable.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:28px;text-align:center;" class="reveal">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);margin-bottom:8px;">US Coast Guard Licensed</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.65);line-height:1.7;">All charter captains hold current USCG Masters licenses for commercial passenger vessels operating in Kachemak Bay and Gulf of Alaska waters.</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:28px;text-align:center;" class="reveal">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);margin-bottom:8px;">ADF&G Licensed</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.65);line-height:1.7;">Alaska Department of Fish & Game licensed sport fishing guide and charter operator. All operations fully permitted for Kachemak Bay and Kenai Peninsula fisheries.</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:28px;text-align:center;" class="reveal">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);margin-bottom:8px;">First Aid / CPR Certified</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.65);line-height:1.7;">All guides and captains are current in first aid and CPR. Remote and offshore operations require highest safety preparedness — we take that seriously.</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:28px;text-align:center;" class="reveal">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);margin-bottom:8px;">Commercially Insured</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.65);line-height:1.7;">Full commercial liability coverage for all charter and guide operations. All lodge properties carry appropriate hospitality insurance.</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:28px;text-align:center;" class="reveal">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);margin-bottom:8px;">Drug Screened</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.65);line-height:1.7;">All captains and guides operating under The Last Frontier Collection are drug screened. Non-negotiable when guests are offshore or in wilderness environments.</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:28px;text-align:center;" class="reveal">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);margin-bottom:8px;">1% for Planet</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.65);line-height:1.7;">One percent of revenue is donated to environmental nonprofits dedicated to protecting Alaska's wild fisheries and coastal ecosystems. The fish come first.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="padding:100px 32px;max-width:1280px;margin:0 auto;">
+  <div style="text-align:center;margin-bottom:60px;" class="reveal">
+    <div class="section-label" style="justify-content:center;"><span>Guest Voices</span></div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:400;color:var(--slate);">From the Horizon</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
+    <div style="background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:16px;padding:36px;" class="reveal">
+      <div style="display:flex;gap:3px;margin-bottom:20px;">
+        <span style="color:var(--gold);">&#9733;</span><span style="color:var(--gold);">&#9733;</span><span style="color:var(--gold);">&#9733;</span><span style="color:var(--gold);">&#9733;</span><span style="color:var(--gold);">&#9733;</span>
+      </div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.7;color:var(--slate);margin-bottom:24px;font-style:italic;">"We stayed at Baycrest and did two halibut days with Flat Fish Lodge. The combination of views from the lodge and the fish we caught offshore — I've never had a trip like it. Already planning next summer."</p>
+      <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8A9BAB;">— Michael & Carol T., Arizona</div>
+    </div>
+    <div style="background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:16px;padding:36px;" class="reveal">
+      <div style="display:flex;gap:3px;margin-bottom:20px;">
+        <span style="color:var(--gold);">&#9733;</span><span style="color:var(--gold);">&#9733;</span><span style="color:var(--gold);">&#9733;</span><span style="color:var(--gold);">&#9733;</span><span style="color:var(--gold);">&#9733;</span>
+      </div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.7;color:var(--slate);margin-bottom:24px;font-style:italic;">"The flyout to Katmai was the highlight of our Alaska trip. Saw bears fishing within 30 feet of us. The Homer team coordinated everything flawlessly — transport, the flight, the whole experience."</p>
+      <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8A9BAB;">— David & Patricia R., Colorado</div>
+    </div>
+    <div style="background:#fff;border:1px solid rgba(44,62,80,0.08);border-radius:16px;padding:36px;" class="reveal">
+      <div style="display:flex;gap:3px;margin-bottom:20px;">
+        <span style="color:var(--gold);">&#9733;</span><span style="color:var(--gold);">&#9733;</span><span style="color:var(--gold);">&#9733;</span><span style="color:var(--gold);">&#9733;</span><span style="color:var(--gold);">&#9733;</span>
+      </div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.7;color:var(--slate);margin-bottom:24px;font-style:italic;">"My wife doesn't fish and she said Homer was her favorite stop on the whole circuit. The Driftwood, the whale watching, the galleries on the Spit — Homer has depth beyond the fishing."</p>
+      <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8A9BAB;">— Tom B., Michigan</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,var(--ocean),#1A3050);padding:80px 32px;text-align:center;">
+  <div style="max-width:640px;margin:0 auto;" class="reveal">
+    <div class="section-label" style="justify-content:center;"><span>Ready to Visit Homer</span></div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:400;color:#fff;margin-bottom:16px;">Drive South Until the Road Ends.<br><em style="color:var(--gold);">Then Go Further.</em></h2>
+    <p style="font-size:14px;line-height:1.8;color:rgba(255,255,255,0.7);margin-bottom:40px;">Halibut charters, Kachemak Bay views, flyouts to Katmai, and four properties that define the end of the Alaska road. Book your Homer stay.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html" class="btn-gold">Plan My Homer Trip</a>
+      <a href="hub3-services.html" class="btn-ghost">See All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:var(--slate);padding:60px 32px 32px;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;">
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;margin-bottom:8px;">The Horizon</div>
+        <div style="font-size:9px;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Hub 3 · Homer, Alaska</div>
+        <p style="font-size:12px;line-height:1.8;color:rgba(255,255,255,0.55);">Part of The Last Frontier Collection — three-stop Alaska experience guided by Dave Lisi.</p>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Homer</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="hub3.html" style="font-size:12px;color:rgba(255,255,255,0.65);text-decoration:none;">Home</a>
+          <a href="hub3-about.html" style="font-size:12px;color:rgba(255,255,255,0.65);text-decoration:none;">About</a>
+          <a href="hub3-services.html" style="font-size:12px;color:rgba(255,255,255,0.65);text-decoration:none;">Services</a>
+          <a href="hub3-rates.html" style="font-size:12px;color:rgba(255,255,255,0.65);text-decoration:none;">Rates</a>
+          <a href="contact.html" style="font-size:12px;color:rgba(255,255,255,0.65);text-decoration:none;">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">The Circuit</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="hub1.html" style="font-size:12px;color:rgba(255,255,255,0.65);text-decoration:none;">Hub 1 · Cooper Landing</a>
+          <a href="hub2.html" style="font-size:12px;color:rgba(255,255,255,0.65);text-decoration:none;">Hub 2 · Soldotna</a>
+          <a href="hub3.html" style="font-size:12px;color:rgba(255,255,255,0.65);text-decoration:none;">Hub 3 · Homer</a>
+          <a href="index.html" style="font-size:12px;color:rgba(255,255,255,0.65);text-decoration:none;">The Collection</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Contact</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.55);line-height:2;">
+          (907) 599-0126<br>
+          cooperlandingguide@gmail.com<br><br>
+          Homer, Alaska 99603
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <div style="font-size:11px;color:rgba(255,255,255,0.35);">© 2025 The Last Frontier Collection. All rights reserved.</div>
+      <a href="index.html" style="font-size:11px;color:rgba(255,255,255,0.35);text-decoration:none;">lastfrontiercollection.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>40);});
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');}});},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
