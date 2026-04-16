@@ -177,8 +177,7 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
             <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:4px 10px;">Events</span>
           </div>
           <div style="display:flex;gap:12px;align-items:center;">
-            <a href="#" class="btn-gold fh" style="font-size:9px;padding:10px 20px;">Book Hub 2</a>
-            <a href="#" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Explore →</a>
+            <a href="hub2.html" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Explore →</a>
           </div>
         </div>
       </div>
@@ -197,8 +196,7 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
             <span style="font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:#F5EDD8;color:var(--gold);padding:4px 10px;">Celebrations</span>
           </div>
           <div style="display:flex;gap:12px;align-items:center;">
-            <a href="#" class="btn-gold fh" style="font-size:9px;padding:10px 20px;">Book Hub 3</a>
-            <a href="#" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Explore →</a>
+            <a href="hub3.html" style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Explore →</a>
           </div>
         </div>
       </div>
@@ -412,8 +410,8 @@ function popup(title,sub,cap,btn,url){return`<div style="padding:20px 24px;min-w
 
 L.marker([61.174,-149.996],{icon:makeIcon('ANC','#4A6070')}).addTo(map).bindPopup(popup("Anchorage Int'l Airport","Your Starting Point",null,"Plan My Trip →","#"));
 L.marker([60.488,-149.988],{icon:makeIcon('H1','#5A8A5A')}).addTo(map).bindPopup(popup("The Gateway","Hub 1 · Cooper Landing","~75 guests","Explore Hub 1 →","hub1.html"));
-L.marker([60.488,-150.757],{icon:makeIcon('H2','#C5A059')}).addTo(map).bindPopup(popup("The Heartbeat","Hub 2 · Soldotna / Sterling","~55 guests","Explore Hub 2 →","#"));
-L.marker([59.643,-151.549],{icon:makeIcon('H3','#4A7898')}).addTo(map).bindPopup(popup("The Horizon","Hub 3 · Homer","85+ guests","Explore Hub 3 →","#"));
+L.marker([60.488,-150.757],{icon:makeIcon('H2','#C5A059')}).addTo(map).bindPopup(popup("The Heartbeat","Hub 2 · Soldotna / Sterling","~55 guests","Explore Hub 2 →","hub2.html"));
+L.marker([59.643,-151.549],{icon:makeIcon('H3','#4A7898')}).addTo(map).bindPopup(popup("The Horizon","Hub 3 · Homer","85+ guests","Explore Hub 3 →","hub3.html"));
 L.polyline([[61.174,-149.996],[60.488,-149.988],[60.488,-150.757],[59.643,-151.549]],{color:'#C5A059',weight:2.5,opacity:0.6,dashArray:'8,8'}).addTo(map);
 
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1});
