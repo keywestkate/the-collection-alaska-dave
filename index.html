@@ -87,7 +87,7 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
 .hero-service-pill:hover { background:rgba(197,160,89,0.18); border-color:rgba(197,160,89,0.5); color:var(--gold); }
 </style>
 <link rel="stylesheet" href="mobile.css">
-<section class="hero-split" style="min-height:100vh;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 420px;">
+<section class="hero-split" style="min-height:100vh;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr;">
 
   <!-- BACKGROUND full-bleed — slow drift animation -->
   <img src="photos/fly-fishing-man.jpg" alt="Alaska wilderness fly fishing" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% center;z-index:0;animation:heroDrift 22s ease-in-out forwards;">
@@ -160,18 +160,6 @@ body{background:var(--glacier);color:var(--slate);font-family:'Montserrat',sans-
     </div>
   </div>
 
-  <!-- RIGHT: 3 square photos — fixed equal size with gaps -->
-  <div class="hero-split-right" style="position:relative;z-index:5;display:flex;flex-direction:column;justify-content:center;gap:10px;padding:110px 32px 60px 0;">
-    <div style="width:100%;height:210px;border-radius:14px;overflow:hidden;flex-shrink:0;">
-      <img loading="lazy" src="photos/guide-kid-fishing.jpg" alt="Family fishing trip Alaska" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="width:100%;height:210px;border-radius:14px;overflow:hidden;flex-shrink:0;">
-      <img loading="lazy" src="photos/girl-fishing.jpg" alt="Fishing the Kenai River" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="width:100%;height:210px;border-radius:14px;overflow:hidden;flex-shrink:0;">
-      <img loading="lazy" src="photos/driftwood-wedding.jpg" alt="Alaska Weddings" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-  </div>
 
   <!-- Scroll indicator -->
   <div style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:8px;">
